@@ -1,0 +1,272 @@
+/* -*- Mode: IDL; indent-tabs-mode: t; tab-width: 8 -*- *//* 
+ * Copyright (C) 1998-2000 Free Software Foundation
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public
+ * License along with this program; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authors: Eskil Heyn Olsen  <eskil@eskil.org>
+ */
+
+
+/*
+   IDL for gpilotd communcation
+   $Id: gnome-pilot.idl,v 1.34 2003/05/02 13:10:07 jpr Exp $
+   $Author: jpr $
+*/
+
+module GNOME {	
+	module Pilot {
+
+		/* typedefinitions and enums */
+		typedef sequence<string> StringSequence;
+		typedef sequence<long> LongSequence;
+
+		/* exception thrown when requested pilot doesn't exist */
+		exception UnknownPilot {
+			string pilotId;
+		};
+	
+		/* exception thrown when user doesn't exist */
+		exception UnknownUser {
+			string user;
+		};
+	
+		/* exception thrown when conduit doesn't exist */
+		exception UnknownConduit {
+			string conduit;
+		};
+	
+		/* exception thrown when requested file or directory doesn't exist */
+		exception MissingFile {
+		};
+	
+		/* exception thrown when no access to file/directory/pilot is give */
+		exception NoAccess {
+		};
+
+		/* exception thrown when no monitors are on, but client called notify */
+		exception NoMonitors {
+		};
+	  
+		/* exception throw when the given request handle doesn't exist */
+		exception NoSuchHandle {
+		};
+	
+		/* exception thrown when the pilot is already syncing */
+		exception PilotBusy {
+		};
+	 
+		/* execption thrown when the cradle is already in use */
+		exception CradleBusy {
+		};
+
+		enum ConfigErrorType {
+			DEVICE_MISSING,
+			DEVICE_CANNOT_BE_OPENED
+		};
+
+		/* exception thrown when the daemon's config prevents it for doing anything */
+		exception ConfigError {
+			ConfigErrorType errorType;
+			string message;
+		};
+	
+		enum Survival {
+			IMMEDIATE,
+			PERSISTENT
+		};
+	
+		enum EventType {
+			NOTIFY_CONNECT,
+			NOTIFY_DISCONNECT,
+			NOTIFY_BACKUP,
+			NOTIFY_CONDUIT,
+			NOTIFY_REQUEST_COMPLETION,
+			NOTIFY_REQUEST_TIMEOUT,
+			NOTIFY_USERINFO_REQUESTED,
+			NOTIFY_SYSINFO_REQUESTED,
+			NOTIFY_USERINFO_SENT
+		};
+
+		enum ConduitOperation {
+			SYNCHRONIZE,
+			CONDUIT_DEFAULT,
+			COPY_FROM_PILOT,
+			COPY_TO_PILOT,
+			MERGE_FROM_PILOT,
+			MERGE_TO_PILOT
+		};
+	
+		struct UserInfo {
+			unsigned long userID;
+			string username;
+		};
+	
+		struct SysInfo {
+			/* memory is KB's */
+			long romSize;
+			long ramSize;
+			long ramFree;
+			string name;
+			string manufacturer;
+			long creation;
+			long romVersion;
+		};
+	
+		interface Client {
+			attribute string client_id;
+			oneway void connect(in string pilot_id, 
+					    in UserInfo userinfo);
+			oneway void disconnect(in string pilot_id);
+			oneway void request_completed(in string pilot_id,
+						      in unsigned long request_id);
+			/*oneway void backup(in string pilot_id,in string filename); */
+			/*oneway void request_timeout(in string pilot_id,
+			  in unsigned long request_id);*/
+			oneway void userinfo_requested(in string device,
+						       in UserInfo user);
+			oneway void sysinfo_requested(in string pilot_id,
+						      in SysInfo sysinfo);
+
+			/* progress bar additions */
+			oneway void conduit_start(in string pilot_id,
+						  in string conduit, 
+						  in string database);
+			oneway void conduit_progress(in string pilot_id,
+						     in string conduit,
+						     in unsigned long current, 
+						     in unsigned long total);
+			oneway void conduit_end(in string pilot_id,
+						in string conduit);
+			oneway void overall_progress (in string pilot_id,
+						      in unsigned long current,
+						      in unsigned long total);
+
+			/* call that lets a conduit give the user some
+                           sort of info or error message */
+			oneway void daemon_message (in string pilot_id,
+						    in string conduit,
+						    in string message);
+			oneway void daemon_error (in string pilot_id,
+						  in string message);
+			oneway void conduit_message(in string pilot_id, 
+						    in string conduit, 
+						    in string message);
+			oneway void conduit_error(in string pilot_id, 
+						  in string conduit, 
+						  in string message);
+
+			oneway void pause (in boolean on_off);
+
+		};
+	
+		interface Daemon {
+			/* adm calls */
+			void pause(in boolean on_off)
+				raises (NoAccess);
+			void reread_config ()
+				raises (NoAccess);
+			
+			/* A no-operation call, used by client to occasionally
+			   check to see if the daemon has blown up */
+			void noop ();
+
+			/* request operations */
+			unsigned long request_install(in Client cb,
+						      in string pilot_id,
+						      in string file_name,
+						      in string description,
+						      in Survival survival,
+						      in unsigned long timeout)
+				raises(UnknownPilot,MissingFile,NoAccess);
+	
+			unsigned long request_restore(in Client cb,
+						      in string pilot_id,
+						      in string directory,
+						      in Survival survival,
+						      in unsigned long timeout)
+				raises(UnknownPilot,MissingFile,NoAccess);
+
+			unsigned long request_conduit(in Client cb,
+						      in string pilot_id,
+						      in string conduit_name,
+						      in ConduitOperation operation,
+						      in Survival survival,
+						      in unsigned long timeout)
+				raises(UnknownPilot,UnknownConduit,NoAccess);
+	    
+			unsigned long remove_request(in unsigned long handle)
+				raises(NoSuchHandle);
+
+			unsigned long get_system_info(in Client cb,
+						      in string cradle,
+						      in Survival survival,
+						      in unsigned long timeout);
+
+			/* information operations */    
+	
+			StringSequence get_users();
+			StringSequence get_cradles();
+			StringSequence get_pilots();
+
+	
+			LongSequence   get_pilot_ids();
+
+			StringSequence get_pilots_by_user_name(in string user);
+			StringSequence get_pilots_by_user_login(in string uid);
+			string         get_user_name_by_pilot_name(in string pilot_id);
+			string         get_user_login_by_pilot_name(in string pilot_id);
+
+			string         get_pilot_base_dir(in string pilot_id);
+			long           get_pilot_id_from_name(in string pilot_id);
+			string         get_pilot_name_from_id(in long pilot_id);
+			StringSequence get_databases_from_cache(in string pilot_id);
+
+			/* admin operations */
+			unsigned long get_user_info(in Client cb,
+						    in string cradle,
+						    in Survival survival,
+						    in unsigned long timeout);
+			unsigned long set_user_info(in Client cb,
+						    in UserInfo user,
+						    in string cradle,
+						    in boolean continue_sync,
+						    in Survival survival,
+						    in unsigned long timeout);
+			/*
+			  unsigned long set_user_info_if_not_set(in UserInfo user,
+			  in Client cb,
+			  in string cradle,
+			  in Survival survival,
+			  in unsigned long timeout);
+			*/
+	
+			/* Notification operations */
+			void monitor_on(in Client cb, in string pilot_id)
+				raises(UnknownPilot,NoAccess);
+			void monitor_off(in Client cb, in string pilot_id)
+				raises(UnknownPilot,NoAccess);
+	
+			/* if a notify_on is done several times for the same eventtype, 
+			   callback to all callback objects */
+	   
+			void notify_on(in EventType event, in Client cb)
+				raises(NoMonitors);
+			void notify_off(in EventType event, in Client cb)
+				raises(NoMonitors);
+		};
+
+	};
+};

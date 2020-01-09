@@ -1,0 +1,12 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+gnomepilot_plversion=@PILOT_LINK_VERSION@
+
+Name: Gnome Pilot
+Description: 
+Version: @VERSION@ (pilot-link version @PILOT_LINK_VERSION@)
+Requires: libgnome-2.0 libgnomeui-2.0
+Libs: -L${libdir} -lgpilotd -lgpilotdcm -lgpilotdconduit @PISOCK_LIBS@
+Cflags: -I${includedir} @PISOCK_CFLAGS@

@@ -1,0 +1,1731 @@
+# Copyright (C) 2000 Free Software Foundation, Inc.
+# Valek Filippov <frob@df.ru>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnome-pilot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-26 22:03-0400\n"
+"PO-Revision-Date: 2001-03-13 16:04+03:00\n"
+"Last-Translator: Valek Filippov <frob@df.ru>\n"
+"Language-Team: Russian <ru@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applet/GNOME_PilotApplet.server.in.in.h:1
+msgid "Utility"
+msgstr ""
+
+#: applet/pilot-applet.glade.h:1 capplet/gpilotd-capplet.glade.h:1
+msgid "*"
+msgstr ""
+
+#: applet/pilot-applet.glade.h:2
+msgid "Choose Pilot"
+msgstr "Выбрать Pilot"
+
+#: applet/pilot-applet.glade.h:3
+msgid "Directory"
+msgstr "Каталог"
+
+#: applet/pilot-applet.glade.h:4
+msgid "Display notices"
+msgstr "Показать предупреждения"
+
+#: applet/pilot-applet.glade.h:5
+msgid "Execute when clicked"
+msgstr "Выполнить при щелчке"
+
+#: applet/pilot-applet.glade.h:6
+msgid "GNOME PilotSync Properties"
+msgstr "Свойства GNOME PilotSync"
+
+#: applet/pilot-applet.glade.h:7
+msgid "Pilot ID"
+msgstr "Pilot ID"
+
+#: applet/pilot-applet.glade.h:8
+msgid "Restore Pilot"
+msgstr "Восстановить Pilot"
+
+#: applet/pilot-applet.glade.h:9
+msgid "Sync cradle"
+msgstr "Синхронизовать колыбельку"
+
+#: applet/pilot-applet.glade.h:10
+#, fuzzy
+msgid "gnome-pilot progress"
+msgstr "GNOME-Pilot прогресс синхронизации"
+
+#: applet/pilot.c:135
+msgid "Synchronizing..."
+msgstr "Синхронизация..."
+
+#: applet/pilot.c:163
+#, c-format
+msgid "%s Synchronizing"
+msgstr "%s Синхронизация..."
+
+#: applet/pilot.c:168
+msgid "Database %v of %u"
+msgstr ""
+
+#: applet/pilot.c:187 applet/pilot.c:716 applet/pilot.c:868
+msgid "Ready to synchronize"
+msgstr "Готов к синхронизации"
+
+#: applet/pilot.c:207
+#, c-format
+msgid "Request %ld has been completed\n"
+msgstr "Запрос %ld был завершен\n"
+
+#: applet/pilot.c:228
+#, c-format
+msgid "%s Synchronizing : %s"
+msgstr "%s Синхронизация: %s"
+
+#: applet/pilot.c:233
+#, c-format
+msgid "%s: Started\n"
+msgstr "%s: Запущено\n"
+
+#: applet/pilot.c:247
+#, c-format
+msgid "%s Finished : %s"
+msgstr "%s: Завершено: %s"
+
+#: applet/pilot.c:252
+#, c-format
+msgid "%s: Ended\n"
+msgstr "%s: Закончено\n"
+
+#: applet/pilot.c:277
+msgid "%v of %u records"
+msgstr ""
+
+#: applet/pilot.c:353
+msgid ""
+"Pilot is currently synchronizing.\n"
+"Please wait for it to finish."
+msgstr ""
+"В настоящий момент происходит синхронизация.\n"
+"Пожалуйста подождите ее окончания."
+
+#: applet/pilot.c:356
+msgid "Not connected. Please restart daemon."
+msgstr "Не присоединен. Пожалуйста перезапустите демона."
+
+#: applet/pilot.c:358
+msgid ""
+"Not connected to gpilotd.\n"
+"Please restart daemon."
+msgstr ""
+"Не присоединен к gpilotd.\n"
+"Пожалуйста перезапустите демона."
+
+#: applet/pilot.c:373
+#, fuzzy
+msgid "gnome-pilot applet"
+msgstr "Апплет Gnome Pilot"
+
+#: applet/pilot.c:375
+#, fuzzy
+msgid "Copyright 2000-2003 Free Software Foundation, Inc."
+msgstr "(C) 2000 Фонд Свободного программного обеспечения"
+
+#: applet/pilot.c:376
+#, fuzzy
+msgid "A dnd and gui monitor for gpilotd.\n"
+msgstr ""
+"Графическая оболочка для gpilotd.\n"
+"Посетите Web-страницу http://www.gnome.org/gnome-pilot"
+
+#: applet/pilot.c:472
+#, c-format
+msgid "cancelling %d"
+msgstr "отмена %d"
+
+#: applet/pilot.c:524
+#, c-format
+msgid "Restoring %s"
+msgstr "Восстановление %s"
+
+#: applet/pilot.c:566
+msgid "No directory to restore from."
+msgstr "Нет каталога для восстановления."
+
+#: applet/pilot.c:574
+msgid ""
+"Press synchronize on the cradle to restore\n"
+" or cancel the operation."
+msgstr ""
+"Нажмите \"Синхронизовать\" на колыбельке для восстановления\n"
+"или отмените действие."
+
+#: applet/pilot.c:583
+msgid "Restore request failed"
+msgstr "Запрос восстановления не удался"
+
+#: applet/pilot.c:621
+msgid ""
+"Pilot sync is currently in progress.\n"
+"Are you sure you want to restart daemon?"
+msgstr ""
+"В настоящий момент происходит синхронизация Pilot.\n"
+"Вы действительно хотите перезапустить демона?"
+
+#: applet/pilot.c:631 applet/pilot.c:1160
+msgid "Trying to connect to the GnomePilot Daemon"
+msgstr "Попытка подключения к демону GnomePilot"
+
+#: applet/pilot.c:647
+msgid "There's no last sync on record."
+msgstr ""
+
+#: applet/pilot.c:687
+#, fuzzy
+msgid "Continue"
+msgstr "Продолжение синхронизации"
+
+#: applet/pilot.c:689
+#, fuzzy
+msgid "Pause Daemon"
+msgstr "Приостановить демона"
+
+#: applet/pilot.c:709
+#, fuzzy
+msgid "Daemon paused..."
+msgstr "Демон приостановлен"
+
+#: applet/pilot.c:849
+msgid "Not connected. Restart daemon to reconnect"
+msgstr "Не присоединен. Перезапустите демона для подсоединения"
+
+#: applet/pilot.c:1041
+#, c-format
+msgid "Execution of %s failed"
+msgstr "Выполнение %s не удалось"
+
+#.
+#. if (strstr (file_type (ptr),"text")) {
+#. if (file_size (ptr)>properties.text_limit)
+#. g_message ("installing textfile as Doc (not implemented)");
+#. else
+#. g_message ("installing textfile as Memo (not implemented)");
+#. }
+#.
+#: applet/pilot.c:1118
+#, fuzzy, c-format
+msgid "installing \"%s\" to \"%s\""
+msgstr "установка \"%s\""
+
+#: applet/pilot.c:1129
+msgid "unknown dnd type"
+msgstr "Неизвестный тип dnd"
+
+#: applet/pilot.c:1137
+#, fuzzy
+msgid "destroy gpilot-applet"
+msgstr "уничтожить pilot_applet"
+
+#: applet/pilot.c:1224
+msgid "Cannot find pilot-applet.glade"
+msgstr "Невоможно найти pilot-applet.glade"
+
+#: applet/pilot.schemas.in.h:1
+msgid "Command to execute when the applet is clicked"
+msgstr ""
+
+#: applet/pilot.schemas.in.h:2
+#, fuzzy
+msgid "Display notices in popup windows"
+msgstr "Показать предупреждения"
+
+#: capplet/gnome-pilot-capplet.c:211 capplet/gpilotd-capplet.glade.h:47
+msgid "Pilot Settings"
+msgstr "Настройки Pilot"
+
+#: capplet/gnome-pilot-capplet.c:378 capplet/gnome-pilot-capplet.c:460
+#: capplet/gpilotd-capplet.glade.h:38
+msgid "Name"
+msgstr "Название"
+
+#: capplet/gnome-pilot-capplet.c:380 capplet/gpilotd-capplet.glade.h:34
+#: utils/gpilotd-client.c:44
+msgid "ID"
+msgstr "ID"
+
+#: capplet/gnome-pilot-capplet.c:382
+msgid "UserName"
+msgstr "Имя пользователя"
+
+#: capplet/gnome-pilot-capplet.c:462 capplet/gpilotd-capplet.glade.h:49
+msgid "Port"
+msgstr "Порт"
+
+#: capplet/gnome-pilot-capplet.c:464 capplet/gpilotd-capplet.glade.h:55
+msgid "Speed"
+msgstr "Скорость"
+
+#: capplet/gnome-pilot-capplet.c:466 capplet/gpilotd-capplet.glade.h:60
+msgid "Type"
+msgstr "Тип"
+
+#: capplet/gnome-pilot-capplet.c:572
+msgid "Conduit"
+msgstr "Кондуит"
+
+#: capplet/gnome-pilot-capplet.c:574
+msgid "Sync Action"
+msgstr "Синхронизовать действия"
+
+#: capplet/gnome-pilot-capplet.c:775
+#, c-format
+msgid "Are you sure you want to delete %s pilot?"
+msgstr "Вы уверены, что хотите удалить pilot %s?"
+
+#: capplet/gnome-pilot-capplet.c:799
+msgid "_Edit this pilot..."
+msgstr "Правка этого Pilot..."
+
+#: capplet/gnome-pilot-capplet.c:800
+msgid "Edit the currently selected pilot"
+msgstr "Правка выбранного Pilot"
+
+#: capplet/gnome-pilot-capplet.c:802
+msgid "_Delete this pilot"
+msgstr "Удалить этот Pilot"
+
+#: capplet/gnome-pilot-capplet.c:803
+msgid "Delete the currently selected pilot"
+msgstr "Удалить выбранный Pilot"
+
+#: capplet/gnome-pilot-capplet.c:938
+#, fuzzy, c-format
+msgid "Are you sure you want to delete %s device?"
+msgstr "Вы уверены, что хотите удалить pilot %s?"
+
+#: capplet/gnome-pilot-capplet.c:959
+msgid "_Edit this device..."
+msgstr "Правка этого устройства..."
+
+#: capplet/gnome-pilot-capplet.c:960
+msgid "Edit the currently selected device"
+msgstr "Правка выбранного устройства"
+
+#: capplet/gnome-pilot-capplet.c:962
+msgid "_Delete this device"
+msgstr "Удалить это устройство"
+
+#: capplet/gnome-pilot-capplet.c:963
+msgid "Delete the currently selected device"
+msgstr "Удалить выбранное устройство"
+
+#: capplet/gnome-pilot-capplet.c:1125
+#, c-format
+msgid "Unable to instantiate %s conduit."
+msgstr ""
+
+#: capplet/gnome-pilot-capplet.c:1165
+msgid "_Enable this conduit"
+msgstr "Включить указанный кондуит"
+
+#: capplet/gnome-pilot-capplet.c:1166
+msgid "Disable the currently selected conduit"
+msgstr "Отключить выбранный кондуит"
+
+#: capplet/gnome-pilot-capplet.c:1168
+msgid "_Disable this conduit"
+msgstr "Отключить указанный кондуит"
+
+#: capplet/gnome-pilot-capplet.c:1169
+msgid "Enable the currently selected conduit"
+msgstr "Включить выбранный кондуит"
+
+#: capplet/gnome-pilot-capplet.c:1174
+msgid "_Settings..."
+msgstr "Установки..."
+
+#: capplet/gnome-pilot-capplet.c:1175
+msgid "Modify the currently selected conduit's settings"
+msgstr "Изменить установки выбранного кондуита"
+
+#. < 0) {
+#: capplet/gnome-pilot-cdialog.c:209
+msgid ""
+"Unable to create pilot settings window. Incorrect conduit configuration."
+msgstr ""
+"Не удалось создать окно установок pilot. Неправильная настройка кондуита."
+
+#: capplet/gnome-pilot-druid.c:411
+msgid ""
+"Setup did not complete and settings will not\n"
+"be saved. Are you sure you want to quit?"
+msgstr ""
+"Установка не завершена и настройки не будут\n"
+"сохранены. Вы уверены, что хотите выйти?"
+
+#: capplet/gnome-pilot-druid.c:503
+#, c-format
+msgid ""
+"About to send the following data to the pilot.\n"
+"UserName: %s\n"
+"ID: %d\n"
+"Please put pilot in %s (%s) and press HotSync button."
+msgstr ""
+"Для передачи следующих данных в pilot.\n"
+"Имя пользователя: %s\n"
+"ID: %d\n"
+"Пожалуйста поставьте pilot в %s (%s) и нажмите кнопку \"HotSync\"."
+
+#. do get_from_pilot
+#: capplet/gnome-pilot-druid.c:525
+#, c-format
+msgid ""
+"About to retrieve UserName and ID from the pilot.\n"
+"Please put pilot in %s (%s) and press HotSync button."
+msgstr ""
+"Для восстановления имени пользователя и ID из pilot\n"
+"поместите поместите pilot в %s (%s) и нажмите кнопку HotSync."
+
+#: capplet/gnome-pilot-druid.c:538
+msgid "Failed sending request to gpilotd"
+msgstr "Не удалось послать запрос к gpilotd"
+
+#: capplet/gnome-pilot-druid.c:669
+#, c-format
+msgid ""
+"Successfully retrieved UserName and ID from pilot.\n"
+"UserName: %s\n"
+"ID: %d"
+msgstr ""
+"Успешно запрошено имя пользователя и ID из pilot.\n"
+"Имя пользователя: %s\n"
+"ID: %d"
+
+#: capplet/gnome-pilot-pdialog.c:371
+#, c-format
+msgid ""
+"Please put pilot in %s (%s) and press HotSync button or cancel the operation."
+msgstr ""
+"Пожалуйста, вставьте pilot в %s (%s) и нажмите кнопку HotSync или отмените "
+"действие."
+
+#: capplet/gnome-pilot-pdialog.c:407
+msgid "The request to get pilot id failed"
+msgstr "Запрос на получение pilot id не удался"
+
+#: capplet/gnome-pilot-pdialog.c:446
+msgid "The request to set pilot id failed"
+msgstr "Запрос на установку pilot id не удался"
+
+#: capplet/gpilotd-capplet.glade.h:2
+msgid "/dev/pilot"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:3
+#, fuzzy
+msgid "/dev/ttyS0"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:4
+#, fuzzy
+msgid "/dev/ttyS1"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:5
+#, fuzzy
+msgid "/dev/ttyS2"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:6
+#, fuzzy
+msgid "/dev/ttyS3"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:7
+#, fuzzy
+msgid "/dev/ttyqe"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:8
+#, fuzzy
+msgid "Action:"
+msgstr "Синхронизовать действия"
+
+#: capplet/gpilotd-capplet.glade.h:9
+msgid "Add..."
+msgstr "Добавить..."
+
+#: capplet/gpilotd-capplet.glade.h:10
+msgid "Choose Device"
+msgstr "Выбрать устройство"
+
+#: capplet/gpilotd-capplet.glade.h:11
+#, fuzzy
+msgid "Conduit Actions"
+msgstr "Действие кондуита"
+
+#: capplet/gpilotd-capplet.glade.h:12
+msgid "Conduit Description"
+msgstr "Описание кондуита"
+
+#: capplet/gpilotd-capplet.glade.h:13
+msgid "Conduit Settings"
+msgstr "Настройки кондуита"
+
+#: capplet/gpilotd-capplet.glade.h:14
+#, fuzzy
+msgid "Conduits"
+msgstr "Кондуит"
+
+#: capplet/gpilotd-capplet.glade.h:15
+msgid ""
+"Congratulations, gnome-pilot is configured!\n"
+"\n"
+"You can change gnome-pilot settings at any time from \n"
+"PilotLink and Conduits tabs in control center.\n"
+"\n"
+"You can monitor syncing of gnome-pilot by adding \n"
+"PilotLink applet to your panel."
+msgstr ""
+
+#: capplet/gpilotd-capplet.glade.h:22
+msgid "Cradle Settings"
+msgstr "Настройки колыбельки"
+
+#: capplet/gpilotd-capplet.glade.h:23
+msgid "Delete"
+msgstr "удалить"
+
+#: capplet/gpilotd-capplet.glade.h:24
+msgid "Device Settings"
+msgstr "Настройки устройства"
+
+#: capplet/gpilotd-capplet.glade.h:25
+msgid "Devices"
+msgstr "Устройства"
+
+#: capplet/gpilotd-capplet.glade.h:26
+msgid "Disable"
+msgstr "Отключено"
+
+#: capplet/gpilotd-capplet.glade.h:27 capplet/util.c:88 capplet/util.c:418
+msgid "Disabled"
+msgstr "Отключено"
+
+#: capplet/gpilotd-capplet.glade.h:28
+msgid "Edit..."
+msgstr "Правка..."
+
+#: capplet/gpilotd-capplet.glade.h:29
+msgid "Enable"
+msgstr "Включено"
+
+#: capplet/gpilotd-capplet.glade.h:30
+msgid "Enter user name you want stored on your pilot"
+msgstr "Введите имя пользователя, которое вы хотите сохранить в вашем pilot"
+
+#: capplet/gpilotd-capplet.glade.h:31
+msgid "Get User Name and ID from existing pilot that was used before."
+msgstr ""
+"Получить имя пользователя и ID с существующего pilot, использовавшегося "
+"ранее."
+
+#: capplet/gpilotd-capplet.glade.h:32
+msgid "Get from pilot"
+msgstr "Получить из Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:33
+msgid "Gnome Pilot Settings"
+msgstr "Настройки Gnome Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:35
+msgid "Initial Sync"
+msgstr "Первоначальная синхронизация"
+
+#: capplet/gpilotd-capplet.glade.h:36 capplet/util.c:408
+msgid "IrDA"
+msgstr "IrDA"
+
+#: capplet/gpilotd-capplet.glade.h:37
+msgid "Local basedir"
+msgstr "Локальный основной каталог"
+
+#: capplet/gpilotd-capplet.glade.h:39 capplet/util.c:409
+msgid "Network"
+msgstr "Сеть"
+
+#: capplet/gpilotd-capplet.glade.h:40
+msgid "No, I've never used sync software with this pilot before."
+msgstr ""
+"Нет, я никогда раньше не использовал программы синхронизации с этим pilot."
+
+#: capplet/gpilotd-capplet.glade.h:41 capplet/util.c:129
+msgid "None"
+msgstr ""
+
+#: capplet/gpilotd-capplet.glade.h:42
+#, fuzzy
+msgid "One Time Action:"
+msgstr "Действие кондуита"
+
+#: capplet/gpilotd-capplet.glade.h:43
+msgid "Pilot Attributes"
+msgstr "Аттрибуты Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:44
+msgid "Pilot Identification"
+msgstr "Идентификация Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:45
+msgid "Pilot Name"
+msgstr "Название Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:46
+msgid "Pilot Name:"
+msgstr "Название Pilot:"
+
+#: capplet/gpilotd-capplet.glade.h:48
+msgid "Pilots"
+msgstr "Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:50
+msgid "Send to pilot"
+msgstr "Послать в Pilot"
+
+#: capplet/gpilotd-capplet.glade.h:51 capplet/util.c:410
+msgid "Serial"
+msgstr "Последовательный"
+
+#: capplet/gpilotd-capplet.glade.h:52
+msgid "Set User Name and ID to a new pilot."
+msgstr "Установить имя пользователя и ID для нового pilot."
+
+#: capplet/gpilotd-capplet.glade.h:53
+msgid "Set the root directory for all pilot files to be stored."
+msgstr "Установите корневой каталог для сохранения всех файлов pilot."
+
+#: capplet/gpilotd-capplet.glade.h:54
+msgid "Settings..."
+msgstr "Установки..."
+
+#: capplet/gpilotd-capplet.glade.h:56
+msgid "Success"
+msgstr "Успешна"
+
+#: capplet/gpilotd-capplet.glade.h:57
+msgid "The name for your pilot. It is only used for identification."
+msgstr "Название для вашего Pilot. Используется только для идентификации."
+
+#: capplet/gpilotd-capplet.glade.h:58
+msgid ""
+"This integer ID identifies your pilot and must be unique between different "
+"pilots that you use."
+msgstr ""
+"Этот целочисленный ID определяет ваш pilot и должен быть уникальным для всех "
+"используемых вами устройств pilot."
+
+#: capplet/gpilotd-capplet.glade.h:59
+msgid "Timeout"
+msgstr "Таймаут"
+
+#: capplet/gpilotd-capplet.glade.h:61 capplet/util.c:407
+msgid "USB"
+msgstr ""
+
+#: capplet/gpilotd-capplet.glade.h:62
+msgid "User Name"
+msgstr "Имя пользователя"
+
+#: capplet/gpilotd-capplet.glade.h:63
+msgid "User Name and ID to set on the Pilot"
+msgstr "Имя пользователя и ID для установки в Pilot."
+
+#: capplet/gpilotd-capplet.glade.h:64
+msgid "User Name:"
+msgstr "Имя пользователя:"
+
+#: capplet/gpilotd-capplet.glade.h:65
+msgid "Welcome to gnome-pilot!"
+msgstr "Добро пожаловать в gnome-pilot!"
+
+#: capplet/gpilotd-capplet.glade.h:66
+msgid "Yes, I've used sync software with this pilot before."
+msgstr "Да, я использовал раньше программы синхронизация с этим pilot."
+
+#: capplet/gpilotd-capplet.glade.h:67
+#, fuzzy
+msgid ""
+"You seem to be running gnome-pilot for the first time.\n"
+"The following steps will setup gnome-pilot for syncing. \n"
+"You can always change any options later from\n"
+"PilotLink panel in Gnome Control Center.\n"
+"\n"
+"Press 'Forward' to continue.\n"
+"Press 'Cancel' to exit."
+msgstr ""
+"Видимо вы запустили gnome-pilot в первый раз.\n"
+"Следующие шаги установят gnome-pilot для синхронизации.\n"
+"Вы можете изменить любые параметры позднее из\n"
+"панели PilotLink в Центре управления Gnome.\n"
+"\n"
+"Нажмите \"Далее...\" для продолжения.\n"
+"Нажмите \"Отмена\" для установки вручную."
+
+#: capplet/gpilotd-control-applet.c:81
+msgid "Start druid only"
+msgstr "Запустить только druid"
+
+#: capplet/gpilotd-control-applet.c:103
+msgid "Error initializing gpilotd capplet"
+msgstr "Ошибка инициализации gpilotd capplet"
+
+#: capplet/gpilotd-control-applet.c:114 capplet/gpilotd-control-applet.c:115
+msgid "Error loading pilot state, aborting"
+msgstr "Ошибка закрузки состояния Pilot, прервано"
+
+#: capplet/gpilotd-control-applet.c:122 capplet/gpilotd-control-applet.c:123
+msgid "Cannot connect to the GnomePilot Daemon"
+msgstr "Невозможно подключиться к демону GnomePilot"
+
+#: capplet/gpilotd-control-applet.c:132
+msgid "Cannot run druid if pilots or cradles already configured"
+msgstr "Невозможно запустить druid если pilot или колыбелька уже настроены"
+
+#: capplet/gpilotd-control-applet.desktop.in.h:1
+msgid "Configure PalmOS devices"
+msgstr ""
+
+#: capplet/gpilotd-control-applet.desktop.in.h:2
+#, fuzzy
+msgid "PalmOS Devices"
+msgstr "Pilot ID"
+
+#. Default to 57600
+#: capplet/util.c:36 capplet/util.c:399
+msgid "Use conduit settings"
+msgstr "Использовать настройки кондуита"
+
+#: capplet/util.c:37 capplet/util.c:392
+msgid "Synchronize"
+msgstr "Синхронизовать"
+
+#: capplet/util.c:38 capplet/util.c:393
+msgid "Copy from pilot"
+msgstr "Скопировать из Pilot"
+
+#: capplet/util.c:39 capplet/util.c:394
+msgid "Copy to pilot"
+msgstr "Скопировать в Pilot"
+
+#: capplet/util.c:40 capplet/util.c:395
+msgid "Merge from pilot"
+msgstr "Объединить с Pilot"
+
+#: capplet/util.c:41 capplet/util.c:396
+msgid "Merge to pilot"
+msgstr "Объединить в Pilot"
+
+#: capplet/util.c:95 capplet/util.c:420
+msgid "Enabled"
+msgstr "Включено"
+
+#: capplet/util.c:234
+msgid "You must have at least one device setup"
+msgstr "У вас должно быть установлено хотя бы одно устройство"
+
+#: capplet/util.c:458
+msgid ""
+"The specified base directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+"Указанный основной каталог существует, но имеет ошибочные права.\n"
+"Исправьте это или выберите другой каталог."
+
+#: capplet/util.c:463
+msgid ""
+"The specified base directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+"Указанный основной каталог существует, но не является каталогом.\n"
+"Создайте каталог или выберите другой."
+
+#: capplet/util.c:470
+msgid ""
+"It wasn't possible to create the specified base directory.\n"
+"Please verify the permitions on the specified path or choose another "
+"directory"
+msgstr ""
+"Не возможно создать указанный основной каталог.\n"
+"Проверьте права на указанном пути или выберите другой "
+
+#: capplet/util.c:475
+msgid ""
+"The path specified for the base directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+"Указанный для основного каталога путь неверен.\n"
+"Выберите другой каталог"
+
+#: capplet/util.c:577
+msgid "Read/Write permissions failed on"
+msgstr "Права на чтение/запись неверны для"
+
+#: capplet/util.c:579
+msgid "Check the permissions on the device and retry"
+msgstr "Проверьте права на устройстве и повторите"
+
+#: conduits/backup/backup_conduit.c:236
+msgid "Checking for removed databases"
+msgstr "Проверка удаления баз данных"
+
+#. I18N note: this is printed when renaming a file %s
+#: conduits/backup/backup_conduit.c:243
+#, c-format
+msgid "Renaming %s"
+msgstr "Переименование %s"
+
+#. I18N note: this message follow a "Renaming %s". The
+#. %s is a file name
+#: conduits/backup/backup_conduit.c:250
+#, c-format
+msgid "to %s"
+msgstr "в %s"
+
+#: conduits/backup/backup_conduit.c:422 conduits/backup/backup_conduit.c:426
+#, c-format
+msgid "%s not modified since last sync"
+msgstr "%s не был изменен со времени последней синхронизации"
+
+#: conduits/backup/backup_conduit.c:438 conduits/backup/backup_conduit.c:440
+#, c-format
+msgid "Making backup of %s"
+msgstr "Резервирование %s"
+
+#: conduits/backup/backup_conduit.c:447 conduits/backup/backup_conduit.c:449
+#, c-format
+msgid "Could not create backup file %s"
+msgstr "Не удалось создать резервный файл %s"
+
+#: conduits/backup/backup_conduit.c:646
+msgid "Collecting restore information..."
+msgstr ""
+
+#: conduits/backup/backup_conduit.c:770
+msgid "Backup directory"
+msgstr "Резервный каталог"
+
+#: conduits/backup/backup_conduit.c:780
+msgid "Only backup changed bases"
+msgstr "Только создать резервные копии измененных оснований"
+
+#: conduits/backup/backup_conduit.c:787
+msgid "Remove local base if deleted on pilot"
+msgstr "Удалять локально если удалено в pilot"
+
+#: conduits/backup/backup_conduit.c:794
+msgid "# of old backups to keep"
+msgstr "число сохраняемых резервных копий"
+
+#: conduits/file/file_conduit.c:240 conduits/file/file_conduit.c:250
+#, fuzzy, c-format
+msgid "Install of %s failed"
+msgstr "Установка %s не удалась"
+
+#: conduits/file/file_conduit.c:287
+#, c-format
+msgid "Installing %s from %s..."
+msgstr "Установка %s c %s..."
+
+#: conduits/file/file_conduit.c:289
+#, c-format
+msgid "Installing %s..."
+msgstr "Установка %s..."
+
+#: conduits/file/gpilot_install_file.c:44
+msgid "Install immediately"
+msgstr "Установить немедленно"
+
+#: conduits/file/gpilot_install_file.c:45
+msgid "Install delayed"
+msgstr "Отложенная установка"
+
+#: conduits/file/gpilot_install_file.c:46
+msgid "Pilot to install to"
+msgstr "Пилот для установки"
+
+#: conduits/file/gpilot_install_file.c:46
+msgid "PILOT"
+msgstr "Пилот"
+
+#: conduits/file/gpilot_install_file.c:118
+#: conduits/file/gpilot_install_file.c:119
+msgid "Unable to get pilot names"
+msgstr "Невозможно получить названия Pilot"
+
+#: conduits/file/gpilot_install_file.c:158
+msgid "Following files failed :\n"
+msgstr "Следующие файлы повреждены:\n"
+
+#: conduits/file/gpilot_install_file.c:170
+#, c-format
+msgid "Installing to %s:\n"
+msgstr "Установка на %s:\n"
+
+#: conduits/file/gpilot_install_file.c:191
+msgid "No files to install"
+msgstr "Нет файлов для установки"
+
+#: conduits/file/gpilot_install_file.c:194
+msgid ""
+"Press synchronize on the cradle to install\n"
+" or cancel the operation."
+msgstr ""
+"Нажмите \"Синхронизовать\" на колыбельке, чтобы установить\n"
+"или отмените действие."
+
+#: gpilot-fileman/fileman.c:29 gpilot-fileman/fileman.c:646
+#, fuzzy
+msgid "Gnome Pilot File Manager"
+msgstr "Настройки Gnome Pilot"
+
+#: gpilot-fileman/fileman.c:31
+msgid "Copyright Manish and Neil Vachharajani (C) 1998"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:34
+msgid ""
+"Manages files and applications on your Palm Pilot\n"
+"Palm Pilot is a Registered trademark of 3com Inc."
+msgstr ""
+
+#: gpilot-fileman/fileman.c:71
+#, fuzzy
+msgid "Really quit Gnome Pilot File Manager?"
+msgstr "Настройки Gnome Pilot"
+
+#: gpilot-fileman/fileman.c:173
+msgid "Hmm, this shouldn't happen, not enough filenames\n"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:207 gpilot-fileman/fileman.c:366
+#, fuzzy
+msgid "Aborting..."
+msgstr "О программе..."
+
+#: gpilot-fileman/fileman.c:244
+#, fuzzy
+msgid "No files to install!!"
+msgstr "Нет файлов для установки"
+
+#: gpilot-fileman/fileman.c:252
+#, fuzzy
+msgid "Install Progress"
+msgstr "Установить файл"
+
+#: gpilot-fileman/fileman.c:256
+#, fuzzy
+msgid "Installing... "
+msgstr "Установка %s..."
+
+#: gpilot-fileman/fileman.c:311 gpilot-fileman/fileman.c:476
+msgid "Press the Hot Sync button on your pilot now!"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:442
+#, fuzzy
+msgid "Unable to open or create chosen name as a directory!"
+msgstr "Не удалось содать каталог инсталяционной очереди файла"
+
+#: gpilot-fileman/fileman.c:452
+msgid "Chosen backup location is not a directory!"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:463
+#, fuzzy
+msgid "Backup Progress"
+msgstr "Резервный каталог"
+
+#: gpilot-fileman/fileman.c:465
+msgid "Backing up... "
+msgstr ""
+
+#: gpilot-fileman/fileman.c:484
+#, fuzzy
+msgid "Unable to open status pipe"
+msgstr "Не удалось связаться с Pilot"
+
+#: gpilot-fileman/fileman.c:495
+#, fuzzy
+msgid "Unable to open message pipe"
+msgstr "Невозможно получить названия Pilot"
+
+#: gpilot-fileman/fileman.c:506
+msgid "Unable to fork"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:573
+#, fuzzy
+msgid "Backup Directory"
+msgstr "Резервный каталог"
+
+#: gpilot-fileman/fileman.c:591
+#, fuzzy
+msgid "About"
+msgstr "О программе..."
+
+#: gpilot-fileman/fileman.c:591
+msgid "About the gpilot-fileman"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:602
+#, fuzzy
+msgid "Install Files"
+msgstr "Установить файл"
+
+#: gpilot-fileman/fileman.c:602
+msgid "Installs selected files to the connected Pilot"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:608
+#, fuzzy
+msgid "Backup Pilot"
+msgstr "Резервный каталог"
+
+#: gpilot-fileman/fileman.c:608
+msgid "Back's up selected files from the connected Pilot"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:615
+#, fuzzy
+msgid "Properties"
+msgstr "Свойства..."
+
+#: gpilot-fileman/fileman.c:615
+#, fuzzy
+msgid "Properties for the Gnome Pilot File Manager"
+msgstr "Настройки Gnome Pilot"
+
+#: gpilot-fileman/fileman.c:623
+msgid "Quit"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:623
+msgid "Quits the application"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:631
+msgid "File"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:632
+msgid "Help"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:286
+msgid "Add ->"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:287
+msgid "<- Remove"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:288
+msgid "<- Remove All"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:330
+msgid "Selected Files"
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:88
+#, fuzzy
+msgid "Unable to bind to pilot\n"
+msgstr "Не удалось связаться с Pilot"
+
+#: gpilot-fileman/pilotfunc.c:113
+msgid "Exiting on cancel"
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:119
+#, fuzzy, c-format
+msgid "Unable to open '%s'!"
+msgstr "Не удалось связаться с Pilot"
+
+#: gpilot-fileman/pilotfunc.c:124
+#, fuzzy, c-format
+msgid "Install failed %s."
+msgstr "Установить файл"
+
+#: gpilot-fileman/pilotfunc.c:211
+msgid "Exiting on cancel, all data NOT backed up."
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:246
+msgid "Failed, unable to create file\n"
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:254
+msgid "Failed, unable to back up database\n"
+msgstr ""
+
+#: gpilot-fileman/preferences.c:82
+#, fuzzy
+msgid "Pilot Device"
+msgstr "Pilot ID"
+
+#: gpilot-fileman/preferences.c:89
+msgid "Confirm on quit"
+msgstr ""
+
+#: gpilot-fileman/preferences.c:118
+#, fuzzy
+msgid "General"
+msgstr "Последовательный"
+
+#: gpilotd/GNOME_Pilot_Daemon.server.in.in.h:1
+#, fuzzy
+msgid "Gnome-Pilot daemon"
+msgstr "Настройки Gnome Pilot"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:63
+msgid "deleted pilot record modified locally, not deleting\n"
+msgstr ""
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:64
+msgid "deleted local record modified on pilot, not deleting\n"
+msgstr ""
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:65
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:69
+msgid "merge conflict, pilot and local record swapped\n"
+msgstr ""
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:66
+msgid "archive and change conflict, pilot and local record swapped\n"
+msgstr ""
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:67
+msgid "archive and change conflict, local record sent to pilot\n"
+msgstr ""
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:68
+msgid "archive and change conflict, pilot record saved locally\n"
+msgstr ""
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:350
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:425
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:486
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:515
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:544
+msgid "Conduits initialization failed, aborting operation"
+msgstr "Инициализация кондуита не удалась, опереция прервана"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:363
+msgid "Unable to delete all records in pilot database, aborting operation."
+msgstr "Не удалось удалить все записи в базе данных Pilot, операция прервана."
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:374
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:948
+msgid "Conduit did not return a record"
+msgstr "Кондуит не вернул запись"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:431
+msgid "Unable to delete all records in local database, aborting operation."
+msgstr "Не удалось удалить все записи в базе данных Pilot, операция прервана."
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:1349
+msgid "Error in conduit, newly added record could not be found"
+msgstr "Ошибка в кондуите, вновь добавленная запись не может быть найдена"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:487
+msgid "Copy to pilot failed!"
+msgstr "Сбой копирования в Pilot!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:511
+msgid "Copy from pilot failed!"
+msgstr "Сбой копирования из Pilot!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:535
+msgid "Merge to pilot failed!"
+msgstr "Сбой объединения в Pilot!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:559
+msgid "Merge from pilot failed!"
+msgstr "Сбой объединения из Pilot!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:614
+msgid "Synchronization failed!"
+msgstr "Сбой синхронизации!"
+
+#: gpilotd/gnome-pilot-structures.c:286
+#, c-format
+msgid "Could not open device %s (%s): reason: \"%s\"."
+msgstr "Не удалось открыть устройство %s (%s): причина: \"%s\"."
+
+#: gpilotd/gnome-pilot-structures.c:290
+#, c-format
+msgid ""
+"GnomePilot could not open device %s (%s).\n"
+"Reason: \"%s\"."
+msgstr ""
+"GnomePilot не смог открыть устройство %s (%s).\n"
+"Причина: \"%s\""
+
+#: gpilotd/gnome-pilot-structures.c:665 gpilotd/gnome-pilot-structures.c:716
+#: gpilotd/gnome-pilot-structures.c:744 gpilotd/gnome-pilot-structures.c:770
+msgid "Unknown device type"
+msgstr "Неизвестный тип устройства"
+
+#: gpilotd/gnome-pilot-structures.c:785
+msgid "Number of devices is configured to 0"
+msgstr "Число устройств сконфигурировано как 0"
+
+#: gpilotd/gnome-pilot-structures.c:787
+msgid ""
+"No cradles configure.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Нет настроенной колыбельки.\n"
+"Пожалуйста запустите gpilotd-control-applet (используя gnomecc)\n"
+"чтобы настроить gnome-pilot."
+
+#: gpilotd/gnome-pilot-structures.c:808
+msgid "No accessible devices available"
+msgstr "Нет подходящих доступных устройств"
+
+#: gpilotd/gnome-pilot-structures.c:823
+msgid "Number of pilots is configured to 0"
+msgstr "Число pilot сконфигурировано как 0"
+
+#: gpilotd/gnome-pilot-structures.c:825
+msgid ""
+"No pilots configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Нет сконфигурированных pilot.\n"
+"Пожалуйста запустите gpilotd-control-applet (используя gnomecc)\n"
+"чтобы сконфигурировать gnome-pilot."
+
+#: gpilotd/gpilotd.c:173
+msgid "Unable to bind to pilot"
+msgstr "Не удалось связаться с Pilot"
+
+#: gpilotd/gpilotd.c:329
+#, c-format
+msgid "Unknown pilot, no userID/username match %ld"
+msgstr "Неизвестный Pilot, нет ID/имени пользователя совпадающего с %ld"
+
+#: gpilotd/gpilotd.c:336
+msgid "Use gnomecc to configure pilot"
+msgstr ""
+
+#. FIXME: here we should offer to create a profile for the pilot,
+#. bug # 8218
+#: gpilotd/gpilotd.c:341 gpilotd/gpilotd.c:546
+#, c-format
+msgid ""
+"Unknown pilot - no pilots matches ID %ld\n"
+"Use gnomecc to set pilot's ID"
+msgstr ""
+"Неизвестный pilot - нет пилотов с ID совпадающим с %ld\n"
+"Используйте gnomecc чтобы установить pilot ID"
+
+#: gpilotd/gpilotd.c:365
+#, c-format
+msgid "Cradle %s has %d events"
+msgstr "Колыбелька %s имеет %d событий"
+
+#: gpilotd/gpilotd.c:377
+msgid "Setting userinfo..."
+msgstr "Установка пользовательской информации..."
+
+#: gpilotd/gpilotd.c:382
+msgid "Sync continues"
+msgstr "Продолжение синхронизации"
+
+#: gpilotd/gpilotd.c:401
+msgid "Getting userinfo..."
+msgstr "Получение пользовательской информации..."
+
+#: gpilotd/gpilotd.c:463
+msgid "NetSync request detected, synchronizing pilot"
+msgstr "Обнаружен запрос \"NetSync\", синхронизация pilot"
+
+#: gpilotd/gpilotd.c:465
+msgid "HotSync button pressed, synchronizing pilot"
+msgstr "Нажата кнопка \"HotSync\", синхронизация pilot"
+
+#: gpilotd/gpilotd.c:467
+#, c-format
+msgid "Pilot ID is %ld, name is %s, owner is %s"
+msgstr "Pilot ID - %ld, название - %s, владелец - %s"
+
+#: gpilotd/gpilotd.c:477
+#, c-format
+msgid "On host %s\n"
+msgstr "На хост %s\n"
+
+#: gpilotd/gpilotd.c:479
+#, c-format
+msgid "On host %d\n"
+msgstr "На хост %d\n"
+
+#: gpilotd/gpilotd.c:498
+msgid "Synchronization ended"
+msgstr "Синхронизация закончена"
+
+#: gpilotd/gpilotd.c:501
+msgid "Synchronization ended early"
+msgstr "Синхронизация закончилась рано"
+
+#: gpilotd/gpilotd.c:533
+#, c-format
+msgid ""
+"The base directory %s is invalid.\n"
+"Please fix it or use gnomecc to choose another directory."
+msgstr ""
+"Основной каталог %s неисправен.\n"
+"Исправьте его или используйте gnomecc чтобы выбрать другой каталог."
+
+#. no ? drop connection then
+#: gpilotd/gpilotd.c:598
+#, fuzzy
+msgid "An error occured while getting the pilot's system data"
+msgstr "Ошибка возникла при получении данных пользователя Pilot"
+
+#. no ? drop connection then
+#: gpilotd/gpilotd.c:603
+msgid "An error occured while getting the pilot's user data"
+msgstr "Ошибка возникла при получении данных пользователя Pilot"
+
+#: gpilotd/gpilotd.c:608
+#, c-format
+msgid "Completed events for cradle %s (%s)"
+msgstr "Завершенные события для колыбельки %s (%s)"
+
+#: gpilotd/gpilotd.c:656 gpilotd/gpilotd.c:740
+#, c-format
+msgid "Woke on %s"
+msgstr "Пробуждение в %s"
+
+#: gpilotd/gpilotd.c:977
+#, fuzzy, c-format
+msgid "Watching %s (%s, %s)"
+msgstr "Запуск %s (%s)"
+
+#: gpilotd/gpilotd.c:979
+#, c-format
+msgid "Watching %s (%s)"
+msgstr "Запуск %s (%s)"
+
+#: gpilotd/gpilotd.c:992
+msgid "Exiting (caught SIGTERM)..."
+msgstr "Завершение (получен SIGTERM)..."
+
+#: gpilotd/gpilotd.c:1000
+msgid "Exiting (caught SIGINT)..."
+msgstr "Завершение (получен SIGINT)..."
+
+#: gpilotd/gpilotd.c:1055
+#, c-format
+msgid "Unable to open or create file %s with read/write privs"
+msgstr "Не удалось открыть или создать файл %s с правами на чтение/запись"
+
+#: gpilotd/gpilotd.c:1061
+#, c-format
+msgid "Unable to find home directory for uid %d"
+msgstr "Не удалось найти домашний каталог для UID %d"
+
+#: gpilotd/gpilotd.c:1065
+msgid "Unable to create file installation queue directory"
+msgstr "Не удалось содать каталог инсталяционной очереди файла"
+
+#: gpilotd/gpilotd.c:1090
+msgid "Shutting down devices"
+msgstr "Выключение устройств"
+
+#: gpilotd/gpilotd.c:1092
+msgid "Rereading configuration..."
+msgstr "Перечитывание конфигурации..."
+
+#: gpilotd/manager.c:265
+msgid "non-backup conduit in backup conduit list"
+msgstr "не кондуит восстановления в списке кондуитов восстановления"
+
+#: gpilotd/manager.c:273
+#, c-format
+msgid "%s backed up\n"
+msgstr ""
+
+#: gpilotd/manager.c:275
+#, fuzzy, c-format
+msgid "%s backup failed\n"
+msgstr "Резервирование %s не удалось!"
+
+#: gpilotd/manager.c:300
+#, fuzzy
+msgid "Collecting synchronization info..."
+msgstr "Кондуит %s первая синхронизация..."
+
+#: gpilotd/manager.c:408
+#, c-format
+msgid "Synchronizing %s\n"
+msgstr "Синхронизация %s\n"
+
+#: gpilotd/manager.c:427
+#, fuzzy, c-format
+msgid "Copy to pilot %s\n"
+msgstr "Скопировать в Pilot"
+
+#: gpilotd/manager.c:445
+#, fuzzy, c-format
+msgid "Copy from pilot %s\n"
+msgstr "Скопировать из Pilot"
+
+#: gpilotd/manager.c:463
+#, fuzzy, c-format
+msgid "Merge to pilot %s\n"
+msgstr "Объединить в Pilot"
+
+#: gpilotd/manager.c:481
+#, fuzzy, c-format
+msgid "Merge from pilot %s\n"
+msgstr "Объединить с Pilot"
+
+#: gpilotd/manager.c:509
+#, c-format
+msgid "Conduit %s's first synchronization..."
+msgstr "Кондуит %s первая синхронизация..."
+
+#: gpilotd/manager.c:533
+#, c-format
+msgid "unknown syncing action (%d = %s).\n"
+msgstr "неизвестное синхронизующее действие (%d = %s).\n"
+
+#: gpilotd/manager.c:659
+#, c-format
+msgid "Instantiating %d conduits..."
+msgstr "Установка %d кондуитов..."
+
+#: gpilotd/manager.c:664 gpilotd/manager.c:665
+#, c-format
+msgid "Unknown conduit \"%s\" in configure!"
+msgstr "Неизвестный кондуит \"%s\" в настройках!"
+
+#: gpilotd/manager.c:674
+#, c-format
+msgid "Loading conduit \"%s\" failed!"
+msgstr "Загрузка кондуита \"%s\" не удалась!"
+
+#: gpilotd/manager.c:675
+#, c-format
+msgid "Loading conduit \"%s\" failed!\n"
+msgstr "Загрузка кондуита \\\"%s\\\" не удалась!\n"
+
+#: gpilotd/manager.c:764
+#, fuzzy, c-format
+msgid "Setting user/id to %d/%s..."
+msgstr "Установка пользовательской информации..."
+
+#. FIXME: remove the bloody request, or the user will get this
+#. message every time
+#: gpilotd/manager.c:796
+#, c-format
+msgid "Conduit %s requested, but not found"
+msgstr "Кондуит %s запрошен, но не найден"
+
+#: gpilotd/manager.c:806
+#, c-format
+msgid "Conduit %s cannot be requested"
+msgstr "Кондуит %s не может быть запрошен"
+
+#: gpilotd/orbit_daemon_glue.c:1753
+msgid "(unknown DB)"
+msgstr "(неизвестная база данных)"
+
+#: gpilotd/queue_io.c:96
+msgid "Error in queue, non-existing entry"
+msgstr ""
+
+#: gpilotd/queue_io.c:436
+#, c-format
+msgid "fault: no request found for pilot %d, request %d"
+msgstr "сбой: не найден запрос для Pilot %d, запрос %d"
+
+#: libgpilotdCM/gnome-pilot-conduit-management.gob:656
+msgid "module loading not supported, fatal!"
+msgstr "загрузка модулей не поддерживается!"
+
+#: utils/gpilotd-client.c:39
+msgid "Get System Info"
+msgstr "Получить информацию о системе"
+
+#: utils/gpilotd-client.c:40
+msgid "Pause daemon"
+msgstr "Приостановить демона"
+
+#: utils/gpilotd-client.c:41
+msgid "Unpause daemon"
+msgstr "Продолжить работу демона"
+
+#: utils/gpilotd-client.c:42
+msgid "Restart daemon"
+msgstr "Перезапустить демона"
+
+#: utils/gpilotd-client.c:43
+msgid "Set user id and name"
+msgstr "Установить id и имя пользователя"
+
+#: utils/gpilotd-client.c:44
+msgid "ID for the pilot"
+msgstr "ID для Pilot"
+
+#: utils/gpilotd-client.c:45
+msgid "Install file"
+msgstr "Установить файл"
+
+#: utils/gpilotd-client.c:45
+msgid "FILE"
+msgstr "ФАЙЛ"
+
+#: utils/gpilotd-client.c:46
+msgid "Restore directory"
+msgstr "Восстановить каталог"
+
+#: utils/gpilotd-client.c:46
+msgid "DIRECTORY"
+msgstr "КАТАЛОГ"
+
+#: utils/gpilotd-client.c:47
+msgid "Run conduit"
+msgstr "Запустить кондуит"
+
+#: utils/gpilotd-client.c:47 utils/gpilotdcm-client.c:27
+msgid "CONDUIT"
+msgstr "КОНДУИТ"
+
+#: utils/gpilotd-client.c:48
+msgid "Username to set"
+msgstr "Имя пользователя для установки"
+
+#: utils/gpilotd-client.c:48
+msgid "USERNAME"
+msgstr "ИМЯ ПОЛЬЗОВАТЕЛЯ"
+
+#: utils/gpilotd-client.c:49
+msgid "Monitor the specified pilots actions"
+msgstr "Отслеживать указанные действия Pilot"
+
+#: utils/gpilotd-client.c:50
+msgid "Monitor all pilots"
+msgstr "Отслеживать все Pilot"
+
+#: utils/gpilotd-client.c:51
+msgid "list pilots by login (all for all pilots)"
+msgstr "список Pilot по регистрационным именам (все для всех pilot)"
+
+#: utils/gpilotd-client.c:51
+msgid "LOGIN"
+msgstr "РЕГ.ИМЯ"
+
+#: utils/gpilotd-client.c:52
+msgid "Specify pilot to operate on (defaults to MyPilot)"
+msgstr "Указать Pilot для работы (по умолчанию MyPilot)"
+
+#: utils/gpilotd-client.c:52
+msgid "PILOTNAME"
+msgstr "ИМЯ PILOT"
+
+#: utils/gpilotd-client.c:53
+msgid "Specify a cradle to operate on (defaults to Cradle0)"
+msgstr "Указать колыбельку для работы (по умолчанию Cradle0)"
+
+#: utils/gpilotd-client.c:53
+msgid "CRADLENAME"
+msgstr "КОЛЫБЕЛЬКА"
+
+#: utils/gpilotd-client.c:54
+msgid "List the specifed pilot's bases"
+msgstr "Список указанных баз Pilot"
+
+#: utils/gpilotd-client.c:360 utils/gpilotdcm-client.c:106
+msgid ""
+"\n"
+"BEWARE!!\n"
+"This is a tool for certain parts of the gnome-pilot package.\n"
+"Unless you know what you're doing, don't use this tool."
+msgstr ""
+"\n"
+"ВНИМАНИЕ!!!\n"
+"Это инструмент для определенных частей пакета gnome-pilot.\n"
+"Если вы не знаете, что делаете, не используйте этот инструмент."
+
+#: utils/gpilotdcm-client.c:26
+msgid "lists available conduits"
+msgstr "список доступных кондуитов"
+
+#: utils/gpilotdcm-client.c:27
+msgid "conduit to operate on"
+msgstr "кондуит для работы"
+
+#: utils/gpilotdcm-client.c:28
+msgid "list all attributes"
+msgstr "список всех аттрибутов"
+
+#: utils/gpilotdcm-client.c:29
+msgid "specify pilot to operate on"
+msgstr "указать пилот для работы"
+
+#: utils/gpilotdcm-client.c:29
+msgid "PILOTID"
+msgstr "PILOTID"
+
+#: utils/gpilotdcm-client.c:30
+msgid "list attributes"
+msgstr "список аттрибутов"
+
+#: utils/gpilotdcm-client.c:31
+msgid "list available conduits and their state"
+msgstr "список доступных кондуитов и их состояний"
+
+#: utils/gpilotdcm-client.c:32
+msgid "enable specified conduit"
+msgstr "включить указанный кондуит"
+
+#: utils/gpilotdcm-client.c:33
+msgid "disable specified conduit"
+msgstr "отключить указанный кондуит"
+
+#: utils/gpilotdcm-client.c:34
+msgid "enable, and set firstsync to slow"
+msgstr "включить, и установить первую синхронизацию в \"медленно\""
+
+#: utils/gpilotdcm-client.c:35
+msgid "instantiate and destroy the conduit"
+msgstr ""
+
+#~ msgid "Could not examine the port for"
+#~ msgstr "Невозможно проверить порт для"
+
+#~ msgid "The port should point to a USB serial port"
+#~ msgstr "Порт должен указывать на USB последовательный порт"
+
+#~ msgid "The port should be a character special device but isn't for"
+#~ msgstr "Порт должен быть специальным символьным устройством, но не для"
+
+#~ msgid "Sync Type"
+#~ msgstr "Тип синхронизации"
+
+#~ msgid "Advanced"
+#~ msgstr "Дополнительные"
+
+#~ msgid "Sync PCId"
+#~ msgstr "Sync PCId"
+
+#~ msgid "Copying to pilot..."
+#~ msgstr "Копирование в Pilot..."
+
+#~ msgid "Copying from pilot..."
+#~ msgstr "Копирование из Pilot..."
+
+#~ msgid "Merging to pilot..."
+#~ msgstr "Объединение в Pilot..."
+
+#~ msgid "Merging from pilot..."
+#~ msgstr "Объединение из Pilot..."
+
+#~ msgid "Using conduit settings for sync..."
+#~ msgstr "Использование настроек кондуита для синхронизации..."
+
+#~ msgid "Restore..."
+#~ msgstr "Восстановление..."
+
+#~ msgid "Last sync log..."
+#~ msgstr "Последний файл регистрации синхронизации..."
+
+#~ msgid "Conduit Settings..."
+#~ msgstr "Настройки кондуита..."
+
+#~ msgid "Pilot Link Settings..."
+#~ msgstr "Настройки связи Pilot..."
+
+#~ msgid "Properties..."
+#~ msgstr "Свойства..."
+
+#~ msgid "%P %%"
+#~ msgstr "%P %%"
+
+#~ msgid "Applet options"
+#~ msgstr "Параметры апплета"
+
+#~ msgid "saving session"
+#~ msgstr "сохранение сеанса"
+
+#~ msgid "Resume daemon"
+#~ msgstr "Возобновить работу демона"
+
+#~ msgid "About..."
+#~ msgstr "О программе..."
+
+#~ msgid "Can't create applet!\n"
+#~ msgstr "Невозможно создать апплет!\n"
+
+#~ msgid "The gnome-pilot daemon is already running"
+#~ msgstr "Демон GnomePilot уже запущен"
+
+#~ msgid "Gnome Pilot Conduits"
+#~ msgstr "Кондуит Gnome Pilot"
+
+#~ msgid "Handspring USB"
+#~ msgstr "USB"
+
+#~ msgid "\n"
+#~ msgstr "\n"
+
+#~ msgid ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ "/dev/ttyqe\n"
+#~ msgstr ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ "/dev/ttyqe\n"
+
+#~ msgid ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ msgstr ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+
+#~ msgid "Disabled\n"
+#~ msgstr "Отключено\n"
+
+#~ msgid "Restoring %s from %s... "
+#~ msgstr "Восстановление %s из %s..."
+
+#~ msgid "Restore of %s failed"
+#~ msgstr "Восстановление %s не удалось"
+
+#~ msgid "Listening on %s (%s)"
+#~ msgstr "Прослушивание %s (%s)"
+
+#~ msgid "%s this request.type == %d is not a install/restore"
+#~ msgstr "%s тип этого запроса == %d не является установкой/восстановлением"

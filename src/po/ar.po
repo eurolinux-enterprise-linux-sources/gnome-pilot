@@ -1,0 +1,1759 @@
+# Arabic translations for THIS package.
+# Copyright (C) 2007 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as THIS package.
+# Automatically generated, 2007.
+# Djihed Afifi <djihed@gmail.com>, 2007
+msgid ""
+msgstr ""
+"Project-Id-Version: Arabic\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-07-31 11:07+0100\n"
+"PO-Revision-Date: 2007-04-14 18:49+0100\n"
+"Last-Translator: Djihed Afifi <djihed@gmail.com>\n"
+"Language-Team: Arabeyes <doc@arabeyes.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:1
+#, fuzzy
+msgid "Pilot Applet"
+msgstr "بريمجات الشريط"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:2
+#, fuzzy
+msgid "Synchronize your data on PalmOS devices"
+msgstr "زامن مكتبة الموسيقى للجهاز"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:3
+msgid "Utility"
+msgstr "أداة"
+
+#: ../applet/pilot-applet.glade.h:1 ../capplet/gpilotd-capplet.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: ../applet/pilot-applet.glade.h:2
+#, fuzzy
+msgid "Choose PDA"
+msgstr "قاعدة تشيتوسي الجويّة"
+
+#: ../applet/pilot-applet.glade.h:3
+#, fuzzy
+msgid "GNOME PilotSync Properties"
+msgstr "خصائص الفعل"
+
+#: ../applet/pilot-applet.glade.h:4
+#, fuzzy
+msgid "Restore PDA"
+msgstr "استرجاع الإ_فتراضي"
+
+#: ../applet/pilot-applet.glade.h:5
+#, fuzzy
+msgid "_Directory"
+msgstr "دليل"
+
+#: ../applet/pilot-applet.glade.h:6
+#, fuzzy
+msgid "_Display notices"
+msgstr "اعرض حوار تذكير"
+
+#: ../applet/pilot-applet.glade.h:7
+#, fuzzy
+msgid "_Execute when clicked"
+msgstr "_نفّذ الملفات عند نقرها"
+
+#: ../applet/pilot-applet.glade.h:8
+#, fuzzy
+msgid "_PDA ID"
+msgstr "PDA"
+
+#: ../applet/pilot-applet.glade.h:9
+#, fuzzy
+msgid "_Sync cradle"
+msgstr "_حجّم"
+
+#: ../applet/pilot-applet.glade.h:10
+#, fuzzy
+msgid "gnome-pilot progress"
+msgstr "تقدّم التهيئة"
+
+#: ../applet/pilot.c:168
+#, fuzzy, c-format
+msgid "%s Synchronizing"
+msgstr "يجري المزامنة..."
+
+#: ../applet/pilot.c:173
+#, fuzzy
+msgid "Database %v of %u"
+msgstr "قاعدة البيانات المستعملة"
+
+#: ../applet/pilot.c:267
+#, fuzzy, c-format
+msgid "Request %ld has been completed\n"
+msgstr "الإجراء البريدي المطلوب مقبول، تم إنجازه"
+
+#: ../applet/pilot.c:289
+#, fuzzy, c-format
+msgid "%s Synchronizing : %s"
+msgstr "يجري مزامنة المفاتيح"
+
+#: ../applet/pilot.c:294
+#, fuzzy, c-format
+msgid "%s: Started\n"
+msgstr "%dحالة الملف%s\n"
+
+#: ../applet/pilot.c:309
+#, fuzzy, c-format
+msgid "%s Finished : %s"
+msgstr "استكمل "
+
+#: ../applet/pilot.c:314
+#, fuzzy, c-format
+msgid "%s: Ended\n"
+msgstr "هو موسع"
+
+#: ../applet/pilot.c:340
+#, fuzzy
+msgid "%v of %u records"
+msgstr "قُرِأ %1 من %2"
+
+#: ../applet/pilot.c:419
+msgid ""
+"PDA is currently synchronizing.\n"
+"Please wait for it to finish."
+msgstr ""
+
+#: ../applet/pilot.c:422
+#, fuzzy
+msgid "Not connected. Please restart daemon."
+msgstr "تعذّر الاتّصال بـ %s: الرجاء إعادة تشغيل إفليوشن"
+
+#: ../applet/pilot.c:424
+#, fuzzy
+msgid ""
+"Not connected to gpilotd.\n"
+"Please restart daemon."
+msgstr "تعذّر الاتّصال بـ %s: الرجاء إعادة تشغيل إفليوشن"
+
+#: ../applet/pilot.c:442
+#, fuzzy
+msgid "gnome-pilot applet"
+msgstr "بريمجات جنوم"
+
+#: ../applet/pilot.c:444
+#, fuzzy
+msgid "Copyright 2000-2006 Free Software Foundation, Inc."
+msgstr "جميع الحقوق محفوظة 2001، مؤسّسة جنوم"
+
+#: ../applet/pilot.c:445
+msgid "A PalmOS PDA monitor.\n"
+msgstr ""
+
+#: ../applet/pilot.c:541 ../applet/pilot.c:567
+#, fuzzy, c-format
+msgid "There was an error displaying help: %s"
+msgstr ""
+"حدث خطأ عند عرض المساعدة:\n"
+" %s"
+
+#: ../applet/pilot.c:605
+#, fuzzy, c-format
+msgid "cancelling %d"
+msgstr "جاري الاتصال بـ%s"
+
+#: ../applet/pilot.c:657
+#, fuzzy, c-format
+msgid "Restoring %s"
+msgstr "يجري حل: %s"
+
+#: ../applet/pilot.c:699
+#, fuzzy
+msgid "No directory to restore from."
+msgstr "الدليل الذي تقرء منه ملفات .server"
+
+#: ../applet/pilot.c:707
+msgid ""
+"Press synchronize on the cradle to restore\n"
+" or cancel the operation."
+msgstr ""
+
+#: ../applet/pilot.c:716
+#, fuzzy
+msgid "Restore request failed"
+msgstr "فشل التسجيل"
+
+#: ../applet/pilot.c:754
+#, fuzzy
+msgid ""
+"PDA sync is currently in progress.\n"
+"Are you sure you want to restart daemon?"
+msgstr ""
+"هناك ملفات يتم نقلها \n"
+" هل انت متاءكد بانك تريد الخروج؟"
+
+#: ../applet/pilot.c:764 ../applet/pilot.c:1340
+#, fuzzy
+msgid "Trying to connect to the GnomePilot Daemon"
+msgstr "لم يمكن الاتصال بخادم HAL"
+
+#: ../applet/pilot.c:780
+msgid "There's no last sync on record."
+msgstr ""
+
+#. ensure the label strings are extracted by intltool.  This list of
+#. * strings should match the list in the menu_template below
+#.
+#: ../applet/pilot.c:803
+#, fuzzy
+msgid "Restore..."
+msgstr "المزيد..."
+
+#: ../applet/pilot.c:803
+#, fuzzy
+msgid "Restart"
+msgstr "أعد تشغيل GDM..."
+
+#: ../applet/pilot.c:803
+#, fuzzy
+msgid "Last log..."
+msgstr "يجري ايقاف السيد..."
+
+#: ../applet/pilot.c:804
+msgid "Preferences..."
+msgstr "تفضيلات..."
+
+#: ../applet/pilot.c:804
+msgid "Help"
+msgstr "مساعدة"
+
+#: ../applet/pilot.c:804
+#, fuzzy
+msgid "About"
+msgstr "اجهض"
+
+#: ../applet/pilot.c:826
+#, fuzzy
+msgid "Continue"
+msgstr "_مواصلة"
+
+#: ../applet/pilot.c:828
+#, fuzzy
+msgid "Pause Daemon"
+msgstr "إي_قاف اللعبة"
+
+#: ../applet/pilot.c:848
+#, fuzzy
+msgid "Daemon paused..."
+msgstr "اوقفت اللعبة مؤقتا"
+
+#: ../applet/pilot.c:855 ../applet/pilot.c:1009
+#, fuzzy
+msgid "Ready to synchronize"
+msgstr "زامن"
+
+#: ../applet/pilot.c:990
+msgid "Not connected. Restart daemon to reconnect"
+msgstr ""
+
+#: ../applet/pilot.c:1174
+#, fuzzy, c-format
+msgid "Execution of %s failed"
+msgstr "فشل تنشيط %s: %s\n"
+
+#.
+#. if (strstr (file_type (ptr),"text")) {
+#. if (file_size (ptr)>properties.text_limit)
+#. g_message ("installing textfile as Doc (not implemented)");
+#. else
+#. g_message ("installing textfile as Memo (not implemented)");
+#. }
+#.
+#: ../applet/pilot.c:1300
+#, fuzzy, c-format
+msgid "installing \"%s\" to \"%s\""
+msgstr "إعادة تسمية \"%s\" إلى \"%s\"."
+
+#: ../applet/pilot.c:1310
+#, fuzzy
+msgid "unknown dnd type"
+msgstr "نوع مجهول"
+
+#: ../applet/pilot.c:1318
+#, fuzzy
+msgid "destroy gpilot-applet"
+msgstr "تدمير مع الأم"
+
+#: ../applet/pilot.c:1403
+#, fuzzy
+msgid "Cannot find pilot-applet.glade"
+msgstr "لا يمكن العثور على توقيع zip"
+
+#: ../applet/pilot.schemas.in.h:1
+#, fuzzy
+msgid "Command to execute when the applet is clicked"
+msgstr "الأمر الذي سينفذ عند النقر"
+
+#: ../applet/pilot.schemas.in.h:2
+#, fuzzy
+msgid "Display notices in popup windows"
+msgstr "نافذة قافزة واحدة مخفيّة"
+
+#: ../capplet/gnome-pilot-capplet.c:215 ../capplet/gpilotd-capplet.glade.h:89
+#, fuzzy
+msgid "gnome-pilot Settings"
+msgstr "تعذّر استيراد الإعدادات"
+
+#: ../capplet/gnome-pilot-capplet.c:383 ../capplet/gnome-pilot-capplet.c:463
+#, fuzzy
+msgid "Name"
+msgstr "الإ_سم"
+
+#: ../capplet/gnome-pilot-capplet.c:385 ../utils/gpilotd-client.c:44
+#, fuzzy
+msgid "ID"
+msgstr "PID"
+
+#: ../capplet/gnome-pilot-capplet.c:387
+msgid "Owner"
+msgstr "المالك"
+
+#: ../capplet/gnome-pilot-capplet.c:465
+#, fuzzy
+msgid "Type"
+msgstr "أنواع"
+
+#: ../capplet/gnome-pilot-capplet.c:571
+#, fuzzy
+msgid "Conduit"
+msgstr "العدد"
+
+#: ../capplet/gnome-pilot-capplet.c:573
+#, fuzzy
+msgid "Sync Action"
+msgstr "أفعال"
+
+#: ../capplet/gnome-pilot-capplet.c:783
+#, fuzzy, c-format
+msgid "Are you sure you want to delete PDA `%s'?"
+msgstr "أمتأكّدٌ أنّك تريد حذف %1؟"
+
+#: ../capplet/gnome-pilot-capplet.c:807
+#, fuzzy
+msgid "_Edit this PDA..."
+msgstr "تعديل الوظائف"
+
+#: ../capplet/gnome-pilot-capplet.c:808
+#, fuzzy
+msgid "Edit the currently selected PDA"
+msgstr "الوقت المنتقى حالياً"
+
+#: ../capplet/gnome-pilot-capplet.c:810
+#, fuzzy
+msgid "_Delete this PDA"
+msgstr "ا_حذف هذا الشريط"
+
+#: ../capplet/gnome-pilot-capplet.c:811
+#, fuzzy
+msgid "Delete the currently selected PDA"
+msgstr "الوقت المنتقى حالياً"
+
+#: ../capplet/gnome-pilot-capplet.c:944
+#, fuzzy, c-format
+msgid "Are you sure you want to delete %s device?"
+msgstr "أمتأكّدٌ أنّك تريد حذف %1؟"
+
+#: ../capplet/gnome-pilot-capplet.c:965
+#, fuzzy
+msgid "_Edit this device..."
+msgstr "تحرير التدريج..."
+
+#: ../capplet/gnome-pilot-capplet.c:966
+#, fuzzy
+msgid "Edit the currently selected device"
+msgstr "اسم الملف المنتقى حاليا"
+
+#: ../capplet/gnome-pilot-capplet.c:968
+#, fuzzy
+msgid "_Delete this device"
+msgstr "حذف هذه الصورة"
+
+#: ../capplet/gnome-pilot-capplet.c:969
+#, fuzzy
+msgid "Delete the currently selected device"
+msgstr "الوقت المنتقى حالياً"
+
+#: ../capplet/gnome-pilot-capplet.c:1131
+#, fuzzy, c-format
+msgid "Unable to instantiate %s conduit."
+msgstr "لا يمكن إنشاء سياق"
+
+#: ../capplet/gnome-pilot-capplet.c:1171
+#, fuzzy
+msgid "_Enable this conduit"
+msgstr "فعّل هذا الإتصال"
+
+#: ../capplet/gnome-pilot-capplet.c:1172
+#, fuzzy
+msgid "Disable the currently selected conduit"
+msgstr "الوقت المنتقى حالياً"
+
+#: ../capplet/gnome-pilot-capplet.c:1174
+#, fuzzy
+msgid "_Disable this conduit"
+msgstr "عطِّل زر الإعدادات"
+
+#: ../capplet/gnome-pilot-capplet.c:1175
+#, fuzzy
+msgid "Enable the currently selected conduit"
+msgstr "الوقت المنتقى حالياً"
+
+#: ../capplet/gnome-pilot-capplet.c:1180 ../capplet/gpilotd-capplet.glade.h:85
+#, fuzzy
+msgid "_Settings..."
+msgstr "_تعيينات"
+
+#: ../capplet/gnome-pilot-capplet.c:1181
+#, fuzzy
+msgid "Modify the currently selected conduit's settings"
+msgstr "لغة الخطوط المختارة حاليا"
+
+#. < 0) {
+#: ../capplet/gnome-pilot-cdialog.c:210
+msgid "Unable to create PDA settings window. Incorrect conduit configuration."
+msgstr ""
+
+#: ../capplet/gnome-pilot-druid.c:488
+#, fuzzy
+msgid ""
+"Setup did not complete and settings will not\n"
+"be saved. Are you sure you want to quit?"
+msgstr ""
+"هناك ملفات يتم نقلها \n"
+" هل انت متاءكد بانك تريد الخروج؟"
+
+#: ../capplet/gnome-pilot-druid.c:611
+#, c-format
+msgid ""
+"About to send the following data to the PDA.\n"
+"Owner Name: %s\n"
+"PDA ID: %d\n"
+"Please put PDA in %s (%s) and press HotSync button."
+msgstr ""
+
+#: ../capplet/gnome-pilot-druid.c:636
+#, c-format
+msgid ""
+"About to retrieve Owner Name and ID from the PDA.\n"
+"Please put PDA in %s (%s) and press HotSync button."
+msgstr ""
+
+#: ../capplet/gnome-pilot-druid.c:652
+#, fuzzy
+msgid "Failed sending request to gpilotd"
+msgstr "يجري إرسال طلبات الطّرق إلى %s"
+
+#: ../capplet/gnome-pilot-druid.c:803
+#, c-format
+msgid ""
+"Successfully retrieved Owner Name and ID from PDA.\n"
+"Owner Name: %s\n"
+"PDA ID: %d"
+msgstr ""
+
+#: ../capplet/gnome-pilot-pdialog.c:432
+#, c-format
+msgid ""
+"Please put PDA in %s (%s) and press HotSync button or cancel the operation."
+msgstr ""
+
+#: ../capplet/gnome-pilot-pdialog.c:467
+#, fuzzy
+msgid "The request to get PDA ID failed"
+msgstr "فشلت محاولة تسجيل الدخول."
+
+#: ../capplet/gnome-pilot-pdialog.c:511
+#, fuzzy
+msgid "The request to set PDA ID failed"
+msgstr "أُلغِيَ الطلب."
+
+#: ../capplet/gpilotd-capplet.glade.h:2
+msgid "/dev/pilot"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:3
+msgid "/dev/ttyS0"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:4
+msgid "/dev/ttyS1"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:5
+msgid "/dev/ttyUSB0"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:6
+msgid "/dev/ttyUSB1"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:7
+#, fuzzy
+msgid "<b>Conduit Actions</b>"
+msgstr "<b>إجراءات</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:8
+#, fuzzy
+msgid "<b>Conduit Settings</b>"
+msgstr "<b>إعدادات المراقب</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:9
+#, fuzzy
+msgid "<b>PDA Attributes</b>"
+msgstr "<b>بحث عن الصفات:</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:10
+#, fuzzy
+msgid "<b>PDA Identification</b>"
+msgstr "<b>توثق</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:11
+msgid ""
+"<span weight=\"bold\" size=\"larger\">Which device should be used for this "
+"operation?</span>\n"
+"\n"
+"Since you have more than one connection device defined for this computer you "
+"need to identify which one is to be used for this operation."
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:14
+#, fuzzy
+msgid "BIG5"
+msgstr "B5"
+
+#: ../capplet/gpilotd-capplet.glade.h:15
+#, fuzzy
+msgid "CP1252"
+msgstr "125%"
+
+#: ../capplet/gpilotd-capplet.glade.h:16
+msgid "C_harset of PDA:"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:17
+#, fuzzy
+msgid "C_onduits"
+msgstr "الحالات:"
+
+#: ../capplet/gpilotd-capplet.glade.h:18
+#, fuzzy
+msgid "Choose Device"
+msgstr "اختر خادما"
+
+#: ../capplet/gpilotd-capplet.glade.h:19
+msgid ""
+"Choose this option if you have used sync software before, even on another "
+"computer"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:20
+#, fuzzy
+msgid "Conduit Settings"
+msgstr "إعدادات الخط"
+
+#: ../capplet/gpilotd-capplet.glade.h:21
+msgid ""
+"Congratulations, gnome-pilot is configured!\n"
+"\n"
+"You can change gnome-pilot settings at any time from \n"
+"PilotLink and Conduits tabs in control center.\n"
+"\n"
+"You can monitor syncing of gnome-pilot by adding \n"
+"PilotLink applet to your panel."
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:28
+#, fuzzy
+msgid "D_isable"
+msgstr "عطّل"
+
+#: ../capplet/gpilotd-capplet.glade.h:29
+#, fuzzy
+msgid "De_vices"
+msgstr "الأ_قراص"
+
+#: ../capplet/gpilotd-capplet.glade.h:30
+#, fuzzy
+msgid "Description:"
+msgstr "ال_وصف:"
+
+#: ../capplet/gpilotd-capplet.glade.h:31
+#, fuzzy
+msgid "Device Settings"
+msgstr "اعدادات الخدمات"
+
+#: ../capplet/gpilotd-capplet.glade.h:32
+#, fuzzy
+msgid "Device:"
+msgstr "الجهاز"
+
+#: ../capplet/gpilotd-capplet.glade.h:33 ../capplet/util.c:74
+#: ../capplet/util.c:438
+msgid "Disabled"
+msgstr "معطل"
+
+#: ../capplet/gpilotd-capplet.glade.h:34
+msgid "Enter Owner Name you want stored on your PDA"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:35
+#, fuzzy
+msgid "GB18030"
+msgstr "100"
+
+#: ../capplet/gpilotd-capplet.glade.h:36
+#, fuzzy
+msgid "GBK"
+msgstr "غب"
+
+#: ../capplet/gpilotd-capplet.glade.h:37
+msgid "Get the Owner's name and ID from the PDA"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:38
+#, fuzzy
+msgid "I_rDA"
+msgstr "IrLAP"
+
+#: ../capplet/gpilotd-capplet.glade.h:39
+#, fuzzy
+msgid "Initial Sync"
+msgstr "التأخير الأوّلي:"
+
+#: ../capplet/gpilotd-capplet.glade.h:40
+#, fuzzy
+msgid "Net_work"
+msgstr "الشبكة:"
+
+#: ../capplet/gpilotd-capplet.glade.h:41 ../capplet/util.c:115
+#, fuzzy
+msgid "None"
+msgstr "_لا شيء"
+
+#: ../capplet/gpilotd-capplet.glade.h:42
+#, fuzzy
+msgid "O_wner:"
+msgstr "المالك:"
+
+#: ../capplet/gpilotd-capplet.glade.h:43
+msgid "Owner Name and ID to set on the PDA"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:44
+msgid "Owner:"
+msgstr "المالك:"
+
+#: ../capplet/gpilotd-capplet.glade.h:45
+#, fuzzy
+msgid "PDA Attributes"
+msgstr "الصّفة"
+
+#: ../capplet/gpilotd-capplet.glade.h:46
+#, fuzzy
+msgid "PDA Identification"
+msgstr "تجويف النص للملإ آليا"
+
+#: ../capplet/gpilotd-capplet.glade.h:47
+#, fuzzy
+msgid "PDA Settings"
+msgstr "إعدادت NAT"
+
+#: ../capplet/gpilotd-capplet.glade.h:48
+#, fuzzy
+msgid "P_DA:"
+msgstr "PDA"
+
+#: ../capplet/gpilotd-capplet.glade.h:49
+#, fuzzy
+msgid "Port"
+msgstr "منفد:"
+
+#: ../capplet/gpilotd-capplet.glade.h:50
+msgid "S_peed:"
+msgstr "ال_سرعة:"
+
+#: ../capplet/gpilotd-capplet.glade.h:51
+msgid ""
+"Send the Owner's name and ID to the PDA, overwriting any existing identity"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:52
+#, fuzzy
+msgid "Set the character set used on your PDA."
+msgstr "أدخل مجموعة المحارف للاستخدام"
+
+#: ../capplet/gpilotd-capplet.glade.h:53
+#, fuzzy
+msgid "Set the root directory for all PDA files to be stored."
+msgstr "ما إذا سيتم السماح بانتقاء ملفات متعددة"
+
+#: ../capplet/gpilotd-capplet.glade.h:54
+msgid "Success"
+msgstr "نجاح"
+
+#: ../capplet/gpilotd-capplet.glade.h:55
+msgid "The name for your PDA.  It is only used for identification."
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:56
+msgid ""
+"This integer ID identifies your PDA and must be unique between different "
+"PDAs that you use."
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:57
+#, fuzzy
+msgid "Ti_meout:"
+msgstr "فترة الإستراحة"
+
+#: ../capplet/gpilotd-capplet.glade.h:58
+#, fuzzy
+msgid "Welcome to gnome-pilot!"
+msgstr "أهلا بك في Iagno!"
+
+#: ../capplet/gpilotd-capplet.glade.h:59
+msgid ""
+"You seem to be running gnome-pilot for the first time.\n"
+"The following steps will setup gnome-pilot for syncing. \n"
+"You can always change any options later from\n"
+"PilotLink panel in Gnome Control Center.\n"
+"\n"
+"Press 'Forward' to continue.\n"
+"Press 'Cancel' to exit."
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:66
+#, fuzzy
+msgid "_Action:"
+msgstr "_فعل"
+
+#: ../capplet/gpilotd-capplet.glade.h:67
+#, fuzzy
+msgid "_Add..."
+msgstr "أضِف..."
+
+#: ../capplet/gpilotd-capplet.glade.h:68
+msgid "_Bluetooth"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:69
+msgid "_Delete"
+msgstr "_فسخ"
+
+#: ../capplet/gpilotd-capplet.glade.h:70
+#, fuzzy
+msgid "_Device:"
+msgstr "_قرص"
+
+#: ../capplet/gpilotd-capplet.glade.h:71
+msgid "_Edit..."
+msgstr "_حرر..."
+
+#: ../capplet/gpilotd-capplet.glade.h:72
+msgid "_Enable"
+msgstr "_تفعيل"
+
+#: ../capplet/gpilotd-capplet.glade.h:73
+msgid "_Get from PDA"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:74
+#, fuzzy
+msgid "_IrDA"
+msgstr "IrLAP"
+
+#: ../capplet/gpilotd-capplet.glade.h:75
+#, fuzzy
+msgid "_Local folder:"
+msgstr "مجلد محلي"
+
+#: ../capplet/gpilotd-capplet.glade.h:76
+#, fuzzy
+msgid "_Name of PDA:"
+msgstr "اسم ال_سمكة:"
+
+#: ../capplet/gpilotd-capplet.glade.h:77
+msgid "_Name:"
+msgstr "الإ_سم:"
+
+#: ../capplet/gpilotd-capplet.glade.h:78
+msgid "_No, I've never used sync software with this PDA before."
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:79
+#, fuzzy
+msgid "_One time action:"
+msgstr "الإ_تجاه:"
+
+#: ../capplet/gpilotd-capplet.glade.h:80
+msgid "_Owner:"
+msgstr "ال_مالك:"
+
+#: ../capplet/gpilotd-capplet.glade.h:81
+msgid "_PDA ID:"
+msgstr ""
+
+#: ../capplet/gpilotd-capplet.glade.h:82
+#, fuzzy
+msgid "_PDAs"
+msgstr "PDAs"
+
+#: ../capplet/gpilotd-capplet.glade.h:83
+#, fuzzy
+msgid "_Send to PDA"
+msgstr "أرسِل إلى:"
+
+#: ../capplet/gpilotd-capplet.glade.h:84
+#, fuzzy
+msgid "_Serial"
+msgstr "_طرفية"
+
+#: ../capplet/gpilotd-capplet.glade.h:86
+msgid "_Type:"
+msgstr "_نوع"
+
+#: ../capplet/gpilotd-capplet.glade.h:87
+#, fuzzy
+msgid "_USB"
+msgstr "USB"
+
+#: ../capplet/gpilotd-capplet.glade.h:88
+msgid "_Yes, I've used sync software with this PDA before."
+msgstr ""
+
+#: ../capplet/gpilotd-control-applet.c:81
+#, fuzzy
+msgid "Start druid only"
+msgstr "إبدأ مخفياً"
+
+#: ../capplet/gpilotd-control-applet.c:103
+#, fuzzy
+msgid "Error initializing gpilotd capplet"
+msgstr "خطأ أثناء بدأ libnotify\n"
+
+#: ../capplet/gpilotd-control-applet.c:114
+#: ../capplet/gpilotd-control-applet.c:115
+#, fuzzy
+msgid "Error loading PDA state, aborting"
+msgstr "خطأ عند القراءة... إلغاء"
+
+#: ../capplet/gpilotd-control-applet.c:122
+#: ../capplet/gpilotd-control-applet.c:123
+#, fuzzy
+msgid "Cannot connect to the GnomePilot Daemon"
+msgstr "لم يمكن الاتصال بخادم HAL"
+
+#: ../capplet/gpilotd-control-applet.c:132
+msgid "Cannot run druid if PDAs or devices already configured"
+msgstr ""
+
+#: ../capplet/gpilotd-control-applet.desktop.in.in.h:1
+#, fuzzy
+msgid "Configure PalmOS devices"
+msgstr "إع_داد الملحق"
+
+#: ../capplet/gpilotd-control-applet.desktop.in.in.h:2
+#, fuzzy
+msgid "PalmOS Devices"
+msgstr "جهاز بريل"
+
+#: ../capplet/util.c:81 ../capplet/util.c:440
+#, fuzzy
+msgid "Enabled"
+msgstr "/_مفعّل"
+
+#: ../capplet/util.c:238
+#, fuzzy
+msgid "You must have at least one device setup"
+msgstr "%s يجب ان يكون لديك على الاقل عنصر واحد لاختياره\n"
+
+#: ../capplet/util.c:411
+msgid "Synchronize"
+msgstr "زامن"
+
+#: ../capplet/util.c:412
+#, fuzzy
+msgid "Copy from PDA"
+msgstr "جاري النسخ من {0}"
+
+#: ../capplet/util.c:413
+#, fuzzy
+msgid "Copy to PDA"
+msgstr "انسخ للكل"
+
+#: ../capplet/util.c:414
+#, fuzzy
+msgid "Merge from PDA"
+msgstr "رسائِل من %s"
+
+#: ../capplet/util.c:415
+#, fuzzy
+msgid "Merge to PDA"
+msgstr "دمج لأسفل"
+
+#: ../capplet/util.c:418
+#, fuzzy
+msgid "Use conduit settings"
+msgstr "استخدم اعدادات X"
+
+#: ../capplet/util.c:426
+msgid "USB"
+msgstr "USB"
+
+#: ../capplet/util.c:427
+#, fuzzy
+msgid "IrDA"
+msgstr "IrLAP"
+
+#: ../capplet/util.c:428
+#, fuzzy
+msgid "Network"
+msgstr "الشبكة:"
+
+#: ../capplet/util.c:429
+msgid "Bluetooth"
+msgstr ""
+
+#: ../capplet/util.c:430
+#, fuzzy
+msgid "Serial"
+msgstr "خاص"
+
+#: ../capplet/util.c:478
+msgid ""
+"The specified base directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+
+#: ../capplet/util.c:483
+msgid ""
+"The specified base directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+
+#: ../capplet/util.c:490
+msgid ""
+"It wasn't possible to create the specified base directory.\n"
+"Please verify the permitions on the specified path or choose another "
+"directory"
+msgstr ""
+
+#: ../capplet/util.c:495
+msgid ""
+"The path specified for the base directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+
+#: ../capplet/util.c:523
+#, c-format
+msgid ""
+"`%s' is not a valid character set identifier.  Please enter a valid "
+"identifier or select from the available options."
+msgstr ""
+
+#: ../capplet/util.c:647
+msgid "Device 'usb:' is only valid for devices of type USB"
+msgstr ""
+
+#: ../capplet/util.c:658
+#, fuzzy
+msgid "Read/Write permissions failed on"
+msgstr "حرّر أذون الموقع"
+
+#: ../capplet/util.c:660
+#, fuzzy
+msgid "Check the permissions on the device and retry"
+msgstr "الرجاء التأكد من مكان الملف ثم حاول مرة أخرى."
+
+#: ../capplet/util.c:675 ../gpilotd/gpilotd.c:1340
+#, c-format
+msgid ""
+"Failed to find directory %s or read file %s.  Check that usbfs or sysfs is "
+"mounted."
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:243
+#, fuzzy
+msgid "Checking for removed databases"
+msgstr "يجري البحث عن تحديثات"
+
+#. I18N note: this is printed when renaming a file %s
+#: ../conduits/backup/backup_conduit.c:250
+#, fuzzy, c-format
+msgid "Renaming %s"
+msgstr "إعادة تسمية %s إلى %s."
+
+#. I18N note: this message follow a "Renaming %s". The
+#. %s is a file name
+#: ../conduits/backup/backup_conduit.c:257
+#, fuzzy, c-format
+msgid "to %s"
+msgstr "قص %s"
+
+#: ../conduits/backup/backup_conduit.c:435
+#: ../conduits/backup/backup_conduit.c:439
+#, c-format
+msgid "%s not modified since last sync"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:451
+#: ../conduits/backup/backup_conduit.c:453
+#, fuzzy, c-format
+msgid "Making backup of %s"
+msgstr "يجري البحث عن %s"
+
+#: ../conduits/backup/backup_conduit.c:460
+#: ../conduits/backup/backup_conduit.c:462
+#, fuzzy, c-format
+msgid "Could not create backup file %s"
+msgstr "لم أستطع إنشاء ملف ذاكرة مخبئيّة"
+
+#: ../conduits/backup/backup_conduit.c:736
+#, fuzzy
+msgid "Collecting restore information..."
+msgstr "يجري إعادة حساب المعلومات..."
+
+#: ../conduits/backup/backup_conduit.c:860
+#, fuzzy
+msgid "_Backup directory:"
+msgstr "إنسخ دليل إيفُليوشن إحتياطياً"
+
+#: ../conduits/backup/backup_conduit.c:873
+#, fuzzy
+msgid "Backup directory"
+msgstr "إنسخ دليل إيفُليوشن إحتياطياً"
+
+#: ../conduits/backup/backup_conduit.c:875
+msgid "O_nly backup changed bases"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:885
+msgid "Only backup changed bases"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:887
+msgid "_Remove local base if deleted on pilot"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:897
+msgid "Remove local base if deleted on pilot"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:899
+msgid "# of old backups to _keep"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:910
+msgid "# of old backups to keep"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:948
+msgid ""
+"The specified backup directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:953
+msgid ""
+"The specified backup directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:960
+msgid ""
+"It wasn't possible to create the specified backup directory.\n"
+"Please verify the permissions on the specified path or choose another "
+"directory"
+msgstr ""
+
+#: ../conduits/backup/backup_conduit.c:965
+msgid ""
+"The path specified for the backup directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+
+#: ../conduits/file/file_conduit.c:243 ../conduits/file/file_conduit.c:253
+#, fuzzy, c-format
+msgid "Install of %s failed"
+msgstr "فشل التثبيت"
+
+#: ../conduits/file/file_conduit.c:290
+#, fuzzy, c-format
+msgid "Installing %s from %s..."
+msgstr "تحميل %s من %s"
+
+#: ../conduits/file/file_conduit.c:292
+#, fuzzy, c-format
+msgid "Installing %s..."
+msgstr "تثبيت %s"
+
+#: ../conduits/file/gpilot_install_file.c:44
+#, fuzzy
+msgid "Install immediately"
+msgstr "تاريخ التثبيت:"
+
+#: ../conduits/file/gpilot_install_file.c:45
+#, fuzzy
+msgid "Install delayed"
+msgstr "تاريخ التثبيت:"
+
+#: ../conduits/file/gpilot_install_file.c:46
+msgid "PDA to install to"
+msgstr ""
+
+#: ../conduits/file/gpilot_install_file.c:46
+msgid "PDA"
+msgstr "PDA"
+
+#: ../conduits/file/gpilot_install_file.c:118
+#: ../conduits/file/gpilot_install_file.c:119
+#, fuzzy
+msgid "Unable to get PDA names"
+msgstr "لم يمكن إحضار Tty"
+
+#: ../conduits/file/gpilot_install_file.c:158
+#, fuzzy
+msgid "Following files failed :\n"
+msgstr "فشل إرسال الملف"
+
+#: ../conduits/file/gpilot_install_file.c:170
+#, fuzzy, c-format
+msgid "Installing to %s:\n"
+msgstr "تثبيت %s"
+
+#: ../conduits/file/gpilot_install_file.c:191
+#, fuzzy
+msgid "No files to install"
+msgstr "لا أشرطة جانبية مثبتة"
+
+#: ../conduits/file/gpilot_install_file.c:194
+msgid ""
+"Press synchronize on the cradle to install\n"
+" or cancel the operation."
+msgstr ""
+
+#: ../gpilotd/GNOME_Pilot_Daemon.server.in.in.h:1
+#, fuzzy
+msgid "Gnome-Pilot daemon"
+msgstr "حوار جنوم للطباعة"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:136
+msgid "deleted PDA record modified locally, not deleting\n"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:137
+msgid "deleted local record modified on PDA, not deleting\n"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:138
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:142
+msgid "merge conflict, PDA and local record swapped\n"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:139
+msgid "archive and change conflict, PDA and local record swapped\n"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:140
+msgid "archive and change conflict, local record sent to PDA\n"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:141
+msgid "archive and change conflict, PDA record saved locally\n"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:423
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:498
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:563
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:592
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:621
+#, fuzzy
+msgid "Conduits initialization failed, aborting operation"
+msgstr "فشل تهيئة البرنامج"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:436
+msgid "Unable to delete all records in PDA database, aborting operation."
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:447
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:1025
+#, fuzzy
+msgid "Conduit did not return a record"
+msgstr "لم تُدخِل كلمة سر."
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:504
+msgid "Unable to delete all records in local database, aborting operation."
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:1430
+msgid "Error in conduit, newly added record could not be found"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:487
+#, fuzzy
+msgid "Copy to PDA failed!"
+msgstr "فشل نسخ القرص المدمج"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:511
+#, fuzzy
+msgid "Copy from PDA failed!"
+msgstr "فشل نسخ القرص المدمج"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:535
+#, fuzzy
+msgid "Merge to PDA failed!"
+msgstr "دمج لوح الألوان"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:559
+msgid "Merge from PDA failed!"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:614
+#, fuzzy
+msgid "Synchronization failed!"
+msgstr "جاري مزامنة iPod"
+
+#: ../gpilotd/gnome-pilot-structures.c:286
+#, fuzzy, c-format
+msgid "Could not open device %s (%s): reason: \"%s\"."
+msgstr "تعذّر فتح الملف: %s: %s"
+
+#: ../gpilotd/gnome-pilot-structures.c:290
+#, fuzzy, c-format
+msgid ""
+"GnomePilot could not open device %s (%s).\n"
+"Reason: \"%s\"."
+msgstr ""
+"لم يتمكن فانيتي من الاتصال بالويب كاميرا.\n"
+"السبب: %s"
+
+#: ../gpilotd/gnome-pilot-structures.c:449
+#, c-format
+msgid ""
+"Bluetooth Device [%s]: Unable to bind socket: err %d (check pilot-link was "
+"compiled with bluetooth support)"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-structures.c:459
+#, c-format
+msgid "Device [%s, %s]: Unable to bind socket: err %d"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-structures.c:539
+#: ../gpilotd/gnome-pilot-structures.c:590
+#: ../gpilotd/gnome-pilot-structures.c:620
+#: ../gpilotd/gnome-pilot-structures.c:648
+#, fuzzy
+msgid "Unknown device type"
+msgstr "نوع ملف غير معروف"
+
+#: ../gpilotd/gnome-pilot-structures.c:663
+#, fuzzy
+msgid "Number of devices is configured to 0"
+msgstr "لم يتم إعداد أي جهاز"
+
+#: ../gpilotd/gnome-pilot-structures.c:665
+msgid ""
+"No devices configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-structures.c:686
+#, fuzzy
+msgid "No accessible devices available"
+msgstr "لا وجود لأصوات.\n"
+
+#: ../gpilotd/gnome-pilot-structures.c:701
+msgid "Number of PDAs is configured to 0"
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-structures.c:703
+msgid ""
+"No PDAs configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+
+#: ../gpilotd/gnome-pilot-structures.c:764 ../gpilotd/gpilotd.c:687
+#, fuzzy, c-format
+msgid "No pilot_charset specified.  Using `%s'."
+msgstr "لم  يتم تعيين <template> في '%s'"
+
+#: ../gpilotd/gpilotd.c:236
+#, fuzzy
+msgid "Unable to bind to PDA"
+msgstr "تعذّر العثور على نقطة الضمّ"
+
+#: ../gpilotd/gpilotd.c:374
+#, c-format
+msgid ""
+"Failed to connect using device `%s', on port `%s'.  Check your "
+"configuration, as you requested new-style libusb `usb:' syncing, but have "
+"the old-style `visor' kernel module loaded.  You may need to select a "
+"`ttyUSB...' device."
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:389
+#, c-format
+msgid ""
+"Failed to connect using device `%s', on port `%s'.  Check your "
+"configuration, as you requested old-style usbserial `ttyUSB' syncing, but do "
+"not have the usbserial `visor' kernel module loaded.  You may need to select "
+"a `usb:' device."
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:480
+#, c-format
+msgid "Unknown PDA, no userID/username match %ld"
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:487
+msgid "Use gnomecc to configure PDA"
+msgstr ""
+
+#. FIXME: here we should offer to create a profile for the pilot,
+#. bug # 8218
+#: ../gpilotd/gpilotd.c:492
+#, c-format
+msgid ""
+"Unknown PDA - no PDA matches ID %ld\n"
+"Use gnomecc to configure gnome-pilot"
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:516
+#, fuzzy, c-format
+msgid "Device %s has %d events"
+msgstr "له حدث."
+
+#: ../gpilotd/gpilotd.c:529
+#, fuzzy
+msgid "Setting userinfo..."
+msgstr "يجري إعادة تشغيل الحاسوب..."
+
+#: ../gpilotd/gpilotd.c:534
+#, fuzzy
+msgid "Sync continues"
+msgstr "المرسِل يحتوي"
+
+#: ../gpilotd/gpilotd.c:553
+#, fuzzy
+msgid "Getting userinfo..."
+msgstr "يجري إعادة تشغيل الحاسوب..."
+
+#: ../gpilotd/gpilotd.c:615
+msgid "NetSync request detected, synchronizing PDA"
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:617
+#, fuzzy
+msgid "Bluetooth request detected, synchronizing PDA"
+msgstr "واصل المزامنة"
+
+#: ../gpilotd/gpilotd.c:619
+#, fuzzy
+msgid "HotSync button pressed, synchronizing PDA"
+msgstr "واصل المزامنة"
+
+#: ../gpilotd/gpilotd.c:621
+#, c-format
+msgid "PDA ID is %ld, name is %s, owner is %s"
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:631
+#, fuzzy, c-format
+msgid "On host %s\n"
+msgstr "المضيف هو %s\n"
+
+#: ../gpilotd/gpilotd.c:633
+#, fuzzy, c-format
+msgid "On host %d\n"
+msgstr "تحت الإن_تظار"
+
+#: ../gpilotd/gpilotd.c:652
+#, fuzzy
+msgid "Synchronization ended"
+msgstr "جاري مزامنة الجهاز"
+
+#: ../gpilotd/gpilotd.c:655
+#, fuzzy
+msgid "Synchronization ended early"
+msgstr "يجري مزامنة المفاتيح"
+
+#: ../gpilotd/gpilotd.c:701
+#, c-format
+msgid "`%s' is not a recognised iconv charset, using `%s' instead."
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:724
+#, c-format
+msgid ""
+"The base directory %s is invalid.\n"
+"Please fix it or use gnomecc to choose another directory."
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:737
+#, c-format
+msgid ""
+"Unknown PDA - no PDA matches ID %ld\n"
+"Use gpilotd-control-applet to set PDA's ID"
+msgstr ""
+
+#. no ? drop connection then
+#: ../gpilotd/gpilotd.c:788
+#, fuzzy
+msgid "An error occurred while getting the PDA's system data"
+msgstr "حدث خطأ عند تعيين الدليل الجذر"
+
+#. no ? drop connection then
+#: ../gpilotd/gpilotd.c:797
+#, fuzzy
+msgid "An error occurred while getting the PDA's user data"
+msgstr "حدث خطأ أثناء تطبيق العمليات"
+
+#: ../gpilotd/gpilotd.c:802
+#, fuzzy, c-format
+msgid "Completed events for device %s (%s)"
+msgstr "حدث متوقع: %s %s"
+
+#: ../gpilotd/gpilotd.c:863
+#, fuzzy, c-format
+msgid "Woke on %s"
+msgstr "%s على %s"
+
+#: ../gpilotd/gpilotd.c:944
+#, fuzzy, c-format
+msgid "Woke on network: %s"
+msgstr "افتح مكان شبكة %s"
+
+#: ../gpilotd/gpilotd.c:1512
+#, fuzzy, c-format
+msgid "Watching %s (network)"
+msgstr "شبكة ويندوز"
+
+#: ../gpilotd/gpilotd.c:1514
+#, fuzzy, c-format
+msgid "Watching %s (bluetooth)"
+msgstr "شبكة ويندوز"
+
+#: ../gpilotd/gpilotd.c:1516
+#, fuzzy, c-format
+msgid "Watching %s (%s)"
+msgstr "حفظ %s إلى %s"
+
+#: ../gpilotd/gpilotd.c:1530
+msgid "Exiting (caught SIGTERM)..."
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:1539
+msgid "Exiting (caught SIGINT)..."
+msgstr ""
+
+#: ../gpilotd/gpilotd.c:1571
+#, fuzzy
+msgid "Unable to create file installation queue directory"
+msgstr "لا يمكن إنشاء نظام الملفات بشكل صحيح."
+
+#: ../gpilotd/gpilotd.c:1621
+#, fuzzy
+msgid "Shutting down devices"
+msgstr "إطفاء الحاسوب"
+
+#: ../gpilotd/gpilotd.c:1623
+#, fuzzy
+msgid "Rereading configuration..."
+msgstr "أعِد تحميل الإعدادات"
+
+#: ../gpilotd/manager.c:269
+msgid "non-backup conduit in backup conduit list"
+msgstr ""
+
+#: ../gpilotd/manager.c:277
+#, c-format
+msgid "%s backed up\n"
+msgstr ""
+
+#: ../gpilotd/manager.c:279
+#, fuzzy, c-format
+msgid "%s backup failed\n"
+msgstr "فشل البحث عن المضيف"
+
+#: ../gpilotd/manager.c:305
+#, fuzzy
+msgid "Collecting synchronization info..."
+msgstr "خدمة تزامن الساعة"
+
+#: ../gpilotd/manager.c:427
+#, fuzzy, c-format
+msgid "Synchronizing %s\n"
+msgstr "يجري مزامنة المفاتيح"
+
+#: ../gpilotd/manager.c:446
+#, fuzzy, c-format
+msgid "Copy to PDA %s\n"
+msgstr "انسخ %1 إلى %2"
+
+#: ../gpilotd/manager.c:464
+#, fuzzy, c-format
+msgid "Copy from PDA %s\n"
+msgstr "مكالمة من %s"
+
+#: ../gpilotd/manager.c:482
+#, c-format
+msgid "Merge to PDA %s\n"
+msgstr ""
+
+#: ../gpilotd/manager.c:500
+#, fuzzy, c-format
+msgid "Merge from PDA %s\n"
+msgstr "رسائِل من %s"
+
+#: ../gpilotd/manager.c:528
+#, fuzzy, c-format
+msgid "Conduit %s's first synchronization..."
+msgstr "واصل المزامنة"
+
+#: ../gpilotd/manager.c:552
+#, c-format
+msgid "unknown syncing action (%d = %s).\n"
+msgstr ""
+
+#: ../gpilotd/manager.c:678
+#, fuzzy, c-format
+msgid "Instantiating %d conduits..."
+msgstr "يجري إعادة تشغيل الحاسوب..."
+
+#: ../gpilotd/manager.c:683 ../gpilotd/manager.c:684
+#, fuzzy, c-format
+msgid "Unknown conduit \"%s\" in configure!"
+msgstr "وظيفة مجهولة \"%s\" للزر"
+
+#: ../gpilotd/manager.c:693
+#, fuzzy, c-format
+msgid "Loading conduit \"%s\" failed!"
+msgstr "فشل تحميل %s."
+
+#: ../gpilotd/manager.c:694
+#, fuzzy, c-format
+msgid "Loading conduit \"%s\" failed!\n"
+msgstr "فشل تحميل %s."
+
+#: ../gpilotd/manager.c:783
+#, fuzzy, c-format
+msgid "Setting id/owner to %d/%s..."
+msgstr "يجري إطفاء %s (%s)\n"
+
+#. FIXME: remove the bloody request, or the user will get this
+#. message every time
+#: ../gpilotd/manager.c:815
+#, c-format
+msgid "Conduit %s requested, but not found"
+msgstr ""
+
+#: ../gpilotd/manager.c:825
+#, fuzzy, c-format
+msgid "Conduit %s cannot be requested"
+msgstr "لا يمكن فتح  %s"
+
+#: ../gpilotd/orbit_daemon_glue.c:1747
+#, fuzzy
+msgid "(unknown DB)"
+msgstr "(مجهول)"
+
+#: ../gpilotd/queue_io.c:96
+msgid "Error in queue, non-existing entry"
+msgstr ""
+
+#: ../gpilotd/queue_io.c:436
+#, c-format
+msgid "fault: no request found for PDA %d, request %d"
+msgstr ""
+
+#: ../libgpilotdCM/gnome-pilot-conduit-management.gob:686
+#, fuzzy
+msgid "module loading not supported, fatal!"
+msgstr "الوصلات الرمزية غير مدعومة"
+
+#: ../utils/gpilotd-client.c:39
+#, fuzzy
+msgid "Get System Info"
+msgstr "استخدم خطوط النّظام"
+
+#: ../utils/gpilotd-client.c:40
+#, fuzzy
+msgid "Pause daemon"
+msgstr "إي_قاف اللعبة"
+
+#: ../utils/gpilotd-client.c:41
+#, fuzzy
+msgid "Unpause daemon"
+msgstr "شغِّل كخادم"
+
+#: ../utils/gpilotd-client.c:42
+#, fuzzy
+msgid "Restart daemon"
+msgstr "أ_عد تشغيل الأغنية"
+
+#: ../utils/gpilotd-client.c:43
+#, fuzzy
+msgid "Set user id and name"
+msgstr "انتقاء اسم حفظ القاعدة"
+
+#: ../utils/gpilotd-client.c:44
+msgid "ID for the PDA"
+msgstr ""
+
+#: ../utils/gpilotd-client.c:45
+#, fuzzy
+msgid "Install file"
+msgstr "فشل التثبيت"
+
+#: ../utils/gpilotd-client.c:45
+msgid "FILE"
+msgstr "FILE"
+
+#: ../utils/gpilotd-client.c:46
+#, fuzzy
+msgid "Restore directory"
+msgstr "دليل المستخدمين"
+
+#: ../utils/gpilotd-client.c:46
+msgid "DIRECTORY"
+msgstr "DIRECTORY"
+
+#: ../utils/gpilotd-client.c:47
+#, fuzzy
+msgid "Run conduit"
+msgstr "شغّل أمر"
+
+#: ../utils/gpilotd-client.c:47 ../utils/gpilotdcm-client.c:27
+msgid "CONDUIT"
+msgstr ""
+
+#: ../utils/gpilotd-client.c:48
+#, fuzzy
+msgid "Username to set"
+msgstr "اسم المستخدم خال"
+
+#: ../utils/gpilotd-client.c:48
+#, fuzzy
+msgid "USERNAME"
+msgstr "المستخدم"
+
+#: ../utils/gpilotd-client.c:49
+#, fuzzy
+msgid "Monitor the specified PDA's actions"
+msgstr "اذهب إلى موقع محدد"
+
+#: ../utils/gpilotd-client.c:50
+#, fuzzy
+msgid "Monitor all PDAs"
+msgstr "شلالات فيكتوريا"
+
+#: ../utils/gpilotd-client.c:51
+msgid "list PDAs by login (all for all pilots)"
+msgstr ""
+
+#: ../utils/gpilotd-client.c:51
+#, fuzzy
+msgid "LOGIN"
+msgstr "وصلة"
+
+#: ../utils/gpilotd-client.c:52
+msgid "Specify PDA to operate on (defaults to MyPDA)"
+msgstr ""
+
+#: ../utils/gpilotd-client.c:52
+#, fuzzy
+msgid "PILOTNAME"
+msgstr "PROFILENAME"
+
+#: ../utils/gpilotd-client.c:53
+msgid "Specify a cradle to operate on (defaults to Cradle0)"
+msgstr ""
+
+#: ../utils/gpilotd-client.c:53
+#, fuzzy
+msgid "CRADLENAME"
+msgstr "PROFILENAME"
+
+#: ../utils/gpilotd-client.c:54
+#, fuzzy
+msgid "List the specified PDA's bases"
+msgstr "اذهب إلى موقع محدد"
+
+#: ../utils/gpilotd-client.c:359 ../utils/gpilotdcm-client.c:106
+#, c-format
+msgid ""
+"\n"
+"BEWARE!!\n"
+"This is a tool for certain parts of the gnome-pilot package.\n"
+"Unless you know what you're doing, don't use this tool."
+msgstr ""
+
+#: ../utils/gpilotdcm-client.c:26
+#, fuzzy
+msgid "lists available conduits"
+msgstr "سرد الحسابات المتوفرة"
+
+#: ../utils/gpilotdcm-client.c:27
+#, fuzzy
+msgid "conduit to operate on"
+msgstr "نمط العملية:"
+
+#: ../utils/gpilotdcm-client.c:28
+#, fuzzy
+msgid "list all attributes"
+msgstr "تحرير صفات القناة"
+
+#: ../utils/gpilotdcm-client.c:29
+#, fuzzy
+msgid "specify PDA to operate on"
+msgstr "حدّد عنوان للملاحظة"
+
+#: ../utils/gpilotdcm-client.c:29
+#, fuzzy
+msgid "PDA_ID"
+msgstr "PDA"
+
+#: ../utils/gpilotdcm-client.c:30
+#, fuzzy
+msgid "list attributes"
+msgstr "اعرض الخواص"
+
+#: ../utils/gpilotdcm-client.c:31
+#, fuzzy
+msgid "list available conduits and their state"
+msgstr "سرد الحسابات المتوفرة"
+
+#: ../utils/gpilotdcm-client.c:32
+#, fuzzy
+msgid "enable specified conduit"
+msgstr "افتح ملف من موقع مخصّص"
+
+#: ../utils/gpilotdcm-client.c:33
+#, fuzzy
+msgid "disable specified conduit"
+msgstr "عطّل إجبار الإنهاء"
+
+#: ../utils/gpilotdcm-client.c:34
+msgid "enable, and set firstsync to slow"
+msgstr ""
+
+#: ../utils/gpilotdcm-client.c:35
+msgid "instantiate and destroy the conduit"
+msgstr ""
+
+#, fuzzy
+#~ msgid "PilotSync"
+#~ msgstr "كوّم"

@@ -1,0 +1,77 @@
+/* gnome-pilot-conduit-standard.gob
+ * Copyright (C) 1999-2001 Free Software Foundation
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authors: Eskil Heyn Olsen
+ *          Johnathan Blandford
+ *
+ */
+
+%h{
+#include <gnome.h>
+#include "gnome-pilot-conduit.h"
+#include "gnome-pilot-dbinfo.h"
+%}
+
+%{
+#include <gnome.h>
+#include "gnome-pilot-conduit-backup.h"
+#include "gnome-pilot-conduit-backup-private.h"
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <utime.h>
+#include <pi-file.h>
+%}
+
+class Gnome:Pilot:Conduit:Standard from Gnome:Pilot:Conduit {
+        public char *db_name;
+        argument (CONSTRUCT) POINTER (type char*) db_name (export) stringlink;
+
+	public guint32 creator_id;
+	argument (CONSTRUCT) INT creator_id (export) link;
+
+	public gboolean slow;
+	argument (CONSTRUCT) BOOLEAN slow (export) link;
+
+	public GtkObject*
+	new (char *db_name, guint32 creator_id, GPilotPilot *pilot) {
+		GnomePilotConduitStandard *ret = SELF (gtk_object_new (TYPE_SELF, 
+								       "GnomePilotConduit::pilot", pilot, 
+								       NULL));
+		self_set_creator_id (ret, creator_id);
+		self_set_db_name (ret, db_name);
+		return GTK_OBJECT (ret);
+	}
+
+	signal last INT (POINTER)
+	int copy_to_pilot (self, GnomePilotDBInfo *dbinfo (check null)) { }
+
+	signal last INT (POINTER)
+	int copy_from_pilot (self, GnomePilotDBInfo *dbinfo (check null)) { }
+
+	signal last INT (POINTER)
+	int merge_to_pilot (self, GnomePilotDBInfo *dbinfo (check null)) { }
+
+	signal last INT (POINTER)
+	int merge_from_pilot (self, GnomePilotDBInfo *dbinfo (check null)) { }
+
+	signal last INT (POINTER)
+	int synchronize (self, GnomePilotDBInfo *dbinfo (check null)) { }
+}
+
+

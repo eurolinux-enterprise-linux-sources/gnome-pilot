@@ -1,0 +1,2205 @@
+# Swedish messages for gnome-pilot.
+# Copyright (C) 1999-2008 Free Software Foundation, Inc.
+# Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008.
+# Tomas Ögren <stric@ing.umu.se>, 1999.
+# Martin Norbäck <d95mback@dtek.chalmers.se>, 2000, 2001.
+# Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004.
+# Richard Hult <rhult@codefactory.se>, 2001.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-pilot\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-07-27 19:08+0200\n"
+"PO-Revision-Date: 2008-07-27 19:09+0100\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:1
+msgid "Pilot Applet"
+msgstr "Pilot-panelprogram"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:2
+msgid "Synchronize your data on PalmOS devices"
+msgstr "Synkronisera ditt data på PalmOS-enheter"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:3
+msgid "Utility"
+msgstr "Verktyg"
+
+#: ../applet/pilot-applet.glade.h:1
+#: ../capplet/gpilotd-capplet.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: ../applet/pilot-applet.glade.h:2
+msgid "Choose PDA"
+msgstr "Välj handdator"
+
+#: ../applet/pilot-applet.glade.h:3
+msgid "GNOME PilotSync Properties"
+msgstr "GNOME PilotSync-egenskaper"
+
+#: ../applet/pilot-applet.glade.h:4
+msgid "Restore PDA"
+msgstr "Återställ handdator"
+
+#: ../applet/pilot-applet.glade.h:5
+msgid "_Directory"
+msgstr "_Katalog"
+
+#: ../applet/pilot-applet.glade.h:6
+msgid "_Display notices"
+msgstr "_Visa notiser"
+
+#: ../applet/pilot-applet.glade.h:7
+msgid "_Execute when clicked"
+msgstr "_Kör vid klick"
+
+#: ../applet/pilot-applet.glade.h:8
+msgid "_PDA ID"
+msgstr "_Handdator-id"
+
+#: ../applet/pilot-applet.glade.h:9
+msgid "_Sync cradle"
+msgstr "_Synkroniseringsvagga"
+
+#: ../applet/pilot-applet.glade.h:10
+msgid "gnome-pilot progress"
+msgstr "gnome-pilot-förlopp"
+
+#: ../applet/pilot.c:168
+#, c-format
+msgid "%s Synchronizing"
+msgstr "%s synkroniserar"
+
+#: ../applet/pilot.c:173
+msgid "Database %v of %u"
+msgstr "Databas %v av %u"
+
+#: ../applet/pilot.c:267
+#, c-format
+msgid "Request %ld has been completed\n"
+msgstr "Begäran %ld är klar\n"
+
+#: ../applet/pilot.c:289
+#, c-format
+msgid "%s Synchronizing : %s"
+msgstr "%s synkroniserar: %s"
+
+#: ../applet/pilot.c:294
+#, c-format
+msgid "%s: Started\n"
+msgstr "%s: startar\n"
+
+#: ../applet/pilot.c:309
+#, c-format
+msgid "%s Finished : %s"
+msgstr "%s klar: %s"
+
+#: ../applet/pilot.c:314
+#, c-format
+msgid "%s: Ended\n"
+msgstr "%s: avslutad\n"
+
+#: ../applet/pilot.c:340
+msgid "%v of %u records"
+msgstr "%v av %u poster"
+
+#: ../applet/pilot.c:419
+msgid ""
+"PDA is currently synchronizing.\n"
+"Please wait for it to finish."
+msgstr ""
+"Handdatorn synkroniserar nu.\n"
+"Vänta tills den är klar."
+
+#: ../applet/pilot.c:422
+msgid "Not connected. Please restart daemon."
+msgstr "Inte ansluten. Var vänlig och starta om demonen."
+
+#: ../applet/pilot.c:424
+msgid ""
+"Not connected to gpilotd.\n"
+"Please restart daemon."
+msgstr ""
+"Inte uppkopplad mot gpilotd.\n"
+"Var vänlig och starta om demonen."
+
+#: ../applet/pilot.c:442
+msgid "gnome-pilot applet"
+msgstr "gnome-pilot-panelprogram"
+
+#: ../applet/pilot.c:444
+msgid "Copyright 2000-2006 Free Software Foundation, Inc."
+msgstr "Copyright 2000-2006 Free Software Foundation, Inc."
+
+#: ../applet/pilot.c:445
+msgid "A PalmOS PDA monitor.\n"
+msgstr "En övervakare för PalmOS-handdatorer.\n"
+
+#: ../applet/pilot.c:541
+#: ../applet/pilot.c:567
+#, c-format
+msgid "There was an error displaying help: %s"
+msgstr "Det inträffade ett fel vid visning av hjälp: %s"
+
+#: ../applet/pilot.c:605
+#, c-format
+msgid "cancelling %d"
+msgstr "avbryter %d"
+
+#: ../applet/pilot.c:657
+#, c-format
+msgid "Restoring %s"
+msgstr "Återställer %s"
+
+#: ../applet/pilot.c:699
+msgid "No directory to restore from."
+msgstr "Ingen katalog att återställa från."
+
+#: ../applet/pilot.c:707
+msgid ""
+"Press synchronize on the cradle to restore\n"
+" or cancel the operation."
+msgstr ""
+"Tryck synkroniseringsknappen på vaggan för att återställa\n"
+" eller avbryta operationen."
+
+#: ../applet/pilot.c:716
+msgid "Restore request failed"
+msgstr "Återställningsbegäran misslyckades"
+
+#: ../applet/pilot.c:754
+msgid ""
+"PDA sync is currently in progress.\n"
+"Are you sure you want to restart daemon?"
+msgstr ""
+"Synkronisering av handdator pågår.\n"
+"Är du säker på att du vill starta om demonen?"
+
+#: ../applet/pilot.c:764
+#: ../applet/pilot.c:1340
+msgid "Trying to connect to the GnomePilot Daemon"
+msgstr "Försöker att ansluta till GnomePilot-demonen"
+
+#: ../applet/pilot.c:780
+msgid "There's no last sync on record."
+msgstr "Det finns ingen senaste synkronisering sparad."
+
+#. ensure the label strings are extracted by intltool.  This list of
+#. * strings should match the list in the menu_template below
+#.
+#: ../applet/pilot.c:803
+msgid "Restore..."
+msgstr "Återställ..."
+
+#: ../applet/pilot.c:803
+msgid "Restart"
+msgstr "Starta om"
+
+#: ../applet/pilot.c:803
+msgid "Last log..."
+msgstr "Senaste logg..."
+
+#: ../applet/pilot.c:804
+msgid "Preferences..."
+msgstr "Inställningar..."
+
+#: ../applet/pilot.c:804
+msgid "Help"
+msgstr "Hjälp"
+
+#: ../applet/pilot.c:804
+msgid "About"
+msgstr "Om"
+
+#: ../applet/pilot.c:826
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: ../applet/pilot.c:828
+msgid "Pause Daemon"
+msgstr "Pausa demonen"
+
+#: ../applet/pilot.c:848
+msgid "Daemon paused..."
+msgstr "Demonen pausad..."
+
+#: ../applet/pilot.c:855
+#: ../applet/pilot.c:1009
+msgid "Ready to synchronize"
+msgstr "Klar att synkronisera"
+
+#: ../applet/pilot.c:990
+msgid "Not connected. Restart daemon to reconnect"
+msgstr "Inte ansluten. Starta om demonen för att koppla upp"
+
+#: ../applet/pilot.c:1174
+#, c-format
+msgid "Execution of %s failed"
+msgstr "Körning av %s misslyckades"
+
+#.
+#. if (strstr (file_type (ptr),"text")) {
+#. if (file_size (ptr)>properties.text_limit)
+#. g_message ("installing textfile as Doc (not implemented)");
+#. else
+#. g_message ("installing textfile as Memo (not implemented)");
+#. }
+#.
+#: ../applet/pilot.c:1300
+#, c-format
+msgid "installing \"%s\" to \"%s\""
+msgstr "installerar \"%s\" i \"%s\""
+
+#: ../applet/pilot.c:1310
+msgid "unknown dnd type"
+msgstr "okänd dnd-typ"
+
+#: ../applet/pilot.c:1318
+msgid "destroy gpilot-applet"
+msgstr "förstör gpilot-applet"
+
+#: ../applet/pilot.c:1403
+msgid "Cannot find pilot-applet.glade"
+msgstr "Kan inte hitta pilot-applet.glade"
+
+#: ../applet/pilot.schemas.in.h:1
+msgid "Command to execute when the applet is clicked"
+msgstr "Kommando att köra när panelprogrammet klickas på"
+
+#: ../applet/pilot.schemas.in.h:2
+msgid "Display notices in popup windows"
+msgstr "Visa notiser i popupfönster"
+
+#: ../capplet/gnome-pilot-capplet.c:215
+#: ../capplet/gpilotd-capplet.glade.h:89
+msgid "gnome-pilot Settings"
+msgstr "Inställningar för gnome-pilot"
+
+#: ../capplet/gnome-pilot-capplet.c:383
+#: ../capplet/gnome-pilot-capplet.c:463
+msgid "Name"
+msgstr "Namn"
+
+#: ../capplet/gnome-pilot-capplet.c:385
+#: ../utils/gpilotd-client.c:44
+msgid "ID"
+msgstr "Id"
+
+#: ../capplet/gnome-pilot-capplet.c:387
+msgid "Owner"
+msgstr "Ägare"
+
+#: ../capplet/gnome-pilot-capplet.c:465
+msgid "Type"
+msgstr "Typ"
+
+#: ../capplet/gnome-pilot-capplet.c:571
+msgid "Conduit"
+msgstr "Komponent"
+
+#: ../capplet/gnome-pilot-capplet.c:573
+msgid "Sync Action"
+msgstr "Synkroniseringsåtgärd"
+
+#: ../capplet/gnome-pilot-capplet.c:783
+#, c-format
+msgid "Are you sure you want to delete PDA `%s'?"
+msgstr "Är du säker på att du vill ta bort handdatorn \"%s\"?"
+
+#: ../capplet/gnome-pilot-capplet.c:807
+msgid "_Edit this PDA..."
+msgstr "_Redigera denna handdator..."
+
+#: ../capplet/gnome-pilot-capplet.c:808
+msgid "Edit the currently selected PDA"
+msgstr "Redigera den valda handdatorn"
+
+#: ../capplet/gnome-pilot-capplet.c:810
+msgid "_Delete this PDA"
+msgstr "Ta _bort denna handdator"
+
+#: ../capplet/gnome-pilot-capplet.c:811
+msgid "Delete the currently selected PDA"
+msgstr "Ta bort den valda handdatorn"
+
+#: ../capplet/gnome-pilot-capplet.c:944
+#, c-format
+msgid "Are you sure you want to delete %s device?"
+msgstr "Är du säker på att du vill ta bort enheten %s?"
+
+#: ../capplet/gnome-pilot-capplet.c:965
+msgid "_Edit this device..."
+msgstr "_Redigera denna enhet..."
+
+#: ../capplet/gnome-pilot-capplet.c:966
+msgid "Edit the currently selected device"
+msgstr "Redigera den valda enheten"
+
+#: ../capplet/gnome-pilot-capplet.c:968
+msgid "_Delete this device"
+msgstr "Ta _bort denna enhet"
+
+#: ../capplet/gnome-pilot-capplet.c:969
+msgid "Delete the currently selected device"
+msgstr "Ta bort den valda enheten"
+
+#: ../capplet/gnome-pilot-capplet.c:1131
+#, c-format
+msgid "Unable to instantiate %s conduit."
+msgstr "Kunde inte instantiera komponenten %s."
+
+#: ../capplet/gnome-pilot-capplet.c:1171
+msgid "_Enable this conduit"
+msgstr "_Aktivera denna komponent"
+
+#: ../capplet/gnome-pilot-capplet.c:1172
+msgid "Disable the currently selected conduit"
+msgstr "Inaktivera vald komponent"
+
+#: ../capplet/gnome-pilot-capplet.c:1174
+msgid "_Disable this conduit"
+msgstr "I_naktivera denna komponent"
+
+#: ../capplet/gnome-pilot-capplet.c:1175
+msgid "Enable the currently selected conduit"
+msgstr "Aktivera vald komponent"
+
+#: ../capplet/gnome-pilot-capplet.c:1180
+#: ../capplet/gpilotd-capplet.glade.h:85
+msgid "_Settings..."
+msgstr "_Inställningar..."
+
+#: ../capplet/gnome-pilot-capplet.c:1181
+msgid "Modify the currently selected conduit's settings"
+msgstr "Ändra inställningarna för den valda komponenten"
+
+#. < 0) {
+#: ../capplet/gnome-pilot-cdialog.c:210
+msgid "Unable to create PDA settings window. Incorrect conduit configuration."
+msgstr "Kunde inte skapa handdatorinställingsfönster. Felaktig komponentkonfiguration."
+
+#: ../capplet/gnome-pilot-druid.c:488
+msgid ""
+"Setup did not complete and settings will not\n"
+"be saved. Are you sure you want to quit?"
+msgstr ""
+"Inställningsproceduren slutfördes inte och inställningarna kommer inte\n"
+"att sparas. Är du säker på att du vill avsluta?"
+
+#: ../capplet/gnome-pilot-druid.c:611
+#, c-format
+msgid ""
+"About to send the following data to the PDA.\n"
+"Owner Name: %s\n"
+"PDA ID: %d\n"
+"Please put PDA in %s (%s) and press HotSync button."
+msgstr ""
+"Föjande data kommer att skickas till handdatorn.\n"
+"Användarnamn: %s\n"
+"Id: %d\n"
+"Sätt handdatorn i %s (%s) och tryck på HotSync-knappen."
+
+#: ../capplet/gnome-pilot-druid.c:636
+#, c-format
+msgid ""
+"About to retrieve Owner Name and ID from the PDA.\n"
+"Please put PDA in %s (%s) and press HotSync button."
+msgstr ""
+"Hämtar ägarens namn och id från handdatorn.\n"
+"Sätt handdatorn i %s (%s) och tryck på HotSync-knappen."
+
+#: ../capplet/gnome-pilot-druid.c:652
+msgid "Failed sending request to gpilotd"
+msgstr "Misslyckades med att skicka begäran till gpilotd"
+
+#: ../capplet/gnome-pilot-druid.c:803
+#, c-format
+msgid ""
+"Successfully retrieved Owner Name and ID from PDA.\n"
+"Owner Name: %s\n"
+"PDA ID: %d"
+msgstr ""
+"Lyckades med hämtning av ägarens namn och id från handdatorn.\n"
+"Ägarens namn: %s\n"
+"Id: %d"
+
+#: ../capplet/gnome-pilot-pdialog.c:432
+#, c-format
+msgid "Please put PDA in %s (%s) and press HotSync button or cancel the operation."
+msgstr "Var vänlig och sätt handdatorn i %s (%s) och tryck HotSync-knappen eller avbryt operationen."
+
+#: ../capplet/gnome-pilot-pdialog.c:467
+msgid "The request to get PDA ID failed"
+msgstr "Misslyckades med att hämta id från handdatorn"
+
+#: ../capplet/gnome-pilot-pdialog.c:511
+msgid "The request to set PDA ID failed"
+msgstr "Misslyckades med att ställa in id på handdatorn"
+
+#: ../capplet/gpilotd-capplet.glade.h:2
+msgid "/dev/pilot"
+msgstr "/dev/pilot"
+
+#: ../capplet/gpilotd-capplet.glade.h:3
+msgid "/dev/ttyS0"
+msgstr "/dev/ttyS0"
+
+#: ../capplet/gpilotd-capplet.glade.h:4
+msgid "/dev/ttyS1"
+msgstr "/dev/ttyS1"
+
+#: ../capplet/gpilotd-capplet.glade.h:5
+msgid "/dev/ttyUSB0"
+msgstr "/dev/ttyUSB0"
+
+#: ../capplet/gpilotd-capplet.glade.h:6
+msgid "/dev/ttyUSB1"
+msgstr "/dev/ttyUSB1"
+
+#: ../capplet/gpilotd-capplet.glade.h:7
+msgid "<b>Conduit Actions</b>"
+msgstr "<b>Komponentåtgärder</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:8
+msgid "<b>Conduit Settings</b>"
+msgstr "<b>Komponentinställningar</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:9
+msgid "<b>PDA Attributes</b>"
+msgstr "<b>Handdatorattribut</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:10
+msgid "<b>PDA Identification</b>"
+msgstr "<b>Handdatoridentifikation</b>"
+
+#: ../capplet/gpilotd-capplet.glade.h:11
+msgid ""
+"<span weight=\"bold\" size=\"larger\">Which device should be used for this operation?</span>\n"
+"\n"
+"Since you have more than one connection device defined for this computer you need to identify which one is to be used for this operation."
+msgstr ""
+"<span weight=\"bold\" size=\"larger\">Vilken enhet skall användas för denna operation?</span>\n"
+"\n"
+"Eftersom du har fler än en anslutningsenhet angiven för denna dator behöver du identifiera vilken som skall användas för denna operation."
+
+#: ../capplet/gpilotd-capplet.glade.h:14
+msgid "BIG5"
+msgstr "BIG5"
+
+#: ../capplet/gpilotd-capplet.glade.h:15
+msgid "CP1252"
+msgstr "CP1252"
+
+#: ../capplet/gpilotd-capplet.glade.h:16
+msgid "C_harset of PDA:"
+msgstr "_Teckenuppsättning på handdatorn:"
+
+#: ../capplet/gpilotd-capplet.glade.h:17
+msgid "C_onduits"
+msgstr "Kom_ponenter"
+
+#: ../capplet/gpilotd-capplet.glade.h:18
+msgid "Choose Device"
+msgstr "Välj enhet"
+
+#: ../capplet/gpilotd-capplet.glade.h:19
+msgid "Choose this option if you have used sync software before, even on another computer"
+msgstr "Välj detta alternativ om du har använt synkroniseringsprogramvara tidigare, även på en annan dator"
+
+#: ../capplet/gpilotd-capplet.glade.h:20
+msgid "Conduit Settings"
+msgstr "Komponentinställningar"
+
+#: ../capplet/gpilotd-capplet.glade.h:21
+msgid ""
+"Congratulations, gnome-pilot is configured!\n"
+"\n"
+"You can change gnome-pilot settings at any time from \n"
+"PilotLink and Conduits tabs in control center.\n"
+"\n"
+"You can monitor syncing of gnome-pilot by adding \n"
+"PilotLink applet to your panel."
+msgstr ""
+"Gratulerar, du har nu konfigurerat gnome-pilot!\n"
+"\n"
+"Du kan ändra inställningarna när som helst \n"
+"i PilotLink- och Komponentinställningarna i kontrollpanelen.\n"
+"\n"
+"Du kan övervaka synkronisering av gnome-pilot genom att \n"
+"lägga till PilotLink-panelprogrammet till din panel."
+
+#: ../capplet/gpilotd-capplet.glade.h:28
+msgid "D_isable"
+msgstr "Ina_ktivera"
+
+#: ../capplet/gpilotd-capplet.glade.h:29
+msgid "De_vices"
+msgstr "En_heter"
+
+#: ../capplet/gpilotd-capplet.glade.h:30
+msgid "Description:"
+msgstr "Beskrivning:"
+
+#: ../capplet/gpilotd-capplet.glade.h:31
+msgid "Device Settings"
+msgstr "Enhetsinställningar"
+
+#: ../capplet/gpilotd-capplet.glade.h:32
+msgid "Device:"
+msgstr "Enhet:"
+
+#: ../capplet/gpilotd-capplet.glade.h:33
+#: ../capplet/util.c:74
+#: ../capplet/util.c:438
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+#: ../capplet/gpilotd-capplet.glade.h:34
+msgid "Enter Owner Name you want stored on your PDA"
+msgstr "Ange ägarens namn som du vill lagra i din handdator"
+
+#: ../capplet/gpilotd-capplet.glade.h:35
+msgid "GB18030"
+msgstr "GB18030"
+
+#: ../capplet/gpilotd-capplet.glade.h:36
+msgid "GBK"
+msgstr "GBK"
+
+#: ../capplet/gpilotd-capplet.glade.h:37
+msgid "Get the Owner's name and ID from the PDA"
+msgstr "Hämta ägarens namn och id från handdatorn"
+
+#: ../capplet/gpilotd-capplet.glade.h:38
+msgid "I_rDA"
+msgstr "I_rDA"
+
+#: ../capplet/gpilotd-capplet.glade.h:39
+msgid "Initial Sync"
+msgstr "Första synkronisering"
+
+#: ../capplet/gpilotd-capplet.glade.h:40
+msgid "Net_work"
+msgstr "Nät_verk"
+
+#: ../capplet/gpilotd-capplet.glade.h:41
+#: ../capplet/util.c:115
+msgid "None"
+msgstr "Ingen"
+
+#: ../capplet/gpilotd-capplet.glade.h:42
+msgid "O_wner:"
+msgstr "Ä_gare:"
+
+#: ../capplet/gpilotd-capplet.glade.h:43
+msgid "Owner Name and ID to set on the PDA"
+msgstr "Ägarens namn och id att ställa in på handdatorn"
+
+#: ../capplet/gpilotd-capplet.glade.h:44
+msgid "Owner:"
+msgstr "Ägare:"
+
+#: ../capplet/gpilotd-capplet.glade.h:45
+msgid "PDA Attributes"
+msgstr "Handdatorattribut"
+
+#: ../capplet/gpilotd-capplet.glade.h:46
+msgid "PDA Identification"
+msgstr "Handdatoridentifikation"
+
+#: ../capplet/gpilotd-capplet.glade.h:47
+msgid "PDA Settings"
+msgstr "Handdatorinställningar"
+
+#: ../capplet/gpilotd-capplet.glade.h:48
+msgid "P_DA:"
+msgstr "Ha_nddator:"
+
+#: ../capplet/gpilotd-capplet.glade.h:49
+msgid "Port"
+msgstr "Port"
+
+#: ../capplet/gpilotd-capplet.glade.h:50
+msgid "S_peed:"
+msgstr "Hasti_ghet:"
+
+#: ../capplet/gpilotd-capplet.glade.h:51
+msgid "Send the Owner's name and ID to the PDA, overwriting any existing identity"
+msgstr "Skicka ägarens namn och id till handdatorn, skriv över eventuellt existerande identitet"
+
+#: ../capplet/gpilotd-capplet.glade.h:52
+msgid "Set the character set used on your PDA."
+msgstr "Ställ in teckenuppsättning som används på din handdator."
+
+#: ../capplet/gpilotd-capplet.glade.h:53
+msgid "Set the root directory for all PDA files to be stored."
+msgstr "Ställ in rotkatalogen där alla handdatorfiler lagras."
+
+#: ../capplet/gpilotd-capplet.glade.h:54
+msgid "Success"
+msgstr "Framgång"
+
+#: ../capplet/gpilotd-capplet.glade.h:55
+msgid "The name for your PDA.  It is only used for identification."
+msgstr "Namnet på din handdator. Det används enbart för identifikation."
+
+#: ../capplet/gpilotd-capplet.glade.h:56
+msgid "This integer ID identifies your PDA and must be unique between different PDAs that you use."
+msgstr "Detta heltalsid används för att identifiera din handdator och måste vara unikt för varje handdator du använder."
+
+#: ../capplet/gpilotd-capplet.glade.h:57
+msgid "Ti_meout:"
+msgstr "Tids_gräns:"
+
+#: ../capplet/gpilotd-capplet.glade.h:58
+msgid "Welcome to gnome-pilot!"
+msgstr "Välkommen till gnome-pilot!"
+
+#: ../capplet/gpilotd-capplet.glade.h:59
+msgid ""
+"You seem to be running gnome-pilot for the first time.\n"
+"The following steps will setup gnome-pilot for syncing. \n"
+"You can always change any options later from\n"
+"PilotLink panel in Gnome Control Center.\n"
+"\n"
+"Press 'Forward' to continue.\n"
+"Press 'Cancel' to exit."
+msgstr ""
+"Det verkar som om du kör gnome-pilot för första gången.\n"
+"Följande steg kommer att ställa in gnome-pilot för synkronisering.\n"
+"Du kan alltid ändra alla inställningar senare från PilotLink-panelen\n"
+"i GNOME-kontrollpanelen.\n"
+"\n"
+"Tryck \"Framåt\" för att fortsätta.\n"
+"Tryck \"Avbryt\" för att avsluta."
+
+#: ../capplet/gpilotd-capplet.glade.h:66
+msgid "_Action:"
+msgstr "Å_tgärd:"
+
+#: ../capplet/gpilotd-capplet.glade.h:67
+msgid "_Add..."
+msgstr "_Lägg till..."
+
+#: ../capplet/gpilotd-capplet.glade.h:68
+msgid "_Bluetooth"
+msgstr "_Bluetooth"
+
+#: ../capplet/gpilotd-capplet.glade.h:69
+msgid "_Delete"
+msgstr "_Ta bort"
+
+#: ../capplet/gpilotd-capplet.glade.h:70
+msgid "_Device:"
+msgstr "_Enhet:"
+
+#: ../capplet/gpilotd-capplet.glade.h:71
+msgid "_Edit..."
+msgstr "R_edigera..."
+
+#: ../capplet/gpilotd-capplet.glade.h:72
+msgid "_Enable"
+msgstr "_Aktivera"
+
+#: ../capplet/gpilotd-capplet.glade.h:73
+msgid "_Get from PDA"
+msgstr "_Hämta från handdator"
+
+#: ../capplet/gpilotd-capplet.glade.h:74
+msgid "_IrDA"
+msgstr "_IrDA"
+
+#: ../capplet/gpilotd-capplet.glade.h:75
+msgid "_Local folder:"
+msgstr "_Lokal mapp:"
+
+#: ../capplet/gpilotd-capplet.glade.h:76
+msgid "_Name of PDA:"
+msgstr "_Namn på handdatorn:"
+
+#: ../capplet/gpilotd-capplet.glade.h:77
+msgid "_Name:"
+msgstr "_Namn:"
+
+#: ../capplet/gpilotd-capplet.glade.h:78
+msgid "_No, I've never used sync software with this PDA before."
+msgstr "_Nej, jag har aldrig tidigare använt synkroniseringsprogramvara med denna handdator."
+
+#: ../capplet/gpilotd-capplet.glade.h:79
+msgid "_One time action:"
+msgstr "E_ngångsåtgärd:"
+
+#: ../capplet/gpilotd-capplet.glade.h:80
+msgid "_Owner:"
+msgstr "_Ägare:"
+
+#: ../capplet/gpilotd-capplet.glade.h:81
+msgid "_PDA ID:"
+msgstr "_Handdator-id:"
+
+#: ../capplet/gpilotd-capplet.glade.h:82
+msgid "_PDAs"
+msgstr "_Handdatorer"
+
+#: ../capplet/gpilotd-capplet.glade.h:83
+msgid "_Send to PDA"
+msgstr "_Skicka till handdator"
+
+#: ../capplet/gpilotd-capplet.glade.h:84
+msgid "_Serial"
+msgstr "_Seriell"
+
+#: ../capplet/gpilotd-capplet.glade.h:86
+msgid "_Type:"
+msgstr "_Typ:"
+
+#: ../capplet/gpilotd-capplet.glade.h:87
+msgid "_USB"
+msgstr "_USB"
+
+#: ../capplet/gpilotd-capplet.glade.h:88
+msgid "_Yes, I've used sync software with this PDA before."
+msgstr "_Ja, jag har tidigare använt synkroniseringprogramvara med denna handdator."
+
+#: ../capplet/gpilotd-control-applet.c:81
+msgid "Start druid only"
+msgstr "Starta bara druiden"
+
+#: ../capplet/gpilotd-control-applet.c:103
+msgid "Error initializing gpilotd capplet"
+msgstr "Fel vid initiering av gpilotd-capplet"
+
+#: ../capplet/gpilotd-control-applet.c:114
+#: ../capplet/gpilotd-control-applet.c:115
+msgid "Error loading PDA state, aborting"
+msgstr "Fel vid inläsning av handdatorns tillstånd, avbryter"
+
+#: ../capplet/gpilotd-control-applet.c:122
+#: ../capplet/gpilotd-control-applet.c:123
+msgid "Cannot connect to the GnomePilot Daemon"
+msgstr "Kan inte ansluta till GnomePilot-demonen"
+
+#: ../capplet/gpilotd-control-applet.c:132
+msgid "Cannot run druid if PDAs or devices already configured"
+msgstr "Kan inte köra druiden om handdatorer eller vaggor redan är konfigurerade"
+
+#: ../capplet/gpilotd-control-applet.desktop.in.in.h:1
+msgid "Configure PalmOS devices"
+msgstr "Konfigurera PalmOS-enheter"
+
+#: ../capplet/gpilotd-control-applet.desktop.in.in.h:2
+msgid "PalmOS Devices"
+msgstr "PalmOS-enheter"
+
+#: ../capplet/util.c:81
+#: ../capplet/util.c:440
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: ../capplet/util.c:238
+msgid "You must have at least one device setup"
+msgstr "Du måste ha minst en enhetsinställning"
+
+#: ../capplet/util.c:411
+msgid "Synchronize"
+msgstr "Synkronisera"
+
+#: ../capplet/util.c:412
+msgid "Copy from PDA"
+msgstr "Kopiera från handdator"
+
+#: ../capplet/util.c:413
+msgid "Copy to PDA"
+msgstr "Kopiera till handdator"
+
+#: ../capplet/util.c:414
+msgid "Merge from PDA"
+msgstr "Kombinera från handdator"
+
+#: ../capplet/util.c:415
+msgid "Merge to PDA"
+msgstr "Kombinera till handdator"
+
+#: ../capplet/util.c:418
+msgid "Use conduit settings"
+msgstr "Använd komponentinställningarna"
+
+#: ../capplet/util.c:426
+msgid "USB"
+msgstr "USB"
+
+#: ../capplet/util.c:427
+msgid "IrDA"
+msgstr "IrDA"
+
+#: ../capplet/util.c:428
+msgid "Network"
+msgstr "Nätverk"
+
+#: ../capplet/util.c:429
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#: ../capplet/util.c:430
+msgid "Serial"
+msgstr "Seriell"
+
+#: ../capplet/util.c:478
+msgid ""
+"The specified base directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+"Den valda katalogen existerar men har fel rättigheter.\n"
+"Ändra rättigheterna eller välj en annan katalog."
+
+#: ../capplet/util.c:483
+msgid ""
+"The specified base directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+"Den valda baskatalogen existerar men är ingen katalog.\n"
+"Gör den till en katalog eller välj en annan katalog"
+
+#: ../capplet/util.c:490
+msgid ""
+"It wasn't possible to create the specified base directory.\n"
+"Please verify the permitions on the specified path or choose another directory"
+msgstr ""
+"Kunde inte skapa vald baskatalog.\n"
+"Verifiera rättigheterna på sökvägen eller välj en annan katalog"
+
+#: ../capplet/util.c:495
+msgid ""
+"The path specified for the base directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+"Sökvägen till baskatalogen är ogiltig.\n"
+"Välj en annan katalog"
+
+#: ../capplet/util.c:523
+#, c-format
+msgid "`%s' is not a valid character set identifier.  Please enter a valid identifier or select from the available options."
+msgstr "\"%s\" är inte en giltig identifierare för teckenuppsättning.  Ange en giltig identifierare eller välj från de tillgängliga alternativen."
+
+#: ../capplet/util.c:647
+msgid "Device 'usb:' is only valid for devices of type USB"
+msgstr "Enheten \"usb:\" är endast giltig för enheter av USB-typ"
+
+#: ../capplet/util.c:658
+msgid "Read/Write permissions failed on"
+msgstr "Läs-/skrivrättigheter misslyckades på"
+
+#: ../capplet/util.c:660
+msgid "Check the permissions on the device and retry"
+msgstr "Kontrollera rättigheterna för enheten och försök igen"
+
+#: ../capplet/util.c:675
+#: ../gpilotd/gpilotd.c:1340
+#, c-format
+msgid "Failed to find directory %s or read file %s.  Check that usbfs or sysfs is mounted."
+msgstr "Misslyckades med att hitta katalogen %s eller läsa filen %s.  Kontrollera att usbfs eller sysfs är monterade."
+
+#: ../conduits/backup/backup_conduit.c:243
+msgid "Checking for removed databases"
+msgstr "Söker efter borttagna databaser"
+
+#. I18N note: this is printed when renaming a file %s
+#: ../conduits/backup/backup_conduit.c:250
+#, c-format
+msgid "Renaming %s"
+msgstr "Byter namn på %s"
+
+#. I18N note: this message follow a "Renaming %s". The
+#. %s is a file name
+#: ../conduits/backup/backup_conduit.c:257
+#, c-format
+msgid "to %s"
+msgstr "till %s"
+
+#: ../conduits/backup/backup_conduit.c:435
+#: ../conduits/backup/backup_conduit.c:439
+#, c-format
+msgid "%s not modified since last sync"
+msgstr "%s är inte modifierad sedan senaste synkroniseringen"
+
+#: ../conduits/backup/backup_conduit.c:451
+#: ../conduits/backup/backup_conduit.c:453
+#, c-format
+msgid "Making backup of %s"
+msgstr "Gör en säkerhetskopia av %s"
+
+#: ../conduits/backup/backup_conduit.c:460
+#: ../conduits/backup/backup_conduit.c:462
+#, c-format
+msgid "Could not create backup file %s"
+msgstr "Kunde inte skapa säkerhetskopia %s"
+
+#: ../conduits/backup/backup_conduit.c:736
+msgid "Collecting restore information..."
+msgstr "Samlar återställningsinformation..."
+
+#: ../conduits/backup/backup_conduit.c:860
+msgid "_Backup directory:"
+msgstr "Säkerhetskopie_katalog:"
+
+#: ../conduits/backup/backup_conduit.c:873
+msgid "Backup directory"
+msgstr "Säkerhetskopiekatalog"
+
+#: ../conduits/backup/backup_conduit.c:875
+msgid "O_nly backup changed bases"
+msgstr "Gör _bara säkerhetskopia på ändrade databaser"
+
+#: ../conduits/backup/backup_conduit.c:885
+msgid "Only backup changed bases"
+msgstr "Gör bara säkerhetskopia på ändrade databaser"
+
+#: ../conduits/backup/backup_conduit.c:887
+msgid "_Remove local base if deleted on pilot"
+msgstr "_Ta bort lokal databas om den är raderad på handdatorn"
+
+#: ../conduits/backup/backup_conduit.c:897
+msgid "Remove local base if deleted on pilot"
+msgstr "Ta bort lokal databas om den är raderad på handdatorn"
+
+#: ../conduits/backup/backup_conduit.c:899
+msgid "# of old backups to _keep"
+msgstr "antal gamla säkerhetskopior att _behålla"
+
+#: ../conduits/backup/backup_conduit.c:910
+msgid "# of old backups to keep"
+msgstr "antal gamla säkerhetskopior att behålla"
+
+#: ../conduits/backup/backup_conduit.c:948
+msgid ""
+"The specified backup directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+"Den valda katalogen för säkerhetskopior existerar men har fel rättigheter.\n"
+"Ändra rättigheterna eller välj en annan katalog"
+
+#: ../conduits/backup/backup_conduit.c:953
+msgid ""
+"The specified backup directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+"Den valda katalogen för säkerhetskopior existerar men är ingen katalog.\n"
+"Gör den till en katalog eller välj en annan katalog"
+
+#: ../conduits/backup/backup_conduit.c:960
+msgid ""
+"It wasn't possible to create the specified backup directory.\n"
+"Please verify the permissions on the specified path or choose another directory"
+msgstr ""
+"Kunde inte skapa angiven katalog för säkerhetskopior.\n"
+"Verifiera rättigheterna på angiven sökväg eller välj en annan katalog"
+
+#: ../conduits/backup/backup_conduit.c:965
+msgid ""
+"The path specified for the backup directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+"Angiven sökväg till katalogen för säkerhetskopior är ogiltig.\n"
+"Välj en annan katalog"
+
+#: ../conduits/file/file_conduit.c:243
+#: ../conduits/file/file_conduit.c:253
+#, c-format
+msgid "Install of %s failed"
+msgstr "Installation av %s misslyckades"
+
+#: ../conduits/file/file_conduit.c:290
+#, c-format
+msgid "Installing %s from %s..."
+msgstr "Installerar %s från %s..."
+
+#: ../conduits/file/file_conduit.c:292
+#, c-format
+msgid "Installing %s..."
+msgstr "Installerar %s..."
+
+#: ../conduits/file/gpilot_install_file.c:44
+msgid "Install immediately"
+msgstr "Installera med en gång"
+
+#: ../conduits/file/gpilot_install_file.c:45
+msgid "Install delayed"
+msgstr "Installera med fördröjning"
+
+#: ../conduits/file/gpilot_install_file.c:46
+msgid "PDA to install to"
+msgstr "Handdator att installera till"
+
+#: ../conduits/file/gpilot_install_file.c:46
+msgid "PDA"
+msgstr "Handdator"
+
+#: ../conduits/file/gpilot_install_file.c:118
+#: ../conduits/file/gpilot_install_file.c:119
+msgid "Unable to get PDA names"
+msgstr "Kan inte hämta namn från handdator"
+
+#: ../conduits/file/gpilot_install_file.c:158
+msgid "Following files failed :\n"
+msgstr "Följande filer misslyckades:\n"
+
+#: ../conduits/file/gpilot_install_file.c:170
+#, c-format
+msgid "Installing to %s:\n"
+msgstr "Installerar till %s:\n"
+
+#: ../conduits/file/gpilot_install_file.c:191
+msgid "No files to install"
+msgstr "Inga filer att installera"
+
+#: ../conduits/file/gpilot_install_file.c:194
+msgid ""
+"Press synchronize on the cradle to install\n"
+" or cancel the operation."
+msgstr ""
+"Tryck på synkroniseringsknappen på vaggan för att installera\n"
+" eller avbryt operationen."
+
+#: ../gpilotd/GNOME_Pilot_Daemon.server.in.in.h:1
+msgid "Gnome-Pilot daemon"
+msgstr "Gnome-Pilot-demon"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:136
+msgid "deleted PDA record modified locally, not deleting\n"
+msgstr "borttagen handdatorpost ändrad lokalt, tar inte bort\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:137
+msgid "deleted local record modified on PDA, not deleting\n"
+msgstr "borttagen lokal post ändrad på handdatorn, tar inte bort\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:138
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:142
+msgid "merge conflict, PDA and local record swapped\n"
+msgstr "kombineringskonflikt, handdatorpost och lokal post utbytta\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:139
+msgid "archive and change conflict, PDA and local record swapped\n"
+msgstr "arkiv och ändring är i konflikt, handdatorpost och lokal post utbytta\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:140
+msgid "archive and change conflict, local record sent to PDA\n"
+msgstr "arkiv och ändring är i konflikt, lokal post skickad till handdatorn\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:141
+msgid "archive and change conflict, PDA record saved locally\n"
+msgstr "arkiv och ändring är i konflikt, handdatorposten sparad lokalt\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:423
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:498
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:563
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:592
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:621
+msgid "Conduits initialization failed, aborting operation"
+msgstr "Komponentinitiering misslyckades, avbryter operationen"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:436
+msgid "Unable to delete all records in PDA database, aborting operation."
+msgstr "Kan inte ta bort alla poster i handdatorns databas, avbryter operationen."
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:447
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:1025
+msgid "Conduit did not return a record"
+msgstr "Komponenten returnerade inte en post"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:504
+msgid "Unable to delete all records in local database, aborting operation."
+msgstr "Kan inte ta bort alla poster i värddatorns databas, avbryter operationen."
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:1430
+msgid "Error in conduit, newly added record could not be found"
+msgstr "Fel i komponenten, den nya posten kan inte hittas"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:487
+msgid "Copy to PDA failed!"
+msgstr "Kopiering till handdatorn misslyckades!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:511
+msgid "Copy from PDA failed!"
+msgstr "Kopiering från handdatorn misslyckades!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:535
+msgid "Merge to PDA failed!"
+msgstr "Kombinering till handdatorn misslyckades!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:559
+msgid "Merge from PDA failed!"
+msgstr "Kombinering från handdatorn misslyckades!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:614
+msgid "Synchronization failed!"
+msgstr "Synkroniseringen misslyckades!"
+
+#: ../gpilotd/gnome-pilot-structures.c:286
+#, c-format
+msgid "Could not open device %s (%s): reason: \"%s\"."
+msgstr "Kunde inte öppna enheten %s (%s): anledning: \"%s\"."
+
+#: ../gpilotd/gnome-pilot-structures.c:290
+#, c-format
+msgid ""
+"GnomePilot could not open device %s (%s).\n"
+"Reason: \"%s\"."
+msgstr ""
+"GnomePilot kunde inte öppna enheten %s (%s).\n"
+"Anledning: \"%s\"."
+
+#: ../gpilotd/gnome-pilot-structures.c:449
+#, c-format
+msgid "Bluetooth Device [%s]: Unable to bind socket: err %d (check pilot-link was compiled with bluetooth support)"
+msgstr "Blåtandsenhet [%s]: Kunde inte binda uttag: fel %d (kontrollera om pilot-link byggdes med stöd för Bluetooth)"
+
+#: ../gpilotd/gnome-pilot-structures.c:459
+#, c-format
+msgid "Device [%s, %s]: Unable to bind socket: err %d"
+msgstr "Enhet [%s, %s]: Kunde inte binda uttag: fel %d"
+
+#: ../gpilotd/gnome-pilot-structures.c:539
+#: ../gpilotd/gnome-pilot-structures.c:590
+#: ../gpilotd/gnome-pilot-structures.c:620
+#: ../gpilotd/gnome-pilot-structures.c:648
+msgid "Unknown device type"
+msgstr "Okänd enhetstyp"
+
+#: ../gpilotd/gnome-pilot-structures.c:663
+msgid "Number of devices is configured to 0"
+msgstr "Antalet enheter är inställt till 0"
+
+#: ../gpilotd/gnome-pilot-structures.c:665
+msgid ""
+"No devices configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Inga enheter konfigurerade.\n"
+"Kör gpilotd-control-applet (använd gnomecc)\n"
+"för att konfigurera gnome-pilot."
+
+#: ../gpilotd/gnome-pilot-structures.c:686
+msgid "No accessible devices available"
+msgstr "Kommer inte åt några enheter"
+
+#: ../gpilotd/gnome-pilot-structures.c:701
+msgid "Number of PDAs is configured to 0"
+msgstr "Antal handdatorer är inställt till 0"
+
+#: ../gpilotd/gnome-pilot-structures.c:703
+msgid ""
+"No PDAs configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Inga handdatorer konfigurerade.\n"
+"Kör gpilotd-control-applet (använd gnomecc)\n"
+"för att konfigurera gnome-pilot."
+
+#: ../gpilotd/gnome-pilot-structures.c:764
+#: ../gpilotd/gpilotd.c:687
+#, c-format
+msgid "No pilot_charset specified.  Using `%s'."
+msgstr "Ingen pilot_charset angiven.  Använder \"%s\"."
+
+#: ../gpilotd/gpilotd.c:236
+msgid "Unable to bind to PDA"
+msgstr "Kunde inte binda till handdator"
+
+#: ../gpilotd/gpilotd.c:374
+#, c-format
+msgid "Failed to connect using device `%s', on port `%s'.  Check your configuration, as you requested new-style libusb `usb:' syncing, but have the old-style `visor' kernel module loaded.  You may need to select a `ttyUSB...' device."
+msgstr "Misslyckades med att ansluta med enheten \"%s\", på porten \"%s\".  Kontrollera din konfiguration, eftersom du begärde synkronisering med den nya libusb-stilen \"usb:\", men har läst in kärnmodulen som använder den gamla stilen \"visor\".  Du kanske behöver att välja en \"ttyUSB...\"-enhet."
+
+#: ../gpilotd/gpilotd.c:389
+#, c-format
+msgid "Failed to connect using device `%s', on port `%s'.  Check your configuration, as you requested old-style usbserial `ttyUSB' syncing, but do not have the usbserial `visor' kernel module loaded.  You may need to select a `usb:' device."
+msgstr "Misslyckades med att ansluta med enheten \"%s\", på porten \"%s\".  Kontrollera din konfiguration, eftersom du begärde synkronisering med den gamla usbserial \"ttyUSB\", men har läst in kärnmodulen usbserial som använder den gamla stilen \"visor\".  Du kanske behöver att välja en \"usb:\"-enhet."
+
+#: ../gpilotd/gpilotd.c:480
+#, c-format
+msgid "Unknown PDA, no userID/username match %ld"
+msgstr "Okänd handdator, inget matchande användar-ID/användarnamn %ld"
+
+#: ../gpilotd/gpilotd.c:487
+msgid "Use gnomecc to configure PDA"
+msgstr "Använd gnomecc för att konfigurera handdatorn"
+
+#. FIXME: here we should offer to create a profile for the pilot,
+#. bug # 8218
+#: ../gpilotd/gpilotd.c:492
+#, c-format
+msgid ""
+"Unknown PDA - no PDA matches ID %ld\n"
+"Use gnomecc to configure gnome-pilot"
+msgstr ""
+"Okänd handdator - inga handdatorer matchar id %ld\n"
+"Använd gnomecc för att konfigurera gnome-pilot"
+
+#: ../gpilotd/gpilotd.c:516
+#, c-format
+msgid "Device %s has %d events"
+msgstr "Enheten %s har %d händelser"
+
+#: ../gpilotd/gpilotd.c:529
+msgid "Setting userinfo..."
+msgstr "Ställer in användarinformation..."
+
+#: ../gpilotd/gpilotd.c:534
+msgid "Sync continues"
+msgstr "Synkronisering fortsätter"
+
+#: ../gpilotd/gpilotd.c:553
+msgid "Getting userinfo..."
+msgstr "Hämtar användarinformation..."
+
+#: ../gpilotd/gpilotd.c:615
+msgid "NetSync request detected, synchronizing PDA"
+msgstr "Nätsynkbegäran upptäcktes, synkroniserar handdatorn"
+
+#: ../gpilotd/gpilotd.c:617
+msgid "Bluetooth request detected, synchronizing PDA"
+msgstr "Blåtandsbegäran upptäcktes, synkroniserar handdatorn"
+
+#: ../gpilotd/gpilotd.c:619
+msgid "HotSync button pressed, synchronizing PDA"
+msgstr "HotSync-knappen tryckt, synkroniserar handdatorn"
+
+#: ../gpilotd/gpilotd.c:621
+#, c-format
+msgid "PDA ID is %ld, name is %s, owner is %s"
+msgstr "Handdator-id är %ld, namnet är %s, ägaren är %s"
+
+#: ../gpilotd/gpilotd.c:631
+#, c-format
+msgid "On host %s\n"
+msgstr "På värd %s\n"
+
+#: ../gpilotd/gpilotd.c:633
+#, c-format
+msgid "On host %d\n"
+msgstr "På värd %d\n"
+
+#: ../gpilotd/gpilotd.c:652
+msgid "Synchronization ended"
+msgstr "Synkroniseringen slut"
+
+#: ../gpilotd/gpilotd.c:655
+msgid "Synchronization ended early"
+msgstr "Synkroniseringen slutade för tidigt"
+
+#: ../gpilotd/gpilotd.c:701
+#, c-format
+msgid "`%s' is not a recognised iconv charset, using `%s' instead."
+msgstr "\"%s\" är inte en känd iconv-teckenuppsättning, använder \"%s\" istället."
+
+#: ../gpilotd/gpilotd.c:724
+#, c-format
+msgid ""
+"The base directory %s is invalid.\n"
+"Please fix it or use gnomecc to choose another directory."
+msgstr ""
+"Baskatalogen %s är ogiltig.\n"
+"Rätta till det eller använd gnomecc för att välja en annan katalog."
+
+#: ../gpilotd/gpilotd.c:737
+#, c-format
+msgid ""
+"Unknown PDA - no PDA matches ID %ld\n"
+"Use gpilotd-control-applet to set PDA's ID"
+msgstr ""
+"Okänd handdator - inga handdatorer matchar id %ld\n"
+"Använd gpilotd-control-applet för att ställa in handdatorns id"
+
+#. no ? drop connection then
+#: ../gpilotd/gpilotd.c:788
+msgid "An error occurred while getting the PDA's system data"
+msgstr "Ett fel inträffade när handdatorns systemdata hämtades"
+
+#. no ? drop connection then
+#: ../gpilotd/gpilotd.c:797
+msgid "An error occurred while getting the PDA's user data"
+msgstr "Ett fel inträffade när handdatorns användardata hämtades"
+
+#: ../gpilotd/gpilotd.c:802
+#, c-format
+msgid "Completed events for device %s (%s)"
+msgstr "Avslutade händelser för enheten %s (%s)"
+
+#: ../gpilotd/gpilotd.c:863
+#, c-format
+msgid "Woke on %s"
+msgstr "Vaknade på %s"
+
+#: ../gpilotd/gpilotd.c:944
+#, c-format
+msgid "Woke on network: %s"
+msgstr "Vaknade på nätverk: %s"
+
+#: ../gpilotd/gpilotd.c:1512
+#, c-format
+msgid "Watching %s (network)"
+msgstr "Bevakar %s (nätverk)"
+
+#: ../gpilotd/gpilotd.c:1514
+#, c-format
+msgid "Watching %s (bluetooth)"
+msgstr "Bevakar %s (Bluetooth)"
+
+#: ../gpilotd/gpilotd.c:1516
+#, c-format
+msgid "Watching %s (%s)"
+msgstr "Bevakar %s (%s)"
+
+#: ../gpilotd/gpilotd.c:1530
+msgid "Exiting (caught SIGTERM)..."
+msgstr "Avslutar (fick SIGTERM)..."
+
+#: ../gpilotd/gpilotd.c:1539
+msgid "Exiting (caught SIGINT)..."
+msgstr "Avslutar (Fick SIGINT)..."
+
+#: ../gpilotd/gpilotd.c:1571
+msgid "Unable to create file installation queue directory"
+msgstr "Kan inte skapa katalog för filinstallationskö"
+
+#: ../gpilotd/gpilotd.c:1621
+msgid "Shutting down devices"
+msgstr "Stänger ner enheter"
+
+#: ../gpilotd/gpilotd.c:1623
+msgid "Rereading configuration..."
+msgstr "Läser in konfigurationen igen..."
+
+#: ../gpilotd/manager.c:269
+msgid "non-backup conduit in backup conduit list"
+msgstr "icke-säkerhetskopieringskomponent i säkerhetskoppieringskomponentlistan"
+
+#: ../gpilotd/manager.c:277
+#, c-format
+msgid "%s backed up\n"
+msgstr "%s är säkerhetskopierad\n"
+
+#: ../gpilotd/manager.c:279
+#, c-format
+msgid "%s backup failed\n"
+msgstr "säkerhetskopiering av %s misslyckades\n"
+
+#: ../gpilotd/manager.c:305
+msgid "Collecting synchronization info..."
+msgstr "Samlar synkroniseringsinformation..."
+
+#: ../gpilotd/manager.c:427
+#, c-format
+msgid "Synchronizing %s\n"
+msgstr "Synkroniserar %s\n"
+
+#: ../gpilotd/manager.c:446
+#, c-format
+msgid "Copy to PDA %s\n"
+msgstr "Kopiera till handdatorn %s\n"
+
+#: ../gpilotd/manager.c:464
+#, c-format
+msgid "Copy from PDA %s\n"
+msgstr "Kopiera från handdatorn %s\n"
+
+#: ../gpilotd/manager.c:482
+#, c-format
+msgid "Merge to PDA %s\n"
+msgstr "Kombinera till handdatorn %s\n"
+
+#: ../gpilotd/manager.c:500
+#, c-format
+msgid "Merge from PDA %s\n"
+msgstr "Kombinera från handdatorn %s\n"
+
+#: ../gpilotd/manager.c:528
+#, c-format
+msgid "Conduit %s's first synchronization..."
+msgstr "Första synkroniseringen för komponent %s..."
+
+#: ../gpilotd/manager.c:552
+#, c-format
+msgid "unknown syncing action (%d = %s).\n"
+msgstr "okänd synkroniseringsåtgärd (%d = %s).\n"
+
+#: ../gpilotd/manager.c:678
+#, c-format
+msgid "Instantiating %d conduits..."
+msgstr "Instantierar %d komponenter..."
+
+#: ../gpilotd/manager.c:683
+#: ../gpilotd/manager.c:684
+#, c-format
+msgid "Unknown conduit \"%s\" in configure!"
+msgstr "Okänd komponent \"%s\" i konfigureringen!"
+
+#: ../gpilotd/manager.c:693
+#, c-format
+msgid "Loading conduit \"%s\" failed!"
+msgstr "Inläsning av komponenten \"%s\" misslyckades!"
+
+#: ../gpilotd/manager.c:694
+#, c-format
+msgid "Loading conduit \"%s\" failed!\n"
+msgstr "Inläsning av komponenten \"%s\" misslyckades!\n"
+
+#: ../gpilotd/manager.c:783
+#, c-format
+msgid "Setting id/owner to %d/%s..."
+msgstr "Ställer in id/användare till %d/%s..."
+
+#. FIXME: remove the bloody request, or the user will get this
+#. message every time
+#: ../gpilotd/manager.c:815
+#, c-format
+msgid "Conduit %s requested, but not found"
+msgstr "Komponenten %s efterfrågades men kunde inte hittas"
+
+#: ../gpilotd/manager.c:825
+#, c-format
+msgid "Conduit %s cannot be requested"
+msgstr "Komponenten %s kan inte efterfrågas"
+
+#: ../gpilotd/orbit_daemon_glue.c:1747
+msgid "(unknown DB)"
+msgstr "(okänd databas)"
+
+#: ../gpilotd/queue_io.c:96
+msgid "Error in queue, non-existing entry"
+msgstr "Fel i kö, ickeexisterande post"
+
+#: ../gpilotd/queue_io.c:436
+#, c-format
+msgid "fault: no request found for PDA %d, request %d"
+msgstr "fel: ingen begäran hittades för handdatorn %d, begäran %d"
+
+#: ../libgpilotdCM/gnome-pilot-conduit-management.gob:686
+msgid "module loading not supported, fatal!"
+msgstr "modulinläsning stöds inte, ödesdigert!"
+
+#: ../utils/gpilotd-client.c:39
+msgid "Get System Info"
+msgstr "Hämta systeminformation"
+
+#: ../utils/gpilotd-client.c:40
+msgid "Pause daemon"
+msgstr "Pausa demonen"
+
+#: ../utils/gpilotd-client.c:41
+msgid "Unpause daemon"
+msgstr "Fortsätt demonen"
+
+#: ../utils/gpilotd-client.c:42
+msgid "Restart daemon"
+msgstr "Starta om demonen"
+
+#: ../utils/gpilotd-client.c:43
+msgid "Set user id and name"
+msgstr "Ställ in användarid och namn"
+
+#: ../utils/gpilotd-client.c:44
+msgid "ID for the PDA"
+msgstr "ID för handdatorn"
+
+#: ../utils/gpilotd-client.c:45
+msgid "Install file"
+msgstr "Installera fil"
+
+#: ../utils/gpilotd-client.c:45
+msgid "FILE"
+msgstr "FIL"
+
+#: ../utils/gpilotd-client.c:46
+msgid "Restore directory"
+msgstr "Katalog för återställning"
+
+#: ../utils/gpilotd-client.c:46
+msgid "DIRECTORY"
+msgstr "KATALOG"
+
+#: ../utils/gpilotd-client.c:47
+msgid "Run conduit"
+msgstr "Kör komponent"
+
+#: ../utils/gpilotd-client.c:47
+#: ../utils/gpilotdcm-client.c:27
+msgid "CONDUIT"
+msgstr "KOMPONENT"
+
+#: ../utils/gpilotd-client.c:48
+msgid "Username to set"
+msgstr "Användarnamn som skall sättas"
+
+#: ../utils/gpilotd-client.c:48
+msgid "USERNAME"
+msgstr "ANVÄNDARNAMN"
+
+#: ../utils/gpilotd-client.c:49
+msgid "Monitor the specified PDA's actions"
+msgstr "Övervaka den angivna pilotens åtgärder"
+
+#: ../utils/gpilotd-client.c:50
+msgid "Monitor all PDAs"
+msgstr "Övervaka alla handdatorer"
+
+#: ../utils/gpilotd-client.c:51
+msgid "list PDAs by login (all for all pilots)"
+msgstr "lista handdatorer efter inloggningsnamn (alla för alla piloter)"
+
+#: ../utils/gpilotd-client.c:51
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#: ../utils/gpilotd-client.c:52
+msgid "Specify PDA to operate on (defaults to MyPDA)"
+msgstr "Ange handdator som skall användas (som standard MinPilot)"
+
+#: ../utils/gpilotd-client.c:52
+msgid "PILOTNAME"
+msgstr "PILOTNAMN"
+
+#: ../utils/gpilotd-client.c:53
+msgid "Specify a cradle to operate on (defaults to Cradle0)"
+msgstr "Ange vagga som skall användas (som standard Vagga0)"
+
+#: ../utils/gpilotd-client.c:53
+msgid "CRADLENAME"
+msgstr "VAGGNAMN"
+
+#: ../utils/gpilotd-client.c:54
+msgid "List the specified PDA's bases"
+msgstr "Lista den angivna handdatorns databaser"
+
+#: ../utils/gpilotd-client.c:359
+#: ../utils/gpilotdcm-client.c:106
+#, c-format
+msgid ""
+"\n"
+"BEWARE!!\n"
+"This is a tool for certain parts of the gnome-pilot package.\n"
+"Unless you know what you're doing, don't use this tool."
+msgstr ""
+"\n"
+"VARNING!\n"
+"Det här är ett verktyg för att kontrollera vissa delar av gnome-pilot-paketet.\n"
+"Använd inte detta verktyg om du inte vet vad du gör."
+
+#: ../utils/gpilotdcm-client.c:26
+msgid "lists available conduits"
+msgstr "visar tillgängliga komponenter"
+
+#: ../utils/gpilotdcm-client.c:27
+msgid "conduit to operate on"
+msgstr "komponent att använda"
+
+#: ../utils/gpilotdcm-client.c:28
+msgid "list all attributes"
+msgstr "visa alla attribut"
+
+#: ../utils/gpilotdcm-client.c:29
+msgid "specify PDA to operate on"
+msgstr "ange handdatorn att använda"
+
+#: ../utils/gpilotdcm-client.c:29
+msgid "PDA_ID"
+msgstr "Handdator-_id"
+
+#: ../utils/gpilotdcm-client.c:30
+msgid "list attributes"
+msgstr "visa attribut"
+
+#: ../utils/gpilotdcm-client.c:31
+msgid "list available conduits and their state"
+msgstr "visa tillgängliga komponenter och deras tillstånd"
+
+#: ../utils/gpilotdcm-client.c:32
+msgid "enable specified conduit"
+msgstr "aktivera vald komponent"
+
+#: ../utils/gpilotdcm-client.c:33
+msgid "disable specified conduit"
+msgstr "inaktivera vald komponent"
+
+#: ../utils/gpilotdcm-client.c:34
+msgid "enable, and set firstsync to slow"
+msgstr "aktivera, och ställ in första synkronisering till långsam"
+
+#: ../utils/gpilotdcm-client.c:35
+msgid "instantiate and destroy the conduit"
+msgstr "Instantiera och förstör komponenten"
+
+#~ msgid "PilotSync"
+#~ msgstr "PilotSynk"
+#~ msgid "Synchroniser for PalmOS PDAs"
+#~ msgstr "Synkronisera handdatorer med PalmOS"
+#~ msgid "PDA ID"
+#~ msgstr "Handdator-id"
+#~ msgid "Add..."
+#~ msgstr "Lägg till..."
+#~ msgid "Delete"
+#~ msgstr "Ta bort"
+#~ msgid "Edit..."
+#~ msgstr "Redigera..."
+#~ msgid "Ir_DA"
+#~ msgstr "Ir_DA"
+#~ msgid "Settings..."
+#~ msgstr "Inställningar..."
+#~ msgid "Pilot ID"
+#~ msgstr "Pilotens id"
+#~ msgid "Synchronizing..."
+#~ msgstr "Synkroniserar..."
+#~ msgid "/dev/ttyS2"
+#~ msgstr "/dev/ttyS2"
+#~ msgid "/dev/ttyS3"
+#~ msgstr "/dev/ttyS3"
+#~ msgid "/dev/ttyqe"
+#~ msgstr "/dev/ttyqe"
+#~ msgid "PILOT"
+#~ msgstr "PILOT"
+#~ msgid "Copy from pilot failed!"
+#~ msgstr "Kopiering från piloten misslyckades!"
+#~ msgid ""
+#~ "Unknown pilot - no pilots matches ID %ld\n"
+#~ "Use gnomecc to set pilot's ID"
+#~ msgstr ""
+#~ "Okänd pilot - inga piloter matchar ID %ld\n"
+#~ "Använd gnomecc för att ställa in pilotens id"
+#~ msgid "PILOTID"
+#~ msgstr "PILOTID"
+#~ msgid "A dnd and gui monitor for gpilotd.\n"
+#~ msgstr "En dnd- och gui-övervakare för gpilotd.\n"
+#~ msgid "UserName"
+#~ msgstr "Användarnamn"
+#~ msgid "Cradle Settings"
+#~ msgstr "Inställningar för vagga"
+#~ msgid "Get User Name and ID from existing pilot that was used before."
+#~ msgstr "Hämta användarnamn och id från en pilot som har använts förut."
+#~ msgid "Local basedir"
+#~ msgstr "Lokal databaskatalog"
+#~ msgid "Pilot Name"
+#~ msgstr "Pilotens namn"
+#~ msgid "Pilot Name:"
+#~ msgstr "Pilotens namn:"
+#~ msgid "Pilots"
+#~ msgstr "Piloter"
+#~ msgid "Set User Name and ID to a new pilot."
+#~ msgstr "Ställ in användarnamn och id på en ny pilot."
+#~ msgid "User Name"
+#~ msgstr "Användarnamn"
+#~ msgid "User Name:"
+#~ msgstr "Användarnamn:"
+#~ msgid "Copy to pilot"
+#~ msgstr "Kopiera till piloten"
+#~ msgid "Merge from pilot"
+#~ msgstr "Kombinera från piloten"
+#~ msgid "Merge to pilot"
+#~ msgstr "Kombinera till piloten"
+#~ msgid "Gnome Pilot File Manager"
+#~ msgstr "Gnome Pilot-filhanterare"
+#~ msgid "Copyright Manish and Neil Vachharajani (C) 1998"
+#~ msgstr "Copyright Manish och Neil Vachharajani © 1998"
+#~ msgid ""
+#~ "Manages files and applications on your Palm Pilot\n"
+#~ "Palm Pilot is a Registered trademark of 3com Inc."
+#~ msgstr ""
+#~ "Hanterar filer och program på din Palm Pilot\n"
+#~ "Palm Pilot är ett registrerat varumärke från 3com Inc."
+#~ msgid "Really quit Gnome Pilot File Manager?"
+#~ msgstr "Vill du verkligen avsluta Gnome Pilot-filhanteraren?"
+#~ msgid "Hmm, this shouldn't happen, not enough filenames\n"
+#~ msgstr "Hmm, detta borde inte hända, inte tillräckligt med filnamn\n"
+#~ msgid "Aborting..."
+#~ msgstr "Avbryter..."
+#~ msgid "No files to install!!"
+#~ msgstr "Inga filer att installera!!"
+#~ msgid "Install Progress"
+#~ msgstr "Installationsförlopp"
+#~ msgid "Installing... "
+#~ msgstr "Installerar... "
+#~ msgid "Press the Hot Sync button on your pilot now!"
+#~ msgstr "Tryck på HotSync-knappen på din pilot nu!"
+#~ msgid "Unable to open or create chosen name as a directory!"
+#~ msgstr "Kan inte öppna eller skapa valt namn som en katalog!"
+#~ msgid "Chosen backup location is not a directory!"
+#~ msgstr "Vald säkerhetskopieringsplats är inte en katalog!"
+#~ msgid "Backup Progress"
+#~ msgstr "Säkerhetskopieringsförlopp"
+#~ msgid "Backing up... "
+#~ msgstr "Säkerhetskopierar... "
+#~ msgid "Unable to open status pipe"
+#~ msgstr "Kan inte öppna statusrör"
+#~ msgid "Unable to open message pipe"
+#~ msgstr "Kan inte öppna meddelanderör"
+#~ msgid "Unable to fork"
+#~ msgstr "Kan inte grena"
+#~ msgid "Backup Directory"
+#~ msgstr "Säkerhetskopieringskatalog"
+#~ msgid "About the gpilot-fileman"
+#~ msgstr "Om gpilot-fileman"
+#~ msgid "Install Files"
+#~ msgstr "Installera filer"
+#~ msgid "Installs selected files to the connected Pilot"
+#~ msgstr "Installerar valda filer på den anslutna Piloten"
+#~ msgid "Backup Pilot"
+#~ msgstr "Säkerhetskopiera Pilot"
+#~ msgid "Back's up selected files from the connected Pilot"
+#~ msgstr "Säkerhetskopierar valda filer från den anslutna Piloten"
+#~ msgid "Properties"
+#~ msgstr "Egenskaper"
+#~ msgid "Properties for the Gnome Pilot File Manager"
+#~ msgstr "Egenskaper för Gnome Pilot-filhanteraren"
+#~ msgid "Quit"
+#~ msgstr "Avsluta"
+#~ msgid "Quits the application"
+#~ msgstr "Avslutar programmet"
+#~ msgid "File"
+#~ msgstr "Arkiv"
+#~ msgid "Add ->"
+#~ msgstr "Lägg till ->"
+#~ msgid "<- Remove"
+#~ msgstr "<- Ta bort"
+#~ msgid "<- Remove All"
+#~ msgstr "<- Ta bort alla"
+#~ msgid "Selected Files"
+#~ msgstr "Valda filer"
+#~ msgid "Unable to bind to pilot\n"
+#~ msgstr "Kan inte binda till piloten\n"
+#~ msgid "Exiting on cancel"
+#~ msgstr "Avslutar vid avbryt"
+#~ msgid "Unable to open '%s'!"
+#~ msgstr "Kan inte öppna \"%s\"!"
+#~ msgid "Install failed %s."
+#~ msgstr "Installation misslyckades %s."
+#~ msgid "Exiting on cancel, all data NOT backed up."
+#~ msgstr "Avslutar vid avbryt, all data säkerhetskopierades INTE."
+#~ msgid "Failed, unable to create file\n"
+#~ msgstr "Misslyckades, kan inte skapa fil\n"
+#~ msgid "Failed, unable to back up database\n"
+#~ msgstr "Misslyckades, kan inte säkerhetskopiera databas\n"
+#~ msgid "Pilot Device"
+#~ msgstr "Pilotenhet"
+#~ msgid "Confirm on quit"
+#~ msgstr "bekräfta vid avslut"
+#~ msgid "General"
+#~ msgstr "Allmänt"
+#~ msgid "Watching %s (%s, %s)"
+#~ msgstr "Bevakar %s (%s, %s)"
+#~ msgid "Unable to open or create file %s with read/write privs"
+#~ msgstr "Kunde inte öppna eller skapa fil %s med läs/skriv-rättigheter"
+#~ msgid "Unable to find home directory for uid %d"
+#~ msgstr "Kunde inte hitta hemkatalog för uid %d"
+#~ msgid "Could not examine the port for"
+#~ msgstr "Kunde inte undersöka porten för"
+#~ msgid "The port should point to a USB serial port"
+#~ msgstr "Porten ska vara en seriell USB-port"
+#~ msgid "The port should be a character special device but isn't for"
+#~ msgstr "Porten ska vara en teckenenhet men är det inte för"
+#~ msgid "PalmOS Device"
+#~ msgstr "PalmOS-enhet"
+#~ msgid "Sync Type"
+#~ msgstr "Synkroniseringstyp"
+#~ msgid "Advanced"
+#~ msgstr "Avancerat"
+#~ msgid ""
+#~ "Default conduit action for Synhronization. In most cases you dont want to "
+#~ "change this setting, but individual conduits instead."
+#~ msgstr ""
+#~ "Standardkomponentåtgärd för synkronisering. I de flesta fall behöver du "
+#~ "inte ändra denna inställning, utan de individuella komponenterna istället."
+#~ msgid "Sync PCId"
+#~ msgstr "Sync PCId"
+#~ msgid "Copying to pilot..."
+#~ msgstr "Kopierar till piloten..."
+#~ msgid "Copying from pilot..."
+#~ msgstr "Kopierar från piloten..."
+#~ msgid "Merging to pilot..."
+#~ msgstr "Kombinerar till piloten..."
+#~ msgid "Merging from pilot..."
+#~ msgstr "Kombinerar från piloten..."
+#~ msgid "Using conduit settings for sync..."
+#~ msgstr "Använder komponentinställningarna för synkronisering..."
+#~ msgid "Conduit Settings..."
+#~ msgstr "Komponentinställningar..."
+#~ msgid "Pilot Link Settings..."
+#~ msgstr "Inställningar för Pilot Link"
+#~ msgid "A dnd and gui monitor for gpilotd."
+#~ msgstr "En dnd- och gui-övervakare för gpilotd."
+#~ msgid ""
+#~ "A dnd and gui monitor for gpilotd.\n"
+#~ "Visit Website at http://eskil.org/gnome-pilot"
+#~ msgstr ""
+#~ "En grafisk övervakare för gpilotd som stöder dra-och-släpp.\n"
+#~ "Besök webbsidan på http://eskil.org/gnome-pilot"
+#~ msgid "Copyright (C) 2000-2003 Free Software Foundation, Inc."
+#~ msgstr "Copyright © 2000-2003 Free Software Foundation, Inc."
+#~ msgid "Copyright (C) 2000, 2001, 2002, 2003 Free Software Foundation, Inc."
+#~ msgstr "Copyright © 2000, 2001, 2002, 2003 Free Software Foundation, Inc."
+#~ msgid "Copyright (C) 2003 Free Software Foundation, Inc."
+#~ msgstr "Copyright © 2003 Free Software Foundation, Inc."
+#~ msgid "Copyright 2003 Free Software Foundation, Inc."
+#~ msgstr "Copyright 2003 Free Software Foundation, Inc."
+#~ msgid "%P %%"
+#~ msgstr "%P %%"
+#~ msgid "Applet options"
+#~ msgstr "Inställningar för panelprogram"
+#~ msgid "Stop"
+#~ msgstr "Stopp"
+#~ msgid "saving session"
+#~ msgstr "sparar session"
+#~ msgid "Conduit Action"
+#~ msgstr "Komponentåtgärd"
+#~ msgid ""
+#~ "Default conduit action for Synchronization. In most cases you dont want "
+#~ "to change this setting, but individual conduits instead."
+#~ msgstr ""
+#~ "Standardkomponentåtgärd för synkronisering. I de flesta fall behöver du "
+#~ "inte ändra denna inställning, utan de individuella komponenterna istället."
+#~ msgid "Resume daemon"
+#~ msgstr "Återuppta demonen"
+#~ msgid "About..."
+#~ msgstr "Om..."
+#~ msgid "Can't create applet!\n"
+#~ msgstr "Kan inte skapa panelprogram!\n"
+#~ msgid "The gnome-pilot daemon is already running"
+#~ msgstr "Gnome-pilot-demonen kör redan"
+#~ msgid "Gnome Pilot Conduits"
+#~ msgstr "Gnome Pilot-komponenter"
+#~ msgid "Handspring USB"
+#~ msgstr "Handspring USB"
+#~ msgid "\n"
+#~ msgstr "\n"
+#~ msgid ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ "/dev/ttyqe\n"
+#~ msgstr ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ "/dev/ttyqe\n"
+#~ msgid ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ msgstr ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ msgid "Disabled\n"
+#~ msgstr "Avaktiverad\n"
+#~ msgid "Backup of %s failed!"
+#~ msgstr "Säkerhetskopiering av %s misslyckades!"
+#~ msgid "Restoring %s from %s... "
+#~ msgstr "Återställer %s från %s..."
+#~ msgid "Restore of %s failed"
+#~ msgstr "Återställning av %s misslyckades"
+#~ msgid "Listening on %s (%s)"
+#~ msgstr "Bevakar %s (%s)"
+#~ msgid "%s this request.type == %d is not a install/restore"
+#~ msgstr "%s är request.type == %d är inte en installera/återställ"
+#~ msgid "Eskil Heyn Olsen <deity@eskil.dk>"
+#~ msgstr "Eskil Heyn Olsen <deity@eskil.dk>"
+#~ msgid "Gpilotd backup conduit"
+#~ msgstr "Gpilotd säkerhetskoperingskomponent"
+#~ msgid "(C) 1998 the Free Software Foundation"
+#~ msgstr "© 1998 The Free Software Foundation"
+#~ msgid ""
+#~ "Configuration utility for the backup conduit.\n"
+#~ "The backup conduit is responsible for copying files from the pilot to the "
+#~ "local host, without doing any conversion, whereby ensuring that a proper "
+#~ "restore can be done"
+#~ msgstr ""
+#~ "Konfigurationsverktyg för säkerhetskopieringskomponenten.\n"
+#~ "Komponenten ansvarar för att kopiera filer från piloten till värddatorn "
+#~ "utan att göra någon konvertering, och ser därmed till att en riktig "
+#~ "återställning kan göras"
+#~ msgid "gnome-unknown.xpm"
+#~ msgstr "gnome-unknown.xpm"
+#~ msgid "Conduit state"
+#~ msgstr "Komponenttillstånd"
+#~ msgid ""
+#~ "No pilot configured, please choose the\n"
+#~ "'Pilot Link Properties' capplet first."
+#~ msgstr ""
+#~ "Ingen pilot konfigurerad, välj\n"
+#~ "cappleten för \"Pilot Link-egenskaper\" först"
+#~ msgid ""
+#~ "An error occured when trying to fetch\n"
+#~ "pilot list from the gnome-pilot daemon"
+#~ msgstr ""
+#~ "Ett fel inträffade vid hämtning\n"
+#~ "av pilotlistan från gnome-pilot-demonen"
+#~ msgid ""
+#~ "Could not create object for conduit.\n"
+#~ "Perhaps the conduit isn't properly installed ?"
+#~ msgstr ""
+#~ "Kunde inte skapa ett objekt för komponenten.\n"
+#~ "Kanske är inte komponenten korrekt installerad?"
+#~ msgid "delete"
+#~ msgstr "radera"
+#~ msgid "Gpilotd SendMail conduit"
+#~ msgstr "Gpilotd Sendmailkomponent"
+#~ msgid ""
+#~ "Configuration utility for the SendMail conduit.\n"
+#~ "The SendMail conduit is responsible for sending out mail composed on the "
+#~ "pilot"
+#~ msgstr ""
+#~ "Konfigurationsverktyg för Sendmailkomponenten.\n"
+#~ "Sendmailkomponenten ansvarar för att skicka ut e-post som skrivits på "
+#~ "piloten"
+#~ msgid "From E-mail Address"
+#~ msgstr "Från e-postadress"
+#~ msgid "MH Mail directory"
+#~ msgstr "MH-epostkatalog"
+#~ msgid "mbox file"
+#~ msgstr "mbox-fil"
+#~ msgid "Mailer location"
+#~ msgstr "E-postprogram"
+#~ msgid "Mail sent from pilot"
+#~ msgstr "E-post skickad från piloten"
+#~ msgid "Mail on Host"
+#~ msgstr "E-post på värddatorn"
+#~ msgid "SendMail options"
+#~ msgstr "Sendmail-inställningar"
+#~ msgid "Unknown Currency Symbol"
+#~ msgstr "Okänd valutasymbol"
+#~ msgid "No dir specified. Please run expense conduit capplet first."
+#~ msgstr ""
+#~ "Ingen katalog specificerad. Kör kontrollverktyg för utgiftskomponenten "
+#~ "först."
+#~ msgid "Day/Month/Year"
+#~ msgstr "Dag/Månad/År"
+#~ msgid "Month/Day/Year"
+#~ msgstr "Månad/Dag/År"
+#~ msgid "Since 1970-01-01 (in sec)"
+#~ msgstr "Sen 1970-01-01 (i sekunder)"
+#~ msgid "Simple"
+#~ msgstr "Enkel"
+#~ msgid "Complex"
+#~ msgstr "Komplex"
+#~ msgid "Patrick Decowski <decowski@mit.edu>"
+#~ msgstr "Patrick Decowski <decowski@mit.edu>"
+#~ msgid "Gpilotd Expense conduit"
+#~ msgstr "Gpilotd utgiftskomponent"
+#~ msgid "(C) 1999 the Free Software Foundation"
+#~ msgstr "© 1999 The Free Software Foundation"
+#~ msgid ""
+#~ "Configuration utility for the Expense conduit.\n"
+#~ "The Expense conduit is responsible for getting expenses records from the "
+#~ "pilot"
+#~ msgstr ""
+#~ "Konfigurationsverktyg för utgiftskomponenten.\n"
+#~ "Utgiftskomponenten är ansvarig för att hämta utgiftsposter från piloten"
+#~ msgid "Expense Directory"
+#~ msgstr "Katalog för utgifter"
+#~ msgid "Directory Mode"
+#~ msgstr "Katalogrättigheter:"
+#~ msgid "File Mode"
+#~ msgstr "Filrättigheter:"
+#~ msgid "Date Format"
+#~ msgstr "Datumformat"
+#~ msgid "Output Format"
+#~ msgstr "Utdataformat"
+#~ msgid "Expense options"
+#~ msgstr "Utgiftsinställningar"
+#~ msgid "Gpilotd file conduit"
+#~ msgstr "Gpilotd filkomponent"
+#~ msgid ""
+#~ "Configuration utility for the file conduit.\n"
+#~ "The file conduit is responsible for installing files from the host to the "
+#~ "pilot"
+#~ msgstr ""
+#~ "Konfigurationsverktyg för filkomponenten.\n"
+#~ "Filkomponenten är ansvarig för att installera filer från värddatorn till "
+#~ "piloten"
+#~ msgid "Copy From Pilot"
+#~ msgstr "Kopiera från piloten"
+#~ msgid "Vadim Strizhevsky <vadim@optonline.net>"
+#~ msgstr "Vadim Strizhevsky <vadim@optonline.net>"
+#~ msgid "Gpilotd memo_file conduit"
+#~ msgstr "Gpilotd memo_file-komponent"
+#~ msgid ""
+#~ "Configuration utility for the memo_file conduit.\n"
+#~ "The memo_file conduit syncronizes memos from the pilot with text files on "
+#~ "the local host"
+#~ msgstr ""
+#~ "Konfigurationsverktyg för memo_file-komponenten.\n"
+#~ "memo_file-komponenten synkroniserar anteckningar från piloten med "
+#~ "textfiler på värddatorn"
+#~ msgid "Synchronize Action"
+#~ msgstr "Synkroniseringsåtgärd"
+#~ msgid "Memos directory:"
+#~ msgstr "Katalog för anteckningar:"
+#~ msgid "Ignore start:"
+#~ msgstr "Ignorera start:"
+#~ msgid "Ignore end:"
+#~ msgstr "Ignorera slut:"
+#~ msgid "Directory mode:"
+#~ msgstr "Katalogläge:"
+#~ msgid "Files mode:"
+#~ msgstr "Filläge:"
+#~ msgid "Secret files mode:"
+#~ msgstr "Dolda filer-läge:"
+#~ msgid "Memo Conduit State"
+#~ msgstr "Memokomponenttillstånd"
+#~ msgid "Memo Conduit Options"
+#~ msgstr "Memokomponentalternativ"
+#~ msgid "No dir specified. Please run memo_file conduit capplet first."
+#~ msgstr "Ingen katalog specificerad. Kör memo_file-komponenten först."
+#~ msgid "JP Rosevear <jpr@helixcode.com>"
+#~ msgstr "JP Rosevear <jpr@helixcode.com>"
+#~ msgid "(C) 2001 Helix Code, Inc."
+#~ msgstr "© 2001 Helix Code, Inc."
+#~ msgid "Configuration utility for the test conduit.\n"
+#~ msgstr "Konfigurationsverktyg för testkomponenten.\n"
+#~ msgid "Please specify a cradle port"
+#~ msgstr "Var vänlig och ställ in en port för vaggan"
+#~ msgid ""
+#~ "Press synchronize on the %s (%s)\n"
+#~ "or cancel the operation."
+#~ msgstr ""
+#~ "Tryck synkroniseringknappen på %s (%s)\n"
+#~ "eller avbryt operationen."
+#~ msgid "Pilot with this id or name already exists."
+#~ msgstr "En pilot med detta id eller namn finns redan."
+#~ msgid "Cradle with this port or name already exists."
+#~ msgstr "En vagga med denna port eller detta namn finns redan."
+#~ msgid "Cannot find gpilotd-capplet.glade"
+#~ msgstr "Kan inte hitta gpilotd-capplet.glade"
+#~ msgid "Successfully sent UserName and ID to pilot."
+#~ msgstr "Lyckades skicka användarnamn och id till piloten."
+#~ msgid ""
+#~ "Congratulations!\n"
+#~ "\n"
+#~ "You have succesfully installed gnome-pilot.\n"
+#~ "\n"
+#~ "You can now setup individual conduits options from \n"
+#~ "control-center. If you started PilotSync applet you must \n"
+#~ "select \"Restart daemon\" menu.\n"
+#~ msgstr ""
+#~ "Grattis!\n"
+#~ "\n"
+#~ "Du har framgångsrikt installerat gnome-pilot.\n"
+#~ "\n"
+#~ "Du kan nu ställa in enskilda komponenter från\n"
+#~ "kontrollcentret. Om du startade PilotSync-appleten så måste\n"
+#~ "du välja \"Starta om demonen\" från menyn.\n"
+#~ msgid "Pilot "
+#~ msgstr "Pilot "
+#~ msgid "window1"
+#~ msgstr "window1"
+#~ msgid "Gpilotd memo conduit"
+#~ msgstr "Gpilotd memo-komponent"
+#~ msgid "Cannot initialze the GnomePilot Daemon"
+#~ msgstr "Kan inte initialisera GnomePilot-demonen"
+#~ msgid "(C) 1998 Eskil Heyn Olsen"
+#~ msgstr "© 1998 Eskil Heyn Olsen"
+#~ msgid "Malformed conduit, cannot find conduit_get_gpilot_conduit: %s"
+#~ msgstr "Felaktig komponent, kan inte hitta conduit_get_gpilot_conduit: %s"
+#~ msgid "Malformed conduit, cannot find conduit_destroy_gpilot_conduit: %s"
+#~ msgstr ""
+#~ "Felaktig komponent, kan inte hitta conduit_destroy_gpilot_conduit: %s"
+#~ msgid "Conduit %s has no name"
+#~ msgstr "Komponenten %s har inget namn"
+#~ msgid "Ready to Synchronize"
+#~ msgstr "Klar att synkronisera"
+#~ msgid ""
+#~ "No directory to restore from.\n"
+#~ "Please set the directory in the properties dialog."
+#~ msgstr ""
+#~ "Det finns ingen katalog att återställa från.\n"
+#~ "Ställ in katalogen i dialogrutan för egenskaper."
+#~ msgid "Cannot initialize the GnomePilot Daemon"
+#~ msgstr "Kan inte starta GnomePilot-demonen"
+#~ msgid "SyncPCid is a integer that uniquely identifies your PC"
+#~ msgstr "SyncPCis är ett heltal som är unikt för din PC"
+#~ msgid "Warning - unrecognized device %s, changing to /dev/pilot"
+#~ msgstr "Varning - okänd enhet %s, byter till /dev/pilot"
+#~ msgid "Warning - unrecognized speed %d, changing to 9600"
+#~ msgstr "Varning - okänd hastighet %s, byter till 9600"
+#~ msgid "Host ID"
+#~ msgstr "Värd-ID"
+#~ msgid "User Configuration"
+#~ msgstr "Användarkonfiguration"
+#~ msgid ""
+#~ "More than one set of cradle information located.\n"
+#~ "This tool only handles a single cradle, aborting..."
+#~ msgstr ""
+#~ "Mer än en uppsättning av vagg-information funnen.\n"
+#~ "Detta verktyg kan bara hantera en vagga, avbryter..."
+#~ msgid ""
+#~ "More than one set of pilot information located.\n"
+#~ "This tool only handles a single pilot, aborting..."
+#~ msgstr ""
+#~ "Mer än en uppsättning pilot-information funnen.\n"
+#~ "Detta verkgty kan bara hantera en pilot, avbryter..."
+#~ msgid "Cannot start the GnomePilot daemon"
+#~ msgstr "Kan inte starta GnomePilot-demonen"
+#~ msgid "This is a critical error, stopping gpilotd"
+#~ msgstr "Detta är ett kritiskt fel, stoppar gpilotd"
+#~ msgid "An error occured while listening for sync button press!"
+#~ msgstr "Ett fel inträffade när jag väntade på synk-knapptryck!"
+#~ msgid "Unknown pilot, no userID/username/pwd match"
+#~ msgstr "Okänd pilot, ingen matchande användar-ID/användarnamn/pwd"
+#~ msgid "What, child exited, but wasn't pending???"
+#~ msgstr "Vanudå, barnet avslutade, men väntade inte???"
+#~ msgid "Malformed conduit %s, cannot find conduit_get_gpilot_conduit: %s"
+#~ msgstr ""
+#~ "Felaktig komponent %s, kan inte hitta conduit_get_gpilot_conduit: %s"
+#~ msgid "Malformed conduit %s, cannot find conduit_destroy_gpilot_conduit: %s"
+#~ msgstr ""
+#~ "Felaktig komponent %s, kan inte hitta conduit_destroy_gpilot_conduit: %s"
+#~ msgid ""
+#~ "Please run gpilotd-control-applet (use gnomecc)to configure gnome-pilot."
+#~ msgstr ""
+#~ "Använd gpilotd-control-applet (använd gnomecc) för att konfigurera gnome-"
+#~ "pilot."
+#~ msgid "Bjoern Svin"
+#~ msgstr "Bjoern Svin"
+#~ msgid "Save"
+#~ msgstr "Spara"
+#~ msgid "Create new user"
+#~ msgstr "Skapa ny användare"
+#~ msgid "Create new pilot"
+#~ msgstr "Skapa ny pilot"
+#~ msgid "Create new Device"
+#~ msgstr "Skapa ny enhet"
+#~ msgid "Cut"
+#~ msgstr "Klipp ut"
+#~ msgid "Cut current object"
+#~ msgstr "Klipp ut nuvarande objekt"
+#~ msgid "Duh?"
+#~ msgstr "Duh?"
+#~ msgid "Manish Vachharajani <mvachhar@vger.rutgers.edu>"
+#~ msgstr "Manish Vachharajani <mvachhar@vger.rutgers.edu>"
+#~ msgid ""
+#~ "Released under the terms of the GNU Public License.\n"
+#~ "Admin tool and property editor for gpilotd"
+#~ msgstr ""
+#~ "Släppt under termerna av GNU Public License.\n"
+#~ "Adminverktyget och egenskapseditorn för gpilotd"
+#~ msgid "New User"
+#~ msgstr "Ny användare"
+#~ msgid "GpilotD admin"
+#~ msgstr "GpilotD admin"
+#~ msgid "(C) 1999"
+#~ msgstr "© 1999"
+

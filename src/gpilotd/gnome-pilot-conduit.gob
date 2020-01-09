@@ -1,0 +1,190 @@
+/* gnome-pilot-conduit.gob
+ * Copyright (C) 1999-2001 Free Software Foundation
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authors: Eskil Heyn Olsen
+ *          Johnathan Blandford
+ *
+ */
+
+%h{
+#include <gnome.h>
+#include "gnome-pilot-dbinfo.h"
+#include "gnome-pilot-structures.h"
+%}
+
+%{
+#include <gnome.h>
+#include "gnome-pilot-conduit.h"
+#include "gnome-pilot-conduit-private.h"
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <utime.h>
+#include <pi-file.h>
+#include <math.h>
+
+typedef enum {
+	GPC_MSG, GPC_ERR, GPC_WARN
+} GPC_MessageType;
+%}
+
+class Gnome:Pilot:Conduit from Gtk:Object {
+	public gchar *name destroywith g_free;
+	argument STRING (type gchar*) name (export) stringlink
+
+	public gint progress_stepping;
+	argument INT (type gint) progress_stepping link;
+
+	public gint progress_top;
+	argument INT (type gint) progress_top link;
+
+        protected GPilotPilot *pilot;
+	argument POINTER (type GPilot:Pilot*) pilot link;
+
+	init (self) {
+		self->progress_top = 0;
+		self->progress_stepping = 0;
+		self->name = NULL;
+	}
+
+	public GtkObject*
+	new (void) {
+		GnomePilotConduit *retval = GET_NEW;
+		return GTK_OBJECT (retval);
+	}
+	
+	signal first NONE (INT, INT)
+	void progress (self, gint total, gint current) {
+	}
+
+	public void
+	send_progress (Gnome:Pilot:Conduit *self (check null type), gint total, gint current) {
+		
+		if (current > total) current = total;
+		/* if stepping !=0, calc step, otherwise emit the signal */
+		if (self->progress_stepping) {
+			gfloat tot_f, cur_f;
+			gint pct;
+			gboolean emit = FALSE;
+
+			tot_f = total;
+			cur_f = current;
+			pct = abs (cur_f / (tot_f / 100));
+
+			if (pct < 1) {
+				pct = 1;
+			}
+
+			if (pct < self->progress_top) {
+				self->progress_top = 0;
+				emit = TRUE;
+			}
+			if (pct >= self->progress_top + self->progress_stepping) {
+				self->progress_top = pct;
+				emit = TRUE;
+			}
+
+			if (emit) {
+				self_progress (self, total, current);
+			} 
+		} if (self->progress_stepping==0) {
+			self_progress (self, total, current);
+		} else {
+			/* stepping < 0 */
+			return;
+		}
+	}
+
+	signal first NONE (POINTER)
+	void message (self, gchar *message) {
+	}
+
+	signal first NONE (POINTER)
+	void warning (self, gchar *message) {
+	}
+
+	signal first NONE (POINTER)
+	void error (self, gchar *message) {
+	}
+
+	private void
+	do_send_message (Gnome:Pilot:Conduit *self (check null type), 
+	                 GPC_MessageType t, gchar *message, va_list ap) {
+		gchar *tmp;
+		
+		tmp = g_strdup_vprintf(message,ap);
+		
+		switch (t) {
+		case GPC_MSG:
+			self_message (self, tmp);
+			break;
+		case GPC_ERR:
+			self_error (self, tmp);
+			break;
+		case GPC_WARN:
+			self_warning (self, tmp);
+			break;
+		}
+		
+		g_free(tmp);
+		va_end(ap);		
+	}
+
+	public void
+	send_message (Gnome:Pilot:Conduit *self (check null type), gchar *message,...) {
+		va_list ap;
+		va_start (ap, message);
+		self_do_send_message (self, GPC_MSG, message, ap);		
+	}
+	public void
+	send_warning (Gnome:Pilot:Conduit *self (check null type), gchar *message,...) {
+		va_list ap;
+		va_start (ap, message);
+		self_do_send_message (self, GPC_WARN, message, ap);
+	}
+	public void
+	send_error (Gnome:Pilot:Conduit *self (check null type), gchar *message,...) {
+		va_list ap;
+		va_start (ap, message);
+		self_do_send_message (self, GPC_ERR, message, ap);
+	}
+
+	signal last INT (POINTER)
+	int create_settings_window (self, Gtk:Widget *parent) {
+		return -1;
+	}
+	signal first NONE (NONE) void display_settings (self) { };
+	signal first NONE (NONE) void save_settings (self) { };
+	signal first NONE (NONE) void revert_settings (self) { };
+
+	public const gchar* 
+	get_base_dir (Gnome:Pilot:Conduit *self (check null type)) {
+		/* FIXME: yuch! This preserves some sanity, but it should go
+		   away once all conduits have been converted to the new loader */
+		if (self->pilot == NULL) {
+			return g_get_home_dir ();
+		}
+		return self->pilot->sync_options.basedir;
+	}
+}
+
+%h{
+typedef GnomePilotConduit *(*GnomePilotConduitOldLoadFunc)(guint32);
+typedef GnomePilotConduit *(*GnomePilotConduitLoadFunc)(GPilotPilot*);
+typedef void (*GnomePilotConduitDestroyFunc)(GnomePilotConduit *);
+%}

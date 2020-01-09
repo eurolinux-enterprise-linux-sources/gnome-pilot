@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="no"?>
+<omf>
+  <resource>
+    <creator>
+      Ximian, Inc.
+    </creator>
+    <title>
+      Guide to PalmOS Device Synchronization Tools
+    </title>
+    <date>2003-2006</date>
+    <subject category="GNOME|Applications"/>
+    <description>
+	A user's guide to the gnome-pilot tools for use with PalmOS handheld devices.
+    </description>
+    <type>
+	manual
+    </type>
+    <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+    <identifier url="/"/>
+    <language code="C"/>
+    <relation seriesid="4b665ac2-7cb3-11d7-9af8-a0c7edebb5bb" />
+    <rights type="GNU FDL" license.version="1.1" license="http://www.gnu.org/licenses/fdl.html" holder="Ximian, Inc."/>
+  </resource>
+</omf>

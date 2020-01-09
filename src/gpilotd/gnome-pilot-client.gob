@@ -1,0 +1,1313 @@
+/* gnome-pilot-client.gob
+ *
+ * Copyright (C) 1999-2000 Free Software Foundation
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 2 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authors: Eskil Heyn Olsen <eskil@eskil.org>
+ *
+ */
+
+/*
+
+  Usage:
+  Most calls return 
+  GPILOTD_ERR_INVAL          on invalid arguments
+  GPILOTD_ERR_NOT_CONNECTED  connection to the gpilotd is not established
+  GPILOTD_ERR_INTERNAL       on internal fatal object gruesome cruel cursed state
+  GPILOTD_ERR_FAILED         on failed request
+
+  ( in general (return val <= 0) == things went wrong )
+
+ */
+
+%h{
+#include <config.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <unistd.h>
+#include <gtk/gtkobject.h>
+#include <bonobo-activation/bonobo-activation.h>
+#include <libbonobo.h>
+#include <gpilotd/gnome-pilot.h>
+
+#ifdef WITH_VFS
+#include <libgnomevfs/gnome-vfs.h>
+#endif
+
+enum GPilotdErrCode {
+	GPILOTD_OK=0,
+	GPILOTD_ERR_INVAL=-1,
+	GPILOTD_ERR_NOT_CONNECTED=-2,
+	GPILOTD_ERR_FAILED=-3,
+	GPILOTD_ERR_INTERNAL=-4
+};
+
+%}
+
+%{
+
+#include <sys/types.h>
+#include <signal.h>
+	
+typedef struct {
+	POA_GNOME_Pilot_Client servant;
+	GnomePilotClient *self;
+} GnomePilotClientServant;
+
+GnomePilotClient* get_self (PortableServer_Servant servant);
+pid_t gpilotd_get_pid (void);
+
+PortableServer_ServantBase__epv base_epv = {
+	NULL,
+	NULL,
+	NULL
+};
+
+static POA_GNOME_Pilot_Client__epv  gnome_pilot_client_epv;
+static POA_GNOME_Pilot_Client__vepv gnome_pilot_client_vepv = { &base_epv, &gnome_pilot_client_epv };
+
+enum get_triple_ptr_action {
+	GPILOTD_APP_PILOT_NAMES,
+	GPILOTD_APP_PILOT_IDS,
+	GPILOTD_APP_PILOTS_BY_NAME,
+	GPILOTD_APP_PILOTS_BY_LOGIN,
+	GPILOTD_APP_USER_NAMES,
+	GPILOTD_APP_DATABASES_FROM_CACHE,
+	GPILOTD_APP_CRADLES
+};
+
+#ifdef WITH_VFS
+gboolean xfer_callback (GnomeVFSXferProgressInfo *info,
+			GnomePilotClient *this);
+#endif
+
+%}
+
+class Gnome:Pilot:Client from Gtk:Object {
+	public GNOME_Pilot_Daemon gpilotddaemon;
+        public GNOME_Pilot_Client gpilotdclient;
+	public CORBA_Environment ev;
+	public CORBA_char *client_id;
+	public CORBA_ORB orb;
+
+	class_init (class) {
+#ifdef WITH_VFS
+		if (gnome_vfs_initialized () == FALSE) {
+			g_message ("Initing gnome vfs");
+			if (gnome_vfs_init () == FALSE) {
+				g_warning ("Failed to init gnome-vfs");
+			}
+		}
+#endif /* WITH_VFS */
+	}
+
+	private void init_corba_class (self) {
+		static gboolean inited = FALSE;
+		
+		if (inited==FALSE) {
+			self->client_id = NULL;
+			inited = TRUE;
+			gnome_pilot_client_epv._get_client_id = self_corba_get_client_id;
+			gnome_pilot_client_epv._set_client_id = self_corba_set_client_id;
+			gnome_pilot_client_epv.connect = self_corba_connect;
+			gnome_pilot_client_epv.disconnect = self_corba_disconnect;
+			gnome_pilot_client_epv.request_completed = self_corba_request_completed;
+			gnome_pilot_client_epv.userinfo_requested = self_corba_user_info_requested;
+			gnome_pilot_client_epv.sysinfo_requested = self_corba_system_info_requested;
+			gnome_pilot_client_epv.conduit_start = self_corba_conduit_start;
+			gnome_pilot_client_epv.conduit_end = self_corba_conduit_end;
+			gnome_pilot_client_epv.overall_progress = self_corba_overall_progress;
+			gnome_pilot_client_epv.conduit_progress = self_corba_conduit_progress;
+			gnome_pilot_client_epv.conduit_message = self_corba_conduit_message;
+			gnome_pilot_client_epv.daemon_message = self_corba_daemon_message;
+			gnome_pilot_client_epv.daemon_error = self_corba_daemon_error;
+			gnome_pilot_client_epv.conduit_error = self_corba_conduit_error;
+			gnome_pilot_client_epv.pause = self_corba_pause;
+		}
+	}
+
+	init (self) {
+			int argc=0;
+			char *argv=NULL;
+			CORBA_Environment *ev;
+			PortableServer_POA the_poa;
+			GnomePilotClientServant *gnome_pilot_client_servant;
+
+			ev = &(self->ev);
+			self_init_corba_class (self);
+
+			CORBA_exception_init (ev);
+
+			if (!bonobo_activation_is_initialized ())
+				self->orb = bonobo_activation_init (argc, &argv);
+			else
+				self->orb = bonobo_activation_orb_get ();
+
+			g_assert (self->orb!=NULL);
+					
+			gnome_pilot_client_servant = g_new0(GnomePilotClientServant,1);
+			gnome_pilot_client_servant->servant.vepv = 
+			                            &gnome_pilot_client_vepv;
+			gnome_pilot_client_servant->self = self;
+			
+			the_poa = (PortableServer_POA)CORBA_ORB_resolve_initial_references (self->orb,"RootPOA",ev);
+			if (ev->_major != CORBA_NO_EXCEPTION) {
+				g_warning ("%s:%d: Caught exception: %s",
+					   __FILE__,__LINE__, 
+					   CORBA_exception_id (ev));
+				CORBA_exception_free (ev);
+			}
+
+			PortableServer_POAManager_activate (PortableServer_POA__get_the_POAManager (the_poa, ev), ev);
+			if (ev->_major != CORBA_NO_EXCEPTION) {
+				g_warning ("%s:%d: Caught exception: %s",
+					   __FILE__,__LINE__, 
+					   CORBA_exception_id (ev));
+				CORBA_exception_free (ev);
+			}
+
+			POA_GNOME_Pilot_Client__init ((PortableServer_Servant)gnome_pilot_client_servant,ev);
+			if (ev->_major != CORBA_NO_EXCEPTION) {
+				g_warning ("%s:%d: Caught exception: %s",
+					   __FILE__,__LINE__, 
+					   CORBA_exception_id (ev));
+				CORBA_exception_free (ev);
+			}
+
+			CORBA_free (
+				PortableServer_POA_activate_object (the_poa,
+								   gnome_pilot_client_servant,
+								   ev)
+				);
+			if (ev->_major != CORBA_NO_EXCEPTION) {
+				g_warning ("%s:%d: Caught exception: %s",
+					   __FILE__,__LINE__, 
+					   CORBA_exception_id (ev));
+				CORBA_exception_free (ev);
+			}
+			
+			self->gpilotdclient = 
+				PortableServer_POA_servant_to_reference (the_poa, 
+									gnome_pilot_client_servant, 
+									ev);
+			if (ev->_major != CORBA_NO_EXCEPTION) {
+				g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (ev));
+				CORBA_exception_free (ev);
+			}			
+	}
+
+	public GtkObject*
+	new (void) {
+		GnomePilotClient *ret = GET_NEW;
+		return GTK_OBJECT (ret);
+	}
+
+        public void destroy (self) {
+		g_free (self->client_id);
+		/* FIXME: ick, what more to do here ? */
+        }
+	
+        public gint connect_to_daemon (self) {
+		Bonobo_ServerInfoList *list;
+		CORBA_Environment *ev;
+		
+		ev = &(self->ev);
+		list = bonobo_activation_query ("repo_ids.has ('IDL:GNOME/Pilot/Daemon:2.0')", NULL, ev);
+		if (list->_length == 0) {
+			return GPILOTD_ERR_NOT_CONNECTED;
+		} else {
+			Bonobo_ServerInfo info;
+			info = list->_buffer[0];
+			g_message ("Activating object %s", info.iid);
+			self->gpilotddaemon = bonobo_activation_activate_from_id (info.iid, 		  
+									    	Bonobo_ACTIVATION_FLAG_NO_LOCAL, NULL, NULL);
+		}
+		CORBA_free (list);
+		CORBA_exception_free (ev);
+
+		if (self->gpilotddaemon == NULL) return GPILOTD_ERR_NOT_CONNECTED;
+
+		return GPILOTD_OK;
+	}
+
+	private CORBA_char*
+	corba_get_client_id (PortableServer_Servant servant,
+			    CORBA_Environment *ev) {
+		gchar *id;
+		id = get_self (servant)->client_id;
+		if (id==NULL) return CORBA_string_dup ("");
+		return CORBA_string_dup (id);
+	}
+	
+	private void
+	corba_set_client_id (PortableServer_Servant servant,
+			    const CORBA_char *id,
+			    CORBA_Environment *ev) {
+		if (get_self (servant)->client_id!=NULL) {
+			/* throw exception */
+		        g_assert (0);
+		} get_self (servant)->client_id = g_strdup (id);
+	}
+
+	private void
+	corba_connect (PortableServer_Servant servant,
+		      const CORBA_char *pilot_id,
+		      const GNOME_Pilot_UserInfo *user,
+		      CORBA_Environment *ev) {
+		self_pilot_connect (get_self (servant),pilot_id,user);
+	}
+
+	private void
+	corba_disconnect (PortableServer_Servant servant,
+			 const CORBA_char *pilot_id,
+			 CORBA_Environment *ev) {
+		self_pilot_disconnect (get_self (servant),pilot_id);
+	}
+ 
+	private void
+	corba_request_completed (PortableServer_Servant servant,
+				const CORBA_char *pilot_id,				
+				CORBA_unsigned_long id,
+				CORBA_Environment *ev) {
+		self_completed_request (get_self (servant),pilot_id,id);
+	}
+
+	private void
+	corba_user_info_requested (PortableServer_Servant servant,
+				  const CORBA_char *pilot_id,
+				  const GNOME_Pilot_UserInfo *user,
+				  CORBA_Environment *ev) {
+		self_user_info (get_self (servant),pilot_id,user);
+	}
+
+	private void
+	corba_system_info_requested (PortableServer_Servant servant,
+				    const CORBA_char *device,				
+				    const GNOME_Pilot_SysInfo *sysinfo,
+				    CORBA_Environment *ev) {
+		self_system_info (get_self (servant),device,sysinfo);
+	}
+
+	private void
+	corba_conduit_start (PortableServer_Servant servant,
+			    const CORBA_char *pilot_id,
+			    const CORBA_char *conduit_name,
+			    const CORBA_char *database,
+			    CORBA_Environment *ev) {
+		self_start_conduit (get_self (servant),pilot_id,conduit_name,database);
+	}
+				
+	private void
+	corba_conduit_end (PortableServer_Servant servant,
+			  const CORBA_char *pilot_id,
+			  const CORBA_char *conduit_name,
+			  CORBA_Environment *ev) {
+		self_end_conduit (get_self (servant),pilot_id,conduit_name);
+	}
+				
+	private void
+	corba_overall_progress (PortableServer_Servant servant,
+				const CORBA_char *pilot_id,
+				const CORBA_unsigned_long current,
+				const CORBA_unsigned_long total,
+				CORBA_Environment *ev) {
+		self_progress_overall (get_self (servant),pilot_id, current, total);
+	}
+	
+	private void
+	corba_conduit_progress (PortableServer_Servant servant,
+			       const CORBA_char *pilot_id,
+			       const CORBA_char *conduit_name,
+			       const CORBA_unsigned_long current,
+			       const CORBA_unsigned_long total,
+			       CORBA_Environment *ev) {
+		self_progress_conduit (get_self (servant),pilot_id,conduit_name,current,total);
+	}
+				
+	private void
+	corba_conduit_message (PortableServer_Servant servant,
+			      const CORBA_char *pilot_id,
+			      const CORBA_char *conduit_name,
+			      const CORBA_char *message,
+			      CORBA_Environment *ev) {
+		self_message_conduit (get_self (servant),pilot_id,conduit_name,message);
+	}	
+
+	private void
+	corba_daemon_message (PortableServer_Servant servant,
+			      const CORBA_char *pilot_id,
+			      const CORBA_char *conduit_name,
+			      const CORBA_char *message,
+			      CORBA_Environment *ev) {
+		self_message_daemon (get_self (servant),pilot_id,conduit_name,message);
+	}	
+
+	private void
+	corba_daemon_error (PortableServer_Servant servant,
+			    const CORBA_char *pilot_id,
+			    const CORBA_char *message,
+			    CORBA_Environment *ev) {
+		self_error_daemon (get_self (servant), pilot_id, message);
+	}	
+		
+	private void
+	corba_conduit_error (PortableServer_Servant servant,
+			    const CORBA_char *pilot_id,
+			    const CORBA_char *conduit_name,
+			    const CORBA_char *message,
+			    CORBA_Environment *ev) {
+		self_error_conduit (get_self (servant),pilot_id,conduit_name,message);
+	}
+
+	private void
+	corba_pause (PortableServer_Servant servant,
+		     const CORBA_boolean on_off,
+		     CORBA_Environment *ev) {
+		self_daemon_pause (get_self (servant), on_off);
+	}
+	
+	signal first NONE (POINTER,POINTER)
+	void pilot_connect (self, const gchar *pilot_name, const GNOME_Pilot_UserInfo *userinfo) {
+		return;
+	}
+
+	signal first NONE (POINTER)
+	void pilot_disconnect (self,const gchar *pilot_name) {
+		return;
+	}
+
+	signal first NONE (POINTER,ULONG)
+	void completed_request (self, const gchar *pilot_name, unsigned long request_id) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER)
+	void user_info (self, const gchar *device, const GNOME_Pilot_UserInfo *userinfo) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER)
+	void system_info (self, const gchar *device, const GNOME_Pilot_SysInfo *sysinfo) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER,POINTER)
+	void start_conduit (self, const gchar *pilot_name, const gchar *conduit_name, const gchar *database) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER)
+	void end_conduit (self, const gchar *pilot_name, const gchar *conduit_name) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER,UINT,UINT)
+	void progress_conduit (self, const gchar *pilot_name, const gchar *conduit_name, guint current, guint total) {
+		return;
+	}
+
+	signal first NONE (POINTER, UINT, UINT)
+	void progress_overall (self, 
+			       const gchar *pilot_name,
+			       guint current, guint total)
+	{}
+
+	signal first NONE (POINTER,POINTER,POINTER)
+	void message_conduit (self, const gchar *pilot_name, const gchar *conduit_name, const gchar *message) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER,POINTER)
+	void message_daemon (self, const gchar *pilot_name, const gchar *conduit_name, const gchar *message) {
+		return;
+	}
+
+	signal first NONE (POINTER, POINTER)
+	void error_daemon (self, const gchar *pilot_name, const gchar *message) {
+		return;
+	}
+
+	signal first NONE (POINTER,POINTER,POINTER)
+	void error_conduit (self, const gchar *pilot_name, const gchar *conduit_name, const gchar *message) {
+		return;
+	}
+
+	signal first NONE (BOOLEAN)
+	void daemon_pause (self, gboolean on_off) {
+		return;
+	}
+
+        public gint pause_daemon (self) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+
+		GNOME_Pilot_Daemon_pause (self->gpilotddaemon,TRUE,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;
+	}
+
+        public gint unpause_daemon (self) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+
+		GNOME_Pilot_Daemon_pause (self->gpilotddaemon,FALSE,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;
+        }
+
+        public gint reread_config (self) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+
+		GNOME_Pilot_Daemon_reread_config (self->gpilotddaemon, &self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+
+		return GPILOTD_OK;
+        }
+
+        public gint noop (self) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+
+		GNOME_Pilot_Daemon_noop (self->gpilotddaemon, &self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_NOT_CONNECTED;
+		}
+		return GPILOTD_OK;
+	}
+
+        public gint restart_daemon (self) onerror GPILOTD_ERR_INVAL {
+		pid_t pid;
+		
+		/* NOTE: this is going to suck when gpilotd is running on another machine... */
+		pid = gpilotd_get_pid ();
+		if (pid != -1) {
+			/* FIXME shouldn't have to sleep */
+			kill (pid, SIGTERM);
+			sleep(1);
+		}
+		return self_connect_to_daemon (self);
+        }
+
+	public gint monitor_on (self,
+			       const gchar *pilot_id (check null)) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+		GNOME_Pilot_Daemon_monitor_on (self->gpilotddaemon,self->gpilotdclient,pilot_id,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;
+	}	
+
+        public gint monitor_on_all_pilots (self) {
+		GList   *pilots = NULL,
+			*ptr;
+		gint ret = GPILOTD_OK;
+		
+		if (self_get_pilots (self,&pilots) != GPILOTD_OK) return GPILOTD_ERR_FAILED;
+		
+		for (ptr = pilots; ptr; ptr = ptr->next) {
+			ret = self_monitor_on (self,(gchar*)ptr->data);
+		}
+		g_list_foreach (pilots,(GFunc)g_free,NULL);
+		return ret;
+        }
+
+	public gint monitor_off (self,
+				const gchar *pilot_id (check null)) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		GNOME_Pilot_Daemon_monitor_off (self->gpilotddaemon,self->gpilotdclient,pilot_id,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;
+	}	
+
+        public gint monitor_off_all_pilots (self) {
+		GList   *pilots = NULL,
+			*ptr;
+		gint ret = GPILOTD_OK;
+		
+		if (self_get_pilots (self,&pilots) != GPILOTD_OK) return GPILOTD_ERR_FAILED;
+		
+		for (ptr = pilots; ptr; ptr = ptr->next) {
+			ret = self_monitor_on (self,(gchar*)ptr->data);
+		}
+		g_list_foreach (pilots,(GFunc)g_free,NULL);
+		return ret;
+	}
+
+	public gint notify_on (self,
+			      GNOME_Pilot_EventType type) {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		GNOME_Pilot_Daemon_notify_on (self->gpilotddaemon,type,self->gpilotdclient,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;
+	}	
+
+	public gint notify_off (self,
+			       GNOME_Pilot_EventType type) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		GNOME_Pilot_Daemon_notify_off (self->gpilotddaemon,type,self->gpilotdclient,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;
+	}	
+
+	public gint restore (self,
+			    const gchar *pilot_id (check null),
+			    const gchar *directory (check null),
+			    GNOME_Pilot_Survival survival,
+			    gint timeout (check >= 0),
+			    gint *handle) onerror GPILOTD_ERR_INVAL {
+		gint val;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		val = GNOME_Pilot_Daemon_request_restore (self->gpilotddaemon,
+							 self->gpilotdclient,
+							 pilot_id,
+							 directory,
+							 survival,
+							 timeout,
+							 &self->ev);
+		switch (self->ev._major) {
+		case CORBA_SYSTEM_EXCEPTION:
+		case CORBA_USER_EXCEPTION: {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			if (strcmp (ex_GNOME_Pilot_MissingFile,CORBA_exception_id (&self->ev))==0) {
+				g_warning ("Missing file");
+			} 
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+			break;
+		}
+		case CORBA_NO_EXCEPTION: 
+		default:
+			break;
+		}
+
+		if (handle!=NULL) *handle = val;
+
+		return GPILOTD_OK;
+	}	    
+
+	public gint install_file (self,
+				 const gchar *pilot_name (check null),
+				 const gchar *infile (check null),
+				 GNOME_Pilot_Survival survival,
+				 gint timeout (check >=0),
+				 gint *handle) onerror GPILOTD_ERR_INVAL {
+		gint val;
+		gboolean file_copied = FALSE;
+		gchar *filename;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+	       
+		/* g_message ("Installing %s to %s", infile, pilot_name); */
+
+#ifdef WITH_VFS
+		{
+			GnomeVFSResult result;
+			GnomeVFSXferOptions xfer_options = 0;
+			GnomeVFSURI *src_uri;
+			GnomeVFSURI *dest_uri;
+			char *filename_uri;
+			char pwd[128];
+			char *infile_with_path;
+			gchar *queue;
+
+			queue = g_strdup_printf ("%s/.gpilotd/",g_get_home_dir ());
+			filename = tempnam (queue,"PDB");
+						
+			filename_uri = g_strdup_printf ("file://%s", filename);
+
+			/*
+			g_message ("%s test is %d %d", infile, 
+				   infile[0] != '/',
+				   strncmp (infile, "file:/", 6)!=0);
+			*/
+
+			if (infile[0] != '/' && strncmp (infile, "file:/", 6)!=0) {
+				/* gnomevfs needs the file with path */
+				getcwd (pwd, 127);
+				infile_with_path = g_strdup_printf ("%s/%s", pwd, infile);
+			} else {
+				infile_with_path = g_strdup (infile);
+			}
+
+			src_uri = gnome_vfs_uri_new (infile_with_path);
+			dest_uri = gnome_vfs_uri_new (filename_uri);
+
+			/*
+			g_message ("from : \"%s\"", infile_with_path);
+			g_message ("to   : \"%s\"", filename_uri);
+			*/
+
+			result = gnome_vfs_xfer_uri (src_uri, dest_uri,
+						     xfer_options,
+						     GNOME_VFS_XFER_ERROR_MODE_QUERY,
+						     GNOME_VFS_XFER_OVERWRITE_MODE_QUERY,
+						     (GnomeVFSXferProgressCallback)xfer_callback, 
+						     self);
+
+			/* g_message ("gnome-vfs-xfer-uri: %s\n",gnome_vfs_result_to_string (result));  */
+
+			if (result == GNOME_VFS_OK) {
+				file_copied = TRUE;
+			} else {
+				file_copied = FALSE;
+			}
+			g_free (filename_uri);
+			gnome_vfs_uri_unref (src_uri);
+			gnome_vfs_uri_unref (dest_uri);
+			g_free (queue);
+			g_free (infile_with_path);			
+		}
+#else /* WITH_VFS */
+		{
+			gchar *queue;
+			FILE *in,*out;
+
+			file_copied = TRUE;
+
+			queue = g_strdup_printf ("%s/.gnome2/gnome-pilot.d/",g_get_home_dir ());
+			filename = tempnam (queue,"PDB");			
+			
+			in = fopen (infile,"rb");
+			if (in==NULL) {
+				file_copied = FALSE;
+			} 
+
+			out = fopen (filename,"wb");
+			if (out==NULL) {
+				file_copied = FALSE;
+			}
+			
+			while (!feof (in)) {
+				size_t act;
+				char block[1024];
+				act=fread (block,1,1024,in);
+				if (ferror (in)) {
+					file_copied = FALSE;
+				}
+				if (fwrite (block,1,act,out)!=act) {
+					file_copied = FALSE;
+				}
+				if (ferror (out)) {
+					file_copied = FALSE;
+				}
+			}
+			
+			if (out) {
+				fflush (out);
+			}
+			if (in) {
+				fclose (in); 
+			}
+			if (out) {
+				fclose (out);		
+			}
+			g_free (queue);
+		}
+#endif /* WITH_VFS */
+		if (file_copied == FALSE) {
+#ifndef WITH_VFS
+			g_message ("File copy failed");
+#endif
+			free (filename);
+			return GPILOTD_ERR_FAILED;
+		}
+
+		val = GNOME_Pilot_Daemon_request_install (self->gpilotddaemon,
+							 self->gpilotdclient,
+							 pilot_name,
+							 filename,
+							 infile,
+							 survival,
+							 timeout,
+							 &self->ev);
+		switch (self->ev._major) {
+		case CORBA_NO_EXCEPTION: 
+			break;
+		case CORBA_SYSTEM_EXCEPTION:
+		case CORBA_USER_EXCEPTION:
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			
+			if (strcmp (ex_GNOME_Pilot_MissingFile,CORBA_exception_id (&self->ev))==0) {
+				g_warning ("Missing file");
+			} else {
+				unlink (filename);
+			}
+			CORBA_exception_free (&self->ev);
+			free (filename);
+			return GPILOTD_ERR_FAILED;
+			break;
+		default:
+			break;
+		}
+
+		if (handle!=NULL) *handle = val;
+
+		free (filename);
+		return GPILOTD_OK;
+	}
+
+        public gint get_user_info (self,
+				  gchar *cradle_name (check null),
+				  GNOME_Pilot_Survival survival,
+				  gint timeout (check >= 0),
+	                          gint *handle) onerror GPILOTD_ERR_INVAL {
+		gint val;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		val = GNOME_Pilot_Daemon_get_user_info (self->gpilotddaemon,
+						       self->gpilotdclient,
+						       cradle_name,
+						       survival,
+						       timeout,
+						       &self->ev);
+
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+
+		if (handle!=NULL) *handle =val;
+
+		return GPILOTD_OK;
+	}
+
+        public gint set_user_info (self,
+				  gchar *cradle_name (check null),
+				  GNOME_Pilot_UserInfo user,
+				  gboolean continue_sync,
+				  GNOME_Pilot_Survival survival,
+				  gint timeout (check >= 0),
+				  gint *handle) onerror GPILOTD_ERR_INVAL {
+		gint val;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		val = GNOME_Pilot_Daemon_set_user_info (self->gpilotddaemon,
+						       self->gpilotdclient,
+						       &user,
+						       cradle_name,
+						       continue_sync,
+						       survival,
+						       timeout,
+						       &self->ev);
+
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+
+		if (handle!=NULL) *handle =val;
+
+		return GPILOTD_OK;
+	}
+			  
+        public gint get_system_info (self,
+				    gchar *cradle_name (check null),
+				    GNOME_Pilot_Survival survival,
+				    gint timeout,
+				    gint *handle) onerror GPILOTD_ERR_INVAL {
+		gint val;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		val = GNOME_Pilot_Daemon_get_system_info (self->gpilotddaemon,
+							 self->gpilotdclient,
+							 cradle_name,
+							 survival,
+							 timeout,
+							 &self->ev);
+
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+
+		if (handle!=NULL) *handle =val;
+
+		return GPILOTD_OK;
+	}
+
+        public gint remove_request (self,
+				   gint handle) onerror GPILOTD_ERR_INVAL {
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+
+		GNOME_Pilot_Daemon_remove_request (self->gpilotddaemon,handle,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		return GPILOTD_OK;		
+	}
+
+        public gint conduit (self,
+			    const gchar *pilot_name (check null),
+			    const gchar *conduit_name (check null),
+			    GNOME_Pilot_ConduitOperation operation,
+			    GNOME_Pilot_Survival survival, 
+			    gint timeout (check >= 0),
+			    gint *handle) onerror GPILOTD_ERR_INVAL {
+		gint val;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		g_return_val_if_fail (self->gpilotdclient!=NULL, GPILOTD_ERR_INTERNAL);
+		
+		val = GNOME_Pilot_Daemon_request_conduit (self->gpilotddaemon,
+							 self->gpilotdclient,
+							 pilot_name,
+							 conduit_name,
+							 operation,
+							 survival,
+							 timeout,
+							 &self->ev);
+		
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+
+		if (handle!=NULL) *handle =val;
+
+		return GPILOTD_OK;
+	}
+
+	private gint get_triple_ptr (self,
+				    enum get_triple_ptr_action action,
+				    const gchar *name,
+				    GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		GNOME_Pilot_StringSequence *seq=NULL;
+		GNOME_Pilot_LongSequence *seq_long=NULL;
+	
+#ifndef G_DISABLE_CHECKS		
+		if (*output!=NULL) {
+			g_warning ("%s:%d: get_triple_ptr called with non-null pointer for output, leak-alert!",
+				  __FILE__,__LINE__);
+		}
+#endif
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+
+		(*output) = NULL;
+
+		switch (action) {
+		case GPILOTD_APP_PILOT_NAMES:
+			seq = GNOME_Pilot_Daemon_get_pilots (self->gpilotddaemon, &self->ev);
+			break;
+		case GPILOTD_APP_PILOT_IDS:
+			seq_long = GNOME_Pilot_Daemon_get_pilot_ids (self->gpilotddaemon, &self->ev);
+			break;
+		case GPILOTD_APP_PILOTS_BY_NAME:
+			seq = GNOME_Pilot_Daemon_get_pilots_by_user_name (self->gpilotddaemon,name,&self->ev);
+			break;
+		case GPILOTD_APP_PILOTS_BY_LOGIN:
+			seq = GNOME_Pilot_Daemon_get_pilots_by_user_login (self->gpilotddaemon,name,&self->ev);
+			break;
+		case GPILOTD_APP_USER_NAMES:
+			seq = GNOME_Pilot_Daemon_get_users (self->gpilotddaemon,&self->ev);
+			break;
+		case GPILOTD_APP_DATABASES_FROM_CACHE:
+			seq = GNOME_Pilot_Daemon_get_databases_from_cache (self->gpilotddaemon,name,&self->ev);
+			break;
+		case GPILOTD_APP_CRADLES:
+			seq = GNOME_Pilot_Daemon_get_cradles (self->gpilotddaemon,&self->ev);
+			break;
+		}
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		if (seq && seq->_length>0) {
+			int i;
+			for (i=0;i<seq->_length;i++) {
+				if (strlen (seq->_buffer[i]))
+					(*output) = g_list_append ((*output),g_strdup (seq->_buffer[i]));
+			}
+		} 
+		if (seq_long && seq_long->_length>0) {
+			int i;
+			for (i=0;i<seq_long->_length;i++) {
+				(*output) = g_list_append ((*output),
+							   GINT_TO_POINTER (seq_long->_buffer[i]));
+			}
+		} 
+		
+		CORBA_free (seq);
+		CORBA_free (seq_long);
+
+		return GPILOTD_OK;
+	}
+
+        public gint get_users (self,
+			      GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		return self_get_triple_ptr (self,GPILOTD_APP_USER_NAMES,NULL,output);
+	}
+
+        public gint get_databases_from_cache (self,
+					     const gchar *pilot_name,
+					     GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		return self_get_triple_ptr (self,GPILOTD_APP_DATABASES_FROM_CACHE,pilot_name,output);
+	}
+
+	public gint get_cradles (self,
+				 GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		return self_get_triple_ptr (self,GPILOTD_APP_CRADLES,NULL,output);
+	}
+
+	public gint get_pilots (self,
+				GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		return self_get_triple_ptr (self,GPILOTD_APP_PILOT_NAMES,NULL,output);
+	}
+	
+	public gint get_pilot_ids (self,
+				   gint **output (check null)) onerror GPILOTD_ERR_INVAL {
+		GList *long_output = NULL, *ptr;
+		gint result, idx;
+
+		result = self_get_triple_ptr (self, GPILOTD_APP_PILOT_IDS, NULL, &long_output);
+
+		(*output) = g_new0 (int, g_list_length (long_output));
+		idx = 0;
+		for (ptr = long_output; ptr; ptr = g_list_next (ptr)) {
+			(*output)[idx] = GPOINTER_TO_INT (ptr->data);
+			idx++;
+		}
+		g_list_free (long_output);
+
+		return result;
+	}
+
+
+	public gint get_pilots_by_user_name (self,
+					    const gchar *name (check null),
+					    GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		return self_get_triple_ptr (self,GPILOTD_APP_PILOTS_BY_NAME,name,output);
+	}
+
+	public gint get_pilots_by_user_login (self,
+					     const gchar *login (check null),
+					     GList **output (check null)) onerror GPILOTD_ERR_INVAL {
+		return self_get_triple_ptr (self,GPILOTD_APP_PILOTS_BY_LOGIN,login,output);
+	}
+
+	public gint get_user_name_by_pilot_name (self,
+						const gchar *pilot_name (check null),
+						gchar **output (check null)) onerror GPILOTD_ERR_INVAL {
+		CORBA_char *user_name = NULL;
+
+ 		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+#ifndef G_DISABLE_CHECKS		
+		if (*output!=NULL) {
+			g_warning ("%s:%d: get_user_name_by_pilot_name called with non-null pointer for output, leak-alert!",
+				  __FILE__,__LINE__);
+		}
+#endif
+		user_name = GNOME_Pilot_Daemon_get_user_name_by_pilot_name (self->gpilotddaemon,
+									    pilot_name,
+									    &self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, 
+				   CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		
+		*output = g_strdup (user_name);
+		CORBA_free (user_name);
+
+		return GPILOTD_OK;	
+	}
+
+        public gint get_user_login_by_pilot_name (self,
+						 const gchar *pilot_name (check null),
+						 gchar **output (check null)) onerror GPILOTD_ERR_INVAL {
+		CORBA_char *user_login = NULL;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+#ifndef G_DISABLE_CHECKS		
+		if (*output!=NULL) {
+			g_warning ("%s:%d: get_user_login_by_pilot_name called with non-null pointer for output, leak-alert!",
+				  __FILE__,__LINE__);
+		}
+#endif
+		user_login = GNOME_Pilot_Daemon_get_user_login_by_pilot_name (self->gpilotddaemon,
+									      pilot_name,
+									      &self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, 
+				   CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		
+		*output = g_strdup (user_login);
+		CORBA_free (user_login);
+
+		return GPILOTD_OK;	
+	}
+
+	/* Output must be a pointer to a gchar*, and *output should be
+	   NULL when called. The pointer returned in *output must be
+	   g_free'd by the caller. *output will be NULL if anything by
+	   GPILOTD_OK is returned */
+	public gint get_pilot_base_dir_by_name (self,
+						const gchar *pilot_name (check null),
+						gchar **output (check null)) onerror GPILOTD_ERR_INVAL {
+		CORBA_char *basedir;
+
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+#ifndef G_DISABLE_CHECKS		
+		if (*output!=NULL) {
+			g_warning ("%s:%d: get_pilot_base_dir_by_name called with non-null pointer for output, leak-alert!",
+				  __FILE__,__LINE__);
+		}
+#endif
+		basedir = GNOME_Pilot_Daemon_get_pilot_base_dir (self->gpilotddaemon,pilot_name,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		
+		*output = g_strdup (basedir);
+		CORBA_free (basedir);
+		
+		if (strlen (*output)==0) {
+			g_free (*output);
+		       *output = g_strdup_printf ("%s/%s",g_get_home_dir (),pilot_name);
+		}
+		
+		return GPILOTD_OK;	
+	}
+
+	public gint get_pilot_base_dir_by_id (self,
+					     guint32 pilot_id,
+					     gchar **output (check null)) onerror GPILOTD_ERR_INVAL {
+		gchar *pilot_name;
+		gint return_code;
+
+		return_code = self_get_pilot_name_by_id (self,pilot_id,&pilot_name);
+		if (return_code!=GPILOTD_OK) {
+			return return_code;
+		}
+
+		return_code = self_get_pilot_base_dir_by_name (self,pilot_name,output);
+		g_free (pilot_name);
+		return return_code;
+	}
+
+
+	public gint get_pilot_id_by_name (self,
+					   const gchar *pilot_name (check null),
+					   guint32 *output (check null)) onerror GPILOTD_ERR_INVAL {		
+		g_return_val_if_fail (self->gpilotddaemon!=NULL, GPILOTD_ERR_NOT_CONNECTED);
+		
+		*output = GNOME_Pilot_Daemon_get_pilot_id_from_name (self->gpilotddaemon,pilot_name,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		
+		return GPILOTD_OK;	
+	}
+
+	public gint get_pilot_name_by_id (self,
+					 guint32 pilot_id,
+					 gchar **output (check null)) onerror GPILOTD_ERR_INVAL {
+		CORBA_char *name;
+#ifndef G_DISABLE_CHECKS		
+		if (*output!=NULL) {
+			g_warning ("%s:%d: get_pilot_name_by_id called with non-null pointer for output, leak-alert!",
+				  __FILE__,__LINE__);
+		}
+#endif
+		name = GNOME_Pilot_Daemon_get_pilot_name_from_id (self->gpilotddaemon,pilot_id,&self->ev);
+		if (self->ev._major != CORBA_NO_EXCEPTION) {
+			g_warning ("%s:%d: Caught exception: %s",__FILE__,__LINE__, CORBA_exception_id (&self->ev));
+			CORBA_exception_free (&self->ev);
+			return GPILOTD_ERR_FAILED;
+		}
+		
+		*output = g_strdup (name);
+		CORBA_free (name);
+		
+		if (output==NULL || strlen (*output)==0) {
+			g_free (*output);
+			return GPILOTD_ERR_FAILED;
+		}
+		
+		return GPILOTD_OK;	
+	}
+
+
+
+}
+
+%{
+
+#ifdef WITH_VFS
+gboolean xfer_callback (GnomeVFSXferProgressInfo *info,
+			GnomePilotClient *this) {
+	switch (info->status) {
+	case GNOME_VFS_XFER_PROGRESS_STATUS_VFSERROR:
+		g_message ("VFS Error: %s\n",
+			   gnome_vfs_result_to_string (info->vfs_status));
+		return FALSE;
+		break;
+	case GNOME_VFS_XFER_PROGRESS_STATUS_OVERWRITE:
+		g_message ("VFS: Overwriting `%s' with `%s'",
+			   info->target_name, info->source_name);
+		return TRUE;
+		break;
+	case GNOME_VFS_XFER_PROGRESS_STATUS_OK:
+		switch (info->phase) {
+		case GNOME_VFS_XFER_PHASE_INITIAL:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_COLLECTING:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_READYTOGO:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_OPENSOURCE:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_OPENTARGET:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_COPYING:
+/*
+			g_message ("Transferring `%s' to `%s' (file %ld/%ld, byte %ld/%ld in file, "
+				   "%" GNOME_VFS_SIZE_FORMAT_STR "/%" GNOME_VFS_SIZE_FORMAT_STR " total)",
+				   info->source_name,
+				   info->target_name,
+				   info->file_index,
+				   info->files_total,
+				   (glong) info->bytes_copied,
+				   (glong) info->file_size,
+				   info->total_bytes_copied,
+				   info->bytes_total);
+*/
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_CLOSESOURCE:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_CLOSETARGET:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_FILECOMPLETED:
+			return TRUE;
+		case GNOME_VFS_XFER_PHASE_COMPLETED:
+			return TRUE;
+		default:
+			/* g_message ("Unexpected phase %d", info->phase); */
+			return TRUE; 
+		}
+		break;
+	case GNOME_VFS_XFER_PROGRESS_STATUS_DUPLICATE:
+		g_message ("VFS: Duplicate");
+		return FALSE;
+	default:
+		g_message ("VFS: Unknown status");
+		return FALSE;
+	}       
+
+	g_message ("VFS: doh!");
+	return FALSE; 	
+		
+}
+#endif /* WITH_VFS */
+
+pid_t
+gpilotd_get_pid (void)
+{
+	FILE *f;
+	const gchar *homedir;
+	GString *str;
+	gchar pidstr[100];
+	pid_t pid;
+	
+	homedir = g_get_home_dir (); 
+	if (!homedir)
+		return -1;
+	
+	str = g_string_new (homedir);
+	g_string_append (str, "/.gpilotd.pid");
+	f = fopen (str->str, "r");
+	g_string_free (str, TRUE);
+	if (!f) {
+		return -1;
+	} else {
+		fgets (pidstr, sizeof (pidstr), f);
+		fclose (f);
+		pid = strtol (pidstr, NULL, 10);
+		if (pid == '\0')
+			return -1;
+		else
+			return pid;
+	}
+}
+
+GnomePilotClient *
+get_self (PortableServer_Servant servant) {
+	GnomePilotClientServant *s;
+	s = (GnomePilotClientServant*)servant;
+	return s->self;
+}
+
+%}

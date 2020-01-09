@@ -1,0 +1,81 @@
+PLEASE USE TOPLEVEL CHANGELOG 
+	eskil - March 22 2001
+
+2001-02-12  Ettore Perazzoli  <ettore@ximian.com>
+
+	* Makefile.am (gobfiles): Use `$(srcdir)'.
+
+2000-04-16  Vadim Strizhevsky  <vadim@optonline.net>
+
+	* gnome-pilot-conduit-management.gob (new): Add null check for name.
+	Otherwise g_hash_table_lookup would crash.
+
+2000-03-12  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-management.gob: Removed the surplus *enable* 
+	methods.
+
+	* gnome-pilot-conduit-config.gob: Paranoia checks in load_config,
+	ensure that there is a sync_type.
+
+2000-03-12  Vadim Strizhevsky  <vadim@optonline.net>
+
+	* gnome-pilot-conduit-config.gob (load_config, save_config): 
+	Must push/pop config prefix to read the right config information.
+	Also the check for enabled was reversed.
+
+2000-03-08  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-config.gob: Implemented load_config and save_config.
+
+2000-03-06  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-management.gob: destroy now call
+	gtk_object_destroy on self.
+
+2000-02-29  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* Makefile.am ($(GOB_BUILT_SRCS)): Automake juju
+
+2000-02-28  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-management.gob: Prober #include of
+ 	gnome-pilot-conduit.h.
+
+2000-02-27  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-management.gob: introduced id's to conduits, 
+	unique non i18n'ed strings that can be used to uniquely identify a 
+	conduit. Eg. a capplet will then gpcm_new("id",*_ID). Thus also
+	introduced some enums, so _new can take both names and id's, and
+	get_conduits can return both names and enums.
+	Fixed return type on gnome_pilot_conduit_management_new.
+
+	* Makefile.am: libgpilotdCM -> libgpilotcm
+
+2000-02-26  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-management.gob: Finished and tested the
+	disable, enable, enable_with_first and is_enabled calls. Capplets
+	can begin to use it now.
+
+	Did the instantiate_conduit and destroy_conduit plus the shlib
+ 	loading.
+
+2000-02-25  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot-conduit-management.gob: Implemented is_enabled and
+	enabled. I also introduced the notion of a conduit id, basically
+	a string without spaces that must be unique for the conduit, and
+	is i18n independent (using the names for id'ing conduits was
+	pretty broken due to i18n).
+
+	Later that day, Eskil did remove_first_sync and disable. But then
+	he had to catch a plane, and was thus forced to commit it before 
+	testing it properly... the gnome-pilot community wept!
+
+2000-02-24  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* libgpilotdCM/gnome-pilot-conduit-management.gob: Finished
+	attribute loading and getting. Now for the enabling/disable rp
+	pilot and loading of the conduit.

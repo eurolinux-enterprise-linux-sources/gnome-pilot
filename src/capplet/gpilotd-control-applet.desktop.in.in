@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+_Name=PalmOS Devices
+_Comment=Configure PalmOS devices
+Exec=gpilotd-control-applet
+Icon=gnome-palm
+Terminal=false
+StartupNotify=true
+Type=Application
+Categories=GNOME;GTK;Settings;HardwareSettings;
+X-GNOME-Bugzilla-Bugzilla=GNOME
+X-GNOME-Bugzilla-Product=gnome-pilot
+X-GNOME-Bugzilla-Component=capplet
+X-GNOME-Bugzilla-Version=@VERSION@

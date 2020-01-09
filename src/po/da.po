@@ -1,0 +1,1743 @@
+# Dansk translation of gnome-pilot.
+# Copyright (C) 1999 Free Software Foundation, Inc.
+# Kenneth Christiansen <kenneth@ripen.dk>, 1999-2000.
+# Keld Simonsen <keld@dkuug.dk>, 2000.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-pilot 1.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2004-08-26 22:03-0400\n"
+"PO-Revision-Date: 2001-10-06 13:01+02:00\n"
+"Last-Translator: Keld Simonsen <keld@dkuug.dk>\n"
+"Language-Team: Danish <dansk@klid.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: applet/GNOME_PilotApplet.server.in.in.h:1
+msgid "Utility"
+msgstr ""
+
+#: applet/pilot-applet.glade.h:1 capplet/gpilotd-capplet.glade.h:1
+msgid "*"
+msgstr ""
+
+#: applet/pilot-applet.glade.h:2
+msgid "Choose Pilot"
+msgstr "Vælg pilot"
+
+#: applet/pilot-applet.glade.h:3
+msgid "Directory"
+msgstr "Katalog"
+
+#: applet/pilot-applet.glade.h:4
+msgid "Display notices"
+msgstr "Vis beskeder"
+
+#: applet/pilot-applet.glade.h:5
+msgid "Execute when clicked"
+msgstr "Udfør ved museklik"
+
+#: applet/pilot-applet.glade.h:6
+msgid "GNOME PilotSync Properties"
+msgstr "Gnome PilotSynkr-egenskaber"
+
+#: applet/pilot-applet.glade.h:7
+msgid "Pilot ID"
+msgstr "Pilot-id"
+
+#: applet/pilot-applet.glade.h:8
+msgid "Restore Pilot"
+msgstr "Hent pilot"
+
+#: applet/pilot-applet.glade.h:9
+msgid "Sync cradle"
+msgstr "Synk dok"
+
+#: applet/pilot-applet.glade.h:10
+msgid "gnome-pilot progress"
+msgstr "gnome-pilot fremgang"
+
+#: applet/pilot.c:135
+msgid "Synchronizing..."
+msgstr "Synkroniserer..."
+
+#: applet/pilot.c:163
+#, c-format
+msgid "%s Synchronizing"
+msgstr "%s synkroniserer"
+
+#: applet/pilot.c:168
+msgid "Database %v of %u"
+msgstr "Database %v af %u"
+
+#: applet/pilot.c:187 applet/pilot.c:716 applet/pilot.c:868
+msgid "Ready to synchronize"
+msgstr "Klar til synkronisering"
+
+#: applet/pilot.c:207
+#, c-format
+msgid "Request %ld has been completed\n"
+msgstr "Forespørgsel %ld er fuldført\n"
+
+#: applet/pilot.c:228
+#, c-format
+msgid "%s Synchronizing : %s"
+msgstr "%s synkroniserer : %s"
+
+#: applet/pilot.c:233
+#, c-format
+msgid "%s: Started\n"
+msgstr "%s: Startet\n"
+
+#: applet/pilot.c:247
+#, c-format
+msgid "%s Finished : %s"
+msgstr "%s fuldført : %s"
+
+#: applet/pilot.c:252
+#, c-format
+msgid "%s: Ended\n"
+msgstr "%s: Afsluttet\n"
+
+#: applet/pilot.c:277
+msgid "%v of %u records"
+msgstr "%v af %u poster"
+
+#: applet/pilot.c:353
+msgid ""
+"Pilot is currently synchronizing.\n"
+"Please wait for it to finish."
+msgstr ""
+"Piloten synkroniseres.\n"
+"Venligst vent til den er færdig."
+
+#: applet/pilot.c:356
+msgid "Not connected. Please restart daemon."
+msgstr "Ikke tilsluttet. Genstart venligst dæmon."
+
+#: applet/pilot.c:358
+msgid ""
+"Not connected to gpilotd.\n"
+"Please restart daemon."
+msgstr "Ikke tilsluttet gpilotd. Genstart venligst dæmon."
+
+#: applet/pilot.c:373
+msgid "gnome-pilot applet"
+msgstr "gnome-pilot applet"
+
+#: applet/pilot.c:375
+#, fuzzy
+msgid "Copyright 2000-2003 Free Software Foundation, Inc."
+msgstr "Ophavsret (C) Free Software Foundation, 2000"
+
+#: applet/pilot.c:376
+#, fuzzy
+msgid "A dnd and gui monitor for gpilotd.\n"
+msgstr ""
+"En DnD og GUI monitor for gpilotd.\n"
+"Se websiderne på http://eskil.org/gnome-pilot"
+
+#: applet/pilot.c:472
+#, c-format
+msgid "cancelling %d"
+msgstr "afbryder %d"
+
+#: applet/pilot.c:524
+#, c-format
+msgid "Restoring %s"
+msgstr "Genopretter %s"
+
+#: applet/pilot.c:566
+msgid "No directory to restore from."
+msgstr "Intet katalog der kan genoprettes fra "
+
+#: applet/pilot.c:574
+msgid ""
+"Press synchronize on the cradle to restore\n"
+" or cancel the operation."
+msgstr ""
+"Tryk synkronisér på dokken for at genoprette\n"
+" eller annullér operationen."
+
+#: applet/pilot.c:583
+msgid "Restore request failed"
+msgstr "Genoprettelsesforespørgsel fejlede"
+
+#: applet/pilot.c:621
+msgid ""
+"Pilot sync is currently in progress.\n"
+"Are you sure you want to restart daemon?"
+msgstr ""
+"Synkronisering af piloten er i gang.\n"
+"Er du sikker på at du ønsker at starte dæmonen på ny?"
+
+#: applet/pilot.c:631 applet/pilot.c:1160
+msgid "Trying to connect to the GnomePilot Daemon"
+msgstr "Prøver at tilkoble GnomePilot dæmonen"
+
+#: applet/pilot.c:647
+msgid "There's no last sync on record."
+msgstr "Der er ingen sidste sync på posten."
+
+#: applet/pilot.c:687
+#, fuzzy
+msgid "Continue"
+msgstr "Synkr fortsætter"
+
+#: applet/pilot.c:689
+#, fuzzy
+msgid "Pause Daemon"
+msgstr "Pausér dæmon"
+
+#: applet/pilot.c:709
+#, fuzzy
+msgid "Daemon paused..."
+msgstr "Dæmon pauseret"
+
+#: applet/pilot.c:849
+msgid "Not connected. Restart daemon to reconnect"
+msgstr "Ikke forbundet. Genstart dæmon for at genforbinde"
+
+#: applet/pilot.c:1041
+#, c-format
+msgid "Execution of %s failed"
+msgstr "Udførsel af %s fejlede"
+
+#.
+#. if (strstr (file_type (ptr),"text")) {
+#. if (file_size (ptr)>properties.text_limit)
+#. g_message ("installing textfile as Doc (not implemented)");
+#. else
+#. g_message ("installing textfile as Memo (not implemented)");
+#. }
+#.
+#: applet/pilot.c:1118
+#, c-format
+msgid "installing \"%s\" to \"%s\""
+msgstr "installerer \"%s\" til \"%s\""
+
+#: applet/pilot.c:1129
+msgid "unknown dnd type"
+msgstr "ukendt dnd-type"
+
+#: applet/pilot.c:1137
+msgid "destroy gpilot-applet"
+msgstr "ødelæg pilot-applet"
+
+#: applet/pilot.c:1224
+msgid "Cannot find pilot-applet.glade"
+msgstr "Kan ikke finde pilot-applet.glade"
+
+#: applet/pilot.schemas.in.h:1
+msgid "Command to execute when the applet is clicked"
+msgstr ""
+
+#: applet/pilot.schemas.in.h:2
+#, fuzzy
+msgid "Display notices in popup windows"
+msgstr "Vis beskeder"
+
+#: capplet/gnome-pilot-capplet.c:211 capplet/gpilotd-capplet.glade.h:47
+msgid "Pilot Settings"
+msgstr "Pilot-opsætning"
+
+#: capplet/gnome-pilot-capplet.c:378 capplet/gnome-pilot-capplet.c:460
+#: capplet/gpilotd-capplet.glade.h:38
+msgid "Name"
+msgstr "Navn"
+
+#: capplet/gnome-pilot-capplet.c:380 capplet/gpilotd-capplet.glade.h:34
+#: utils/gpilotd-client.c:44
+msgid "ID"
+msgstr "ID"
+
+#: capplet/gnome-pilot-capplet.c:382
+msgid "UserName"
+msgstr "brugernavn"
+
+#: capplet/gnome-pilot-capplet.c:462 capplet/gpilotd-capplet.glade.h:49
+msgid "Port"
+msgstr "Port"
+
+#: capplet/gnome-pilot-capplet.c:464 capplet/gpilotd-capplet.glade.h:55
+msgid "Speed"
+msgstr "Hastighed"
+
+#: capplet/gnome-pilot-capplet.c:466 capplet/gpilotd-capplet.glade.h:60
+msgid "Type"
+msgstr "Type"
+
+#: capplet/gnome-pilot-capplet.c:572
+msgid "Conduit"
+msgstr "Rørkanalnavn"
+
+#: capplet/gnome-pilot-capplet.c:574
+msgid "Sync Action"
+msgstr "Synkr handling"
+
+#: capplet/gnome-pilot-capplet.c:775
+#, c-format
+msgid "Are you sure you want to delete %s pilot?"
+msgstr "Er du sikker på at du vil slette %s piloten?"
+
+#: capplet/gnome-pilot-capplet.c:799
+msgid "_Edit this pilot..."
+msgstr "_Redigér denne pilot..."
+
+#: capplet/gnome-pilot-capplet.c:800
+msgid "Edit the currently selected pilot"
+msgstr "Rediger aktuelt valgte pilot"
+
+#: capplet/gnome-pilot-capplet.c:802
+msgid "_Delete this pilot"
+msgstr "_Slet denne pilot"
+
+#: capplet/gnome-pilot-capplet.c:803
+msgid "Delete the currently selected pilot"
+msgstr "Slet den aktuelt valgte pilot"
+
+#: capplet/gnome-pilot-capplet.c:938
+#, fuzzy, c-format
+msgid "Are you sure you want to delete %s device?"
+msgstr "Er du sikker på at du vil slette %s piloten?"
+
+#: capplet/gnome-pilot-capplet.c:959
+msgid "_Edit this device..."
+msgstr "_Redigér denne enhed..."
+
+#: capplet/gnome-pilot-capplet.c:960
+msgid "Edit the currently selected device"
+msgstr "Rediger aktuelt valgte enhed"
+
+#: capplet/gnome-pilot-capplet.c:962
+msgid "_Delete this device"
+msgstr "_Slet denne enhed"
+
+#: capplet/gnome-pilot-capplet.c:963
+msgid "Delete the currently selected device"
+msgstr "Slet den aktuelt valgte enhed"
+
+#: capplet/gnome-pilot-capplet.c:1125
+#, c-format
+msgid "Unable to instantiate %s conduit."
+msgstr "Kunne ikke instantiere komponent %s."
+
+#: capplet/gnome-pilot-capplet.c:1165
+msgid "_Enable this conduit"
+msgstr "_Slå denne conduit til"
+
+#: capplet/gnome-pilot-capplet.c:1166
+msgid "Disable the currently selected conduit"
+msgstr "Slå den aktuelt valgte conduit fra"
+
+#: capplet/gnome-pilot-capplet.c:1168
+msgid "_Disable this conduit"
+msgstr "_Slå denne conduit fra"
+
+#: capplet/gnome-pilot-capplet.c:1169
+msgid "Enable the currently selected conduit"
+msgstr "Slå den aktuelt angivne conduit til"
+
+#: capplet/gnome-pilot-capplet.c:1174
+msgid "_Settings..."
+msgstr "_Opsætning..."
+
+#: capplet/gnome-pilot-capplet.c:1175
+msgid "Modify the currently selected conduit's settings"
+msgstr "Ændr indstillinger for valgt komponent"
+
+#. < 0) {
+#: capplet/gnome-pilot-cdialog.c:209
+msgid ""
+"Unable to create pilot settings window. Incorrect conduit configuration."
+msgstr ""
+"Kunne ikke oprette vindue for indstillinger af pilot. Ukorrekt konfiguration "
+"af komponent."
+
+#: capplet/gnome-pilot-druid.c:411
+msgid ""
+"Setup did not complete and settings will not\n"
+"be saved. Are you sure you want to quit?"
+msgstr ""
+"Opsætningen blev ikke fuldført og indstillingerne vil ikke\n"
+"blive gemt. Er du sikker på at du vil afslutte?"
+
+#: capplet/gnome-pilot-druid.c:503
+#, c-format
+msgid ""
+"About to send the following data to the pilot.\n"
+"UserName: %s\n"
+"ID: %d\n"
+"Please put pilot in %s (%s) and press HotSync button."
+msgstr ""
+"I færd med at sende følgende data til piloten.\n"
+"BrugerNavn: %s\n"
+"ID: %d\n"
+"Venligst sæt piloten i %s (%s) og tryk HotSync knappen."
+
+#. do get_from_pilot
+#: capplet/gnome-pilot-druid.c:525
+#, c-format
+msgid ""
+"About to retrieve UserName and ID from the pilot.\n"
+"Please put pilot in %s (%s) and press HotSync button."
+msgstr ""
+"I færd med at hente BrugerNavn og ID fra piloten.\n"
+"Venligst sæt piloten i %s (%s) og tryk HotSync knappen."
+
+#: capplet/gnome-pilot-druid.c:538
+msgid "Failed sending request to gpilotd"
+msgstr "Kunne ikke sende forespørgsel til gpilotd"
+
+#: capplet/gnome-pilot-druid.c:669
+#, c-format
+msgid ""
+"Successfully retrieved UserName and ID from pilot.\n"
+"UserName: %s\n"
+"ID: %d"
+msgstr ""
+"Fuldført hentning af BrugerNavn og ID fra piloten.\n"
+"BrugerNavn: %s\n"
+"ID: %d"
+
+#: capplet/gnome-pilot-pdialog.c:371
+#, c-format
+msgid ""
+"Please put pilot in %s (%s) and press HotSync button or cancel the operation."
+msgstr ""
+"Venligst sæt pilot i %s (%s) og tryk HotSync-knappen eller afbryd "
+"operationen."
+
+#: capplet/gnome-pilot-pdialog.c:407
+msgid "The request to get pilot id failed"
+msgstr "Forespørgselen om at hente pilotens id fejlede"
+
+#: capplet/gnome-pilot-pdialog.c:446
+msgid "The request to set pilot id failed"
+msgstr "Forespørgslen om at sætte pilotens id fejlede"
+
+#: capplet/gpilotd-capplet.glade.h:2
+msgid "/dev/pilot"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:3
+#, fuzzy
+msgid "/dev/ttyS0"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:4
+#, fuzzy
+msgid "/dev/ttyS1"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:5
+#, fuzzy
+msgid "/dev/ttyS2"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:6
+#, fuzzy
+msgid "/dev/ttyS3"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:7
+#, fuzzy
+msgid "/dev/ttyqe"
+msgstr "/dev/pilot"
+
+#: capplet/gpilotd-capplet.glade.h:8
+#, fuzzy
+msgid "Action:"
+msgstr "Synkr handling"
+
+#: capplet/gpilotd-capplet.glade.h:9
+msgid "Add..."
+msgstr "Tilføj..."
+
+#: capplet/gpilotd-capplet.glade.h:10
+msgid "Choose Device"
+msgstr "Vælg enhed"
+
+#: capplet/gpilotd-capplet.glade.h:11
+#, fuzzy
+msgid "Conduit Actions"
+msgstr "Handlinger for rørkanal"
+
+#: capplet/gpilotd-capplet.glade.h:12
+msgid "Conduit Description"
+msgstr "Beskrivelse af rørkanal"
+
+#: capplet/gpilotd-capplet.glade.h:13
+msgid "Conduit Settings"
+msgstr "Rørkanal indstillinger"
+
+#: capplet/gpilotd-capplet.glade.h:14
+#, fuzzy
+msgid "Conduits"
+msgstr "Rørkanalnavn"
+
+#: capplet/gpilotd-capplet.glade.h:15
+#, fuzzy
+msgid ""
+"Congratulations, gnome-pilot is configured!\n"
+"\n"
+"You can change gnome-pilot settings at any time from \n"
+"PilotLink and Conduits tabs in control center.\n"
+"\n"
+"You can monitor syncing of gnome-pilot by adding \n"
+"PilotLink applet to your panel."
+msgstr ""
+"Tillykke, du har fuldført konfiguration af gnome-pilot!\n"
+"\n"
+"Du kan ændre indstillinger for gnome-pilot når som helst\n"
+"fra PilotLink og Komponenter-fanerne i kontrolcentret.\n"
+"\n"
+"Du kan overvåge synkronisering af gnome-pilot ved\n"
+"at tilføje PilotLink appletten på panelet."
+
+#: capplet/gpilotd-capplet.glade.h:22
+msgid "Cradle Settings"
+msgstr "Vugge-opsætning"
+
+#: capplet/gpilotd-capplet.glade.h:23
+msgid "Delete"
+msgstr "Slet"
+
+#: capplet/gpilotd-capplet.glade.h:24
+msgid "Device Settings"
+msgstr "Enhedsopsætning"
+
+#: capplet/gpilotd-capplet.glade.h:25
+msgid "Devices"
+msgstr "Enheder"
+
+#: capplet/gpilotd-capplet.glade.h:26
+msgid "Disable"
+msgstr "Deaktivér"
+
+#: capplet/gpilotd-capplet.glade.h:27 capplet/util.c:88 capplet/util.c:418
+msgid "Disabled"
+msgstr "Slået fra"
+
+#: capplet/gpilotd-capplet.glade.h:28
+msgid "Edit..."
+msgstr "Redigér..."
+
+#: capplet/gpilotd-capplet.glade.h:29
+msgid "Enable"
+msgstr "Aktivér"
+
+#: capplet/gpilotd-capplet.glade.h:30
+msgid "Enter user name you want stored on your pilot"
+msgstr "Indtast brugernavn du vil gemme på piloten"
+
+#: capplet/gpilotd-capplet.glade.h:31
+msgid "Get User Name and ID from existing pilot that was used before."
+msgstr "Hent brugernavn og ID fra eksisterende pilot som blev brugt før."
+
+#: capplet/gpilotd-capplet.glade.h:32
+msgid "Get from pilot"
+msgstr "Hent fra pilot"
+
+#: capplet/gpilotd-capplet.glade.h:33
+msgid "Gnome Pilot Settings"
+msgstr "Gnome pilot opsætning"
+
+#: capplet/gpilotd-capplet.glade.h:35
+msgid "Initial Sync"
+msgstr "Første synkronisering"
+
+#: capplet/gpilotd-capplet.glade.h:36 capplet/util.c:408
+msgid "IrDA"
+msgstr "Infrarød"
+
+#: capplet/gpilotd-capplet.glade.h:37
+msgid "Local basedir"
+msgstr "Lokal basekatalog"
+
+#: capplet/gpilotd-capplet.glade.h:39 capplet/util.c:409
+msgid "Network"
+msgstr "Netværk"
+
+#: capplet/gpilotd-capplet.glade.h:40
+msgid "No, I've never used sync software with this pilot before."
+msgstr ""
+"Nej, jeg har aldrig brugt synkroniseringsprogrammer med denne pilot før."
+
+#: capplet/gpilotd-capplet.glade.h:41 capplet/util.c:129
+msgid "None"
+msgstr ""
+
+#: capplet/gpilotd-capplet.glade.h:42
+#, fuzzy
+msgid "One Time Action:"
+msgstr "Handlinger for rørkanal"
+
+#: capplet/gpilotd-capplet.glade.h:43
+msgid "Pilot Attributes"
+msgstr "Pilotattributter"
+
+#: capplet/gpilotd-capplet.glade.h:44
+msgid "Pilot Identification"
+msgstr "Pilot Identifikation"
+
+#: capplet/gpilotd-capplet.glade.h:45
+msgid "Pilot Name"
+msgstr "Pilot-navn"
+
+#: capplet/gpilotd-capplet.glade.h:46
+msgid "Pilot Name:"
+msgstr "Pilot-navn:"
+
+#: capplet/gpilotd-capplet.glade.h:48
+msgid "Pilots"
+msgstr "Piloter"
+
+#: capplet/gpilotd-capplet.glade.h:50
+msgid "Send to pilot"
+msgstr "Send til pilot"
+
+#: capplet/gpilotd-capplet.glade.h:51 capplet/util.c:410
+msgid "Serial"
+msgstr "Seriel"
+
+#: capplet/gpilotd-capplet.glade.h:52
+msgid "Set User Name and ID to a new pilot."
+msgstr "Sæt brugernavn og ID til en ny pilot."
+
+#: capplet/gpilotd-capplet.glade.h:53
+msgid "Set the root directory for all pilot files to be stored."
+msgstr "Sæt rodkatalog for gemning af alle pilot-filer."
+
+#: capplet/gpilotd-capplet.glade.h:54
+msgid "Settings..."
+msgstr "Opsætning..."
+
+#: capplet/gpilotd-capplet.glade.h:56
+msgid "Success"
+msgstr "Succés"
+
+#: capplet/gpilotd-capplet.glade.h:57
+msgid "The name for your pilot. It is only used for identification."
+msgstr "Navnet på din pilot. Det bruges kun for identifikation."
+
+#: capplet/gpilotd-capplet.glade.h:58
+msgid ""
+"This integer ID identifies your pilot and must be unique between different "
+"pilots that you use."
+msgstr ""
+"Denne heltals-ID identificerer din pilot og skal være unik på forskellige "
+"piloter du bruger."
+
+#: capplet/gpilotd-capplet.glade.h:59
+msgid "Timeout"
+msgstr "Tidsafbrydelse"
+
+#: capplet/gpilotd-capplet.glade.h:61 capplet/util.c:407
+msgid "USB"
+msgstr ""
+
+#: capplet/gpilotd-capplet.glade.h:62
+msgid "User Name"
+msgstr "brugernavn"
+
+#: capplet/gpilotd-capplet.glade.h:63
+msgid "User Name and ID to set on the Pilot"
+msgstr "Brugernavn og ID som skal sættes på piloten"
+
+#: capplet/gpilotd-capplet.glade.h:64
+msgid "User Name:"
+msgstr "Brugernavn:"
+
+#: capplet/gpilotd-capplet.glade.h:65
+msgid "Welcome to gnome-pilot!"
+msgstr "Velkommen til gnome-pilot!"
+
+#: capplet/gpilotd-capplet.glade.h:66
+msgid "Yes, I've used sync software with this pilot before."
+msgstr "Ja, jeg har brugt synkroniseringsprogrammer med denne pilot før."
+
+#: capplet/gpilotd-capplet.glade.h:67
+#, fuzzy
+msgid ""
+"You seem to be running gnome-pilot for the first time.\n"
+"The following steps will setup gnome-pilot for syncing. \n"
+"You can always change any options later from\n"
+"PilotLink panel in Gnome Control Center.\n"
+"\n"
+"Press 'Forward' to continue.\n"
+"Press 'Cancel' to exit."
+msgstr ""
+"Det ser ud til at du kører gnome-pilot for første gang.\n"
+"De følgende trin vil sætte gnome-pilot op til synkronisering.\n"
+"Du kan altid ændre et valg senere fra\n"
+"PilotLænke-panelet i Gnome Kontrolcenter.\n"
+"\n"
+"Tryk 'Næste' for at fortsætte.\n"
+"Tryk 'Annullér' for opsætning i hånden."
+
+#: capplet/gpilotd-control-applet.c:81
+msgid "Start druid only"
+msgstr "Start kun druid"
+
+#: capplet/gpilotd-control-applet.c:103
+msgid "Error initializing gpilotd capplet"
+msgstr "Fejl under opstart af gpilotd capplet'en"
+
+#: capplet/gpilotd-control-applet.c:114 capplet/gpilotd-control-applet.c:115
+msgid "Error loading pilot state, aborting"
+msgstr "Fejl under indlæsning af tilstandsdata for pilot, afbryder"
+
+#: capplet/gpilotd-control-applet.c:122 capplet/gpilotd-control-applet.c:123
+msgid "Cannot connect to the GnomePilot Daemon"
+msgstr "Kan ikke forbinde til GnomePilot dæmon"
+
+#: capplet/gpilotd-control-applet.c:132
+msgid "Cannot run druid if pilots or cradles already configured"
+msgstr "Kan ikke køre druid hvis piloter eller dokke allerede er konfigureret"
+
+#: capplet/gpilotd-control-applet.desktop.in.h:1
+msgid "Configure PalmOS devices"
+msgstr ""
+
+#: capplet/gpilotd-control-applet.desktop.in.h:2
+#, fuzzy
+msgid "PalmOS Devices"
+msgstr "Pilot-id"
+
+#. Default to 57600
+#: capplet/util.c:36 capplet/util.c:399
+msgid "Use conduit settings"
+msgstr "Gem rørkanal indstillinger"
+
+#: capplet/util.c:37 capplet/util.c:392
+msgid "Synchronize"
+msgstr "Synkronisér"
+
+#: capplet/util.c:38 capplet/util.c:393
+msgid "Copy from pilot"
+msgstr "Kopiér fra pilot"
+
+#: capplet/util.c:39 capplet/util.c:394
+msgid "Copy to pilot"
+msgstr "Kopiér til pilot"
+
+#: capplet/util.c:40 capplet/util.c:395
+msgid "Merge from pilot"
+msgstr "Hent fra pilot"
+
+#: capplet/util.c:41 capplet/util.c:396
+msgid "Merge to pilot"
+msgstr "Send til pilot"
+
+#: capplet/util.c:95 capplet/util.c:420
+msgid "Enabled"
+msgstr "Slået på"
+
+#: capplet/util.c:234
+msgid "You must have at least one device setup"
+msgstr "Du skal have mindst en enheds-opsætning"
+
+#: capplet/util.c:458
+msgid ""
+"The specified base directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+"Det angivne basekatalog eksisterer, men den har gale rettigheder.\n"
+"Venligst ret dette eller vælg et andet katalog"
+
+#: capplet/util.c:463
+msgid ""
+"The specified base directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+"Det angivne basekatalog eksisterer, men er ikke et katalog.\n"
+"Venligst lav det om til et katalog eller vælg et andet katalog"
+
+#: capplet/util.c:470
+msgid ""
+"It wasn't possible to create the specified base directory.\n"
+"Please verify the permitions on the specified path or choose another "
+"directory"
+msgstr ""
+"Det var ikke muligt at oprette det angivne basekatalog.\n"
+"Venligst verificér rettighederne på den angivne sti eller vælg et andet "
+"katalog"
+
+#: capplet/util.c:475
+msgid ""
+"The path specified for the base directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+"Angivet sti for basekataloget er ugyldig.\n"
+"Venligst vælg et andet katalog"
+
+#: capplet/util.c:577
+msgid "Read/Write permissions failed on"
+msgstr "Læse-/skrive-rettigheder fejlede på"
+
+#: capplet/util.c:579
+msgid "Check the permissions on the device and retry"
+msgstr "Tjek rettigheder for enheden og prøv igen"
+
+#: conduits/backup/backup_conduit.c:236
+msgid "Checking for removed databases"
+msgstr "Tjekker for fjernede databaser"
+
+#. I18N note: this is printed when renaming a file %s
+#: conduits/backup/backup_conduit.c:243
+#, c-format
+msgid "Renaming %s"
+msgstr "Omdøber %s"
+
+#. I18N note: this message follow a "Renaming %s". The
+#. %s is a file name
+#: conduits/backup/backup_conduit.c:250
+#, c-format
+msgid "to %s"
+msgstr "til %s"
+
+#: conduits/backup/backup_conduit.c:422 conduits/backup/backup_conduit.c:426
+#, c-format
+msgid "%s not modified since last sync"
+msgstr "%s er ikke ændret siden seneste synkronisering"
+
+#: conduits/backup/backup_conduit.c:438 conduits/backup/backup_conduit.c:440
+#, c-format
+msgid "Making backup of %s"
+msgstr "Laver sikkerhedskopi af %s"
+
+#: conduits/backup/backup_conduit.c:447 conduits/backup/backup_conduit.c:449
+#, c-format
+msgid "Could not create backup file %s"
+msgstr "Kunne ikke oprette sikkerhedskopifil %s"
+
+#: conduits/backup/backup_conduit.c:646
+msgid "Collecting restore information..."
+msgstr "Samler genopretningsinformation..."
+
+#: conduits/backup/backup_conduit.c:770
+msgid "Backup directory"
+msgstr "Katalog til sikkerhedskopier"
+
+#: conduits/backup/backup_conduit.c:780
+msgid "Only backup changed bases"
+msgstr "Kun sikkerhedskopi-ændrede baser"
+
+#: conduits/backup/backup_conduit.c:787
+msgid "Remove local base if deleted on pilot"
+msgstr "Fjern lokal base hvis slettet på piloten"
+
+#: conduits/backup/backup_conduit.c:794
+msgid "# of old backups to keep"
+msgstr "Antal gamle sikkerhedskopier der skal beholdes"
+
+#: conduits/file/file_conduit.c:240 conduits/file/file_conduit.c:250
+#, c-format
+msgid "Install of %s failed"
+msgstr "Installation af %s mislykkedes"
+
+#: conduits/file/file_conduit.c:287
+#, c-format
+msgid "Installing %s from %s..."
+msgstr "Installerer %s fra %s..."
+
+#: conduits/file/file_conduit.c:289
+#, c-format
+msgid "Installing %s..."
+msgstr "Installerer %s..."
+
+#: conduits/file/gpilot_install_file.c:44
+msgid "Install immediately"
+msgstr "Installér straks"
+
+#: conduits/file/gpilot_install_file.c:45
+msgid "Install delayed"
+msgstr "Installér senere"
+
+#: conduits/file/gpilot_install_file.c:46
+msgid "Pilot to install to"
+msgstr "Pilot som skal installeres til"
+
+#: conduits/file/gpilot_install_file.c:46
+msgid "PILOT"
+msgstr "PILOT"
+
+#: conduits/file/gpilot_install_file.c:118
+#: conduits/file/gpilot_install_file.c:119
+msgid "Unable to get pilot names"
+msgstr "Kan ikke skaffe pilotnavne"
+
+#: conduits/file/gpilot_install_file.c:158
+msgid "Following files failed :\n"
+msgstr "Følgende filer fejlede :\n"
+
+#: conduits/file/gpilot_install_file.c:170
+#, c-format
+msgid "Installing to %s:\n"
+msgstr "Installerer til %s\n"
+
+#: conduits/file/gpilot_install_file.c:191
+msgid "No files to install"
+msgstr "Ingen filer at installere"
+
+#: conduits/file/gpilot_install_file.c:194
+msgid ""
+"Press synchronize on the cradle to install\n"
+" or cancel the operation."
+msgstr ""
+"Tryk synkronisér på dokken for at installere\n"
+" eller annullér operationen."
+
+#: gpilot-fileman/fileman.c:29 gpilot-fileman/fileman.c:646
+#, fuzzy
+msgid "Gnome Pilot File Manager"
+msgstr "Gnome pilot opsætning"
+
+#: gpilot-fileman/fileman.c:31
+msgid "Copyright Manish and Neil Vachharajani (C) 1998"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:34
+msgid ""
+"Manages files and applications on your Palm Pilot\n"
+"Palm Pilot is a Registered trademark of 3com Inc."
+msgstr ""
+
+#: gpilot-fileman/fileman.c:71
+#, fuzzy
+msgid "Really quit Gnome Pilot File Manager?"
+msgstr "Gnome pilot opsætning"
+
+#: gpilot-fileman/fileman.c:173
+msgid "Hmm, this shouldn't happen, not enough filenames\n"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:207 gpilot-fileman/fileman.c:366
+#, fuzzy
+msgid "Aborting..."
+msgstr "Om..."
+
+#: gpilot-fileman/fileman.c:244
+#, fuzzy
+msgid "No files to install!!"
+msgstr "Ingen filer at installere"
+
+#: gpilot-fileman/fileman.c:252
+#, fuzzy
+msgid "Install Progress"
+msgstr "Installér fil"
+
+#: gpilot-fileman/fileman.c:256
+#, fuzzy
+msgid "Installing... "
+msgstr "Installerer %s..."
+
+#: gpilot-fileman/fileman.c:311 gpilot-fileman/fileman.c:476
+msgid "Press the Hot Sync button on your pilot now!"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:442
+#, fuzzy
+msgid "Unable to open or create chosen name as a directory!"
+msgstr "Kunne ikke oprette køkatalog for filinstallation"
+
+#: gpilot-fileman/fileman.c:452
+msgid "Chosen backup location is not a directory!"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:463
+#, fuzzy
+msgid "Backup Progress"
+msgstr "Katalog til sikkerhedskopier"
+
+#: gpilot-fileman/fileman.c:465
+msgid "Backing up... "
+msgstr ""
+
+#: gpilot-fileman/fileman.c:484
+#, fuzzy
+msgid "Unable to open status pipe"
+msgstr "Kan ikke forbinde til piloten"
+
+#: gpilot-fileman/fileman.c:495
+#, fuzzy
+msgid "Unable to open message pipe"
+msgstr "Kan ikke skaffe pilotnavne"
+
+#: gpilot-fileman/fileman.c:506
+msgid "Unable to fork"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:573
+#, fuzzy
+msgid "Backup Directory"
+msgstr "Katalog til sikkerhedskopier"
+
+#: gpilot-fileman/fileman.c:591
+#, fuzzy
+msgid "About"
+msgstr "Om..."
+
+#: gpilot-fileman/fileman.c:591
+msgid "About the gpilot-fileman"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:602
+#, fuzzy
+msgid "Install Files"
+msgstr "Installér fil"
+
+#: gpilot-fileman/fileman.c:602
+msgid "Installs selected files to the connected Pilot"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:608
+#, fuzzy
+msgid "Backup Pilot"
+msgstr "Katalog til sikkerhedskopier"
+
+#: gpilot-fileman/fileman.c:608
+msgid "Back's up selected files from the connected Pilot"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:615
+#, fuzzy
+msgid "Properties"
+msgstr "Egenskaber..."
+
+#: gpilot-fileman/fileman.c:615
+#, fuzzy
+msgid "Properties for the Gnome Pilot File Manager"
+msgstr "Gnome pilot opsætning"
+
+#: gpilot-fileman/fileman.c:623
+msgid "Quit"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:623
+msgid "Quits the application"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:631
+msgid "File"
+msgstr ""
+
+#: gpilot-fileman/fileman.c:632
+msgid "Help"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:286
+msgid "Add ->"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:287
+msgid "<- Remove"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:288
+msgid "<- Remove All"
+msgstr ""
+
+#: gpilot-fileman/multifile.c:330
+msgid "Selected Files"
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:88
+#, fuzzy
+msgid "Unable to bind to pilot\n"
+msgstr "Kan ikke forbinde til piloten"
+
+#: gpilot-fileman/pilotfunc.c:113
+msgid "Exiting on cancel"
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:119
+#, fuzzy, c-format
+msgid "Unable to open '%s'!"
+msgstr "Kan ikke forbinde til piloten"
+
+#: gpilot-fileman/pilotfunc.c:124
+#, fuzzy, c-format
+msgid "Install failed %s."
+msgstr "Installér fil"
+
+#: gpilot-fileman/pilotfunc.c:211
+msgid "Exiting on cancel, all data NOT backed up."
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:246
+msgid "Failed, unable to create file\n"
+msgstr ""
+
+#: gpilot-fileman/pilotfunc.c:254
+msgid "Failed, unable to back up database\n"
+msgstr ""
+
+#: gpilot-fileman/preferences.c:82
+#, fuzzy
+msgid "Pilot Device"
+msgstr "Pilot-id"
+
+#: gpilot-fileman/preferences.c:89
+msgid "Confirm on quit"
+msgstr ""
+
+#: gpilot-fileman/preferences.c:118
+#, fuzzy
+msgid "General"
+msgstr "Seriel"
+
+#: gpilotd/GNOME_Pilot_Daemon.server.in.in.h:1
+#, fuzzy
+msgid "Gnome-Pilot daemon"
+msgstr "Gnome pilot opsætning"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:63
+msgid "deleted pilot record modified locally, not deleting\n"
+msgstr "slettet pilotpost ændret lokalt, bliver ikke slettet\n"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:64
+msgid "deleted local record modified on pilot, not deleting\n"
+msgstr "slettet lokal post ændret på pilot, bliver ikke slettet\n"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:65
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:69
+msgid "merge conflict, pilot and local record swapped\n"
+msgstr "konflikt ved fletning, lokal post og post på pilot ombyttet\n"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:66
+#, fuzzy
+msgid "archive and change conflict, pilot and local record swapped\n"
+msgstr "arkiv og ændringskonflikt, lokal post byttet om med post på pilot\n"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:67
+#, fuzzy
+msgid "archive and change conflict, local record sent to pilot\n"
+msgstr "konflikt ved arkiv og ændring, lokal post sendt til pilot\n"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:68
+#, fuzzy
+msgid "archive and change conflict, pilot record saved locally\n"
+msgstr "konflikt med arkiv og ændring, post på pilot lagret lokalt\n"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:350
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:425
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:486
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:515
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:544
+msgid "Conduits initialization failed, aborting operation"
+msgstr "Initialisering af conduit fejlede, afbryder operationen"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:363
+msgid "Unable to delete all records in pilot database, aborting operation."
+msgstr "Kan ikke slette alle poster i pilot databasen, afbryder operationen."
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:374
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:948
+msgid "Conduit did not return a record"
+msgstr "Conduiten hentede ikke en post"
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:431
+msgid "Unable to delete all records in local database, aborting operation."
+msgstr "Kan ikke slette alle poster i lokal database, afbryder operationen."
+
+#: gpilotd/gnome-pilot-conduit-standard-abs.c:1349
+msgid "Error in conduit, newly added record could not be found"
+msgstr "Fejl i conduit, nylig indlagt post kan ikke findes"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:487
+msgid "Copy to pilot failed!"
+msgstr "Kopiering til pilot mislykkedes!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:511
+msgid "Copy from pilot failed!"
+msgstr "Kopiering fra pilot mislykkedes!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:535
+msgid "Merge to pilot failed!"
+msgstr "Fletning til pilot mislykkedes!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:559
+msgid "Merge from pilot failed!"
+msgstr "Fletning fra pilot mislykkedes!"
+
+#: gpilotd/gnome-pilot-conduit-sync-abs.c:614
+msgid "Synchronization failed!"
+msgstr "Synkronisering afsluttet!"
+
+#: gpilotd/gnome-pilot-structures.c:286
+#, c-format
+msgid "Could not open device %s (%s): reason: \"%s\"."
+msgstr "Kunne ikke åbne enhed %s: (%s): årsag: \"%s\"."
+
+#: gpilotd/gnome-pilot-structures.c:290
+#, c-format
+msgid ""
+"GnomePilot could not open device %s (%s).\n"
+"Reason: \"%s\"."
+msgstr ""
+"GnomePilot kunne ikke åbne enhed %s (%s).\n"
+"Årsag: \"%s\"."
+
+#: gpilotd/gnome-pilot-structures.c:665 gpilotd/gnome-pilot-structures.c:716
+#: gpilotd/gnome-pilot-structures.c:744 gpilotd/gnome-pilot-structures.c:770
+msgid "Unknown device type"
+msgstr "Ukendt enhedstype"
+
+#: gpilotd/gnome-pilot-structures.c:785
+msgid "Number of devices is configured to 0"
+msgstr "Antal enheder konfigureret til 0"
+
+#: gpilotd/gnome-pilot-structures.c:787
+msgid ""
+"No cradles configure.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Ingen dok konfigureret.\n"
+"Venligst kør gpilotd-control-applet (brug gnomecc)\n"
+"til at konfigurere gnome-pilot."
+
+#: gpilotd/gnome-pilot-structures.c:808
+msgid "No accessible devices available"
+msgstr "Ingen disponible tilgængelige enheder"
+
+#: gpilotd/gnome-pilot-structures.c:823
+msgid "Number of pilots is configured to 0"
+msgstr "Antal piloter er sat til 0"
+
+#: gpilotd/gnome-pilot-structures.c:825
+msgid ""
+"No pilots configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Ingen piloter konfigureret.\n"
+"Venligst kør gpilotd-control-applet (brug gnomecc)\n"
+"for at konfigurere gnome-pilot."
+
+#: gpilotd/gpilotd.c:173
+msgid "Unable to bind to pilot"
+msgstr "Kan ikke forbinde til piloten"
+
+#: gpilotd/gpilotd.c:329
+#, c-format
+msgid "Unknown pilot, no userID/username match %ld"
+msgstr "Ukendt pilot, ingen brugerID/brugernavn passer %ld"
+
+#: gpilotd/gpilotd.c:336
+msgid "Use gnomecc to configure pilot"
+msgstr "Brug gnomecc til at konfigurere piloten"
+
+#. FIXME: here we should offer to create a profile for the pilot,
+#. bug # 8218
+#: gpilotd/gpilotd.c:341 gpilotd/gpilotd.c:546
+#, c-format
+msgid ""
+"Unknown pilot - no pilots matches ID %ld\n"
+"Use gnomecc to set pilot's ID"
+msgstr ""
+"Ukendt pilot - ingen piloter har ID %ld\n"
+"Brug gnomecc til at sætte pilotens ID"
+
+#: gpilotd/gpilotd.c:365
+#, c-format
+msgid "Cradle %s has %d events"
+msgstr "Dok %s har %d hændelser"
+
+#: gpilotd/gpilotd.c:377
+msgid "Setting userinfo..."
+msgstr "Opretter brugerinfo..."
+
+#: gpilotd/gpilotd.c:382
+msgid "Sync continues"
+msgstr "Synkr fortsætter"
+
+#: gpilotd/gpilotd.c:401
+msgid "Getting userinfo..."
+msgstr "Skaffer brugerinfo..."
+
+#: gpilotd/gpilotd.c:463
+msgid "NetSync request detected, synchronizing pilot"
+msgstr "Netsynk-forespørgsel opdaget, synkroniserer pilot"
+
+#: gpilotd/gpilotd.c:465
+msgid "HotSync button pressed, synchronizing pilot"
+msgstr "HotSync knappen trykket ned, synkroniserer pilot"
+
+#: gpilotd/gpilotd.c:467
+#, c-format
+msgid "Pilot ID is %ld, name is %s, owner is %s"
+msgstr "Pilot ID er %ld, navn er %s, ejer er %s"
+
+#: gpilotd/gpilotd.c:477
+#, c-format
+msgid "On host %s\n"
+msgstr "På vært %s\n"
+
+#: gpilotd/gpilotd.c:479
+#, c-format
+msgid "On host %d\n"
+msgstr "På vært %d\n"
+
+#: gpilotd/gpilotd.c:498
+msgid "Synchronization ended"
+msgstr "Synkronisation afsluttet"
+
+#: gpilotd/gpilotd.c:501
+msgid "Synchronization ended early"
+msgstr "Synkronisation sluttede for tidligt"
+
+#: gpilotd/gpilotd.c:533
+#, c-format
+msgid ""
+"The base directory %s is invalid.\n"
+"Please fix it or use gnomecc to choose another directory."
+msgstr ""
+"Basekataloget %s er ugyldigt.\n"
+"Venligst ret dette eller brug gnomecc til at vælge et andet katalog."
+
+#. no ? drop connection then
+#: gpilotd/gpilotd.c:598
+#, fuzzy
+msgid "An error occured while getting the pilot's system data"
+msgstr "En fejl opstod under hentning af pilotens brugerdata"
+
+#. no ? drop connection then
+#: gpilotd/gpilotd.c:603
+msgid "An error occured while getting the pilot's user data"
+msgstr "En fejl opstod under hentning af pilotens brugerdata"
+
+#: gpilotd/gpilotd.c:608
+#, c-format
+msgid "Completed events for cradle %s (%s)"
+msgstr "Fuldførte hændelser for dok %s (%s)"
+
+#: gpilotd/gpilotd.c:656 gpilotd/gpilotd.c:740
+#, c-format
+msgid "Woke on %s"
+msgstr "Vågnede på %s"
+
+#: gpilotd/gpilotd.c:977
+#, c-format
+msgid "Watching %s (%s, %s)"
+msgstr "Overvåger %s (%s, %s)"
+
+#: gpilotd/gpilotd.c:979
+#, c-format
+msgid "Watching %s (%s)"
+msgstr "Overvåger %s (%s)"
+
+#: gpilotd/gpilotd.c:992
+msgid "Exiting (caught SIGTERM)..."
+msgstr "Afslutter (modtog SIGTERM)..."
+
+#: gpilotd/gpilotd.c:1000
+msgid "Exiting (caught SIGINT)..."
+msgstr "Afslutter (modtog SIGINT)..."
+
+#: gpilotd/gpilotd.c:1055
+#, c-format
+msgid "Unable to open or create file %s with read/write privs"
+msgstr "Kan ikke åbne eller oprette filen %s med læse/skrive rettigheder"
+
+#: gpilotd/gpilotd.c:1061
+#, c-format
+msgid "Unable to find home directory for uid %d"
+msgstr "Kan ikke finde hjemmekataloget for uid %d"
+
+#: gpilotd/gpilotd.c:1065
+msgid "Unable to create file installation queue directory"
+msgstr "Kunne ikke oprette køkatalog for filinstallation"
+
+#: gpilotd/gpilotd.c:1090
+msgid "Shutting down devices"
+msgstr "Nedlukker enheder"
+
+#: gpilotd/gpilotd.c:1092
+msgid "Rereading configuration..."
+msgstr "Genindlæser konfiguration..."
+
+#: gpilotd/manager.c:265
+msgid "non-backup conduit in backup conduit list"
+msgstr "forkert rørkanal i listen over rørkanaler for sikkerhedskopiéring"
+
+#: gpilotd/manager.c:273
+#, c-format
+msgid "%s backed up\n"
+msgstr "%s sikkerhedskopieret\n"
+
+#: gpilotd/manager.c:275
+#, c-format
+msgid "%s backup failed\n"
+msgstr "%s sikkerhedskopiering mislykkedes\n"
+
+#: gpilotd/manager.c:300
+msgid "Collecting synchronization info..."
+msgstr "Samler synkroniseringsinformation..."
+
+#: gpilotd/manager.c:408
+#, c-format
+msgid "Synchronizing %s\n"
+msgstr "Synkroniserer %s\n"
+
+#: gpilotd/manager.c:427
+#, c-format
+msgid "Copy to pilot %s\n"
+msgstr "Kopiér til pilot %s\n"
+
+#: gpilotd/manager.c:445
+#, c-format
+msgid "Copy from pilot %s\n"
+msgstr "Kopiér fra pilot %s\n"
+
+#: gpilotd/manager.c:463
+#, c-format
+msgid "Merge to pilot %s\n"
+msgstr "Flet til pilot %s\n"
+
+#: gpilotd/manager.c:481
+#, c-format
+msgid "Merge from pilot %s\n"
+msgstr "Flet fra pilot %s\n"
+
+#: gpilotd/manager.c:509
+#, c-format
+msgid "Conduit %s's first synchronization..."
+msgstr "Første synkronisering for conduit %s"
+
+#: gpilotd/manager.c:533
+#, c-format
+msgid "unknown syncing action (%d = %s).\n"
+msgstr "ukendt synkroniseringshandling /%d = %s).\n"
+
+#: gpilotd/manager.c:659
+#, c-format
+msgid "Instantiating %d conduits..."
+msgstr "Opretter %d rørkanaler..."
+
+#: gpilotd/manager.c:664 gpilotd/manager.c:665
+#, c-format
+msgid "Unknown conduit \"%s\" in configure!"
+msgstr "Ukendt conduit \"%s\" i konfiguration!"
+
+#: gpilotd/manager.c:674
+#, c-format
+msgid "Loading conduit \"%s\" failed!"
+msgstr "Indlæsning af rørkanal \"%s\" fejlede!"
+
+#: gpilotd/manager.c:675
+#, c-format
+msgid "Loading conduit \"%s\" failed!\n"
+msgstr "Indlæsning af rørkanal '%s' fejlede!\n"
+
+#: gpilotd/manager.c:764
+#, c-format
+msgid "Setting user/id to %d/%s..."
+msgstr "Sætter bruger/id til %d/%s..."
+
+#. FIXME: remove the bloody request, or the user will get this
+#. message every time
+#: gpilotd/manager.c:796
+#, c-format
+msgid "Conduit %s requested, but not found"
+msgstr "Rørkanal %s forespurgt, men ikke fundet"
+
+#: gpilotd/manager.c:806
+#, c-format
+msgid "Conduit %s cannot be requested"
+msgstr "Rørkanal %s kan ikke forespørges"
+
+#: gpilotd/orbit_daemon_glue.c:1753
+msgid "(unknown DB)"
+msgstr "(ukendt DB)"
+
+#: gpilotd/queue_io.c:96
+msgid "Error in queue, non-existing entry"
+msgstr ""
+
+#: gpilotd/queue_io.c:436
+#, c-format
+msgid "fault: no request found for pilot %d, request %d"
+msgstr "fejl: ingen forespørgsel fundet for pilot %d, forespørgsel %d"
+
+#: libgpilotdCM/gnome-pilot-conduit-management.gob:656
+msgid "module loading not supported, fatal!"
+msgstr "Indlæsning af moduler er ikke understøttet, fatalt!"
+
+#: utils/gpilotd-client.c:39
+msgid "Get System Info"
+msgstr "Hent systeminfo"
+
+#: utils/gpilotd-client.c:40
+msgid "Pause daemon"
+msgstr "Pausér dæmon"
+
+#: utils/gpilotd-client.c:41
+msgid "Unpause daemon"
+msgstr "genoptag dæmon"
+
+#: utils/gpilotd-client.c:42
+msgid "Restart daemon"
+msgstr "Genstart dæmon"
+
+#: utils/gpilotd-client.c:43
+msgid "Set user id and name"
+msgstr "Sæt bruger id og navn"
+
+#: utils/gpilotd-client.c:44
+msgid "ID for the pilot"
+msgstr "Id for piloten"
+
+#: utils/gpilotd-client.c:45
+msgid "Install file"
+msgstr "Installér fil"
+
+#: utils/gpilotd-client.c:45
+msgid "FILE"
+msgstr "FIL"
+
+#: utils/gpilotd-client.c:46
+msgid "Restore directory"
+msgstr "Genskab katalog:"
+
+#: utils/gpilotd-client.c:46
+msgid "DIRECTORY"
+msgstr "KATALOG"
+
+#: utils/gpilotd-client.c:47
+msgid "Run conduit"
+msgstr "Kør conduit"
+
+#: utils/gpilotd-client.c:47 utils/gpilotdcm-client.c:27
+msgid "CONDUIT"
+msgstr "CONDUIT"
+
+#: utils/gpilotd-client.c:48
+msgid "Username to set"
+msgstr "Brugernavn der skal sættes"
+
+#: utils/gpilotd-client.c:48
+msgid "USERNAME"
+msgstr "BRUGERNAVN"
+
+#: utils/gpilotd-client.c:49
+msgid "Monitor the specified pilots actions"
+msgstr "Overvåg handlingerne for angivne piloter"
+
+#: utils/gpilotd-client.c:50
+msgid "Monitor all pilots"
+msgstr "Overvåg alle piloter"
+
+#: utils/gpilotd-client.c:51
+msgid "list pilots by login (all for all pilots)"
+msgstr "list piloter efter indlogning (alt for alle piloter)"
+
+#: utils/gpilotd-client.c:51
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#: utils/gpilotd-client.c:52
+msgid "Specify pilot to operate on (defaults to MyPilot)"
+msgstr "Angiv en pilot at arbejde på (standard er MyPilot)"
+
+#: utils/gpilotd-client.c:52
+msgid "PILOTNAME"
+msgstr "PILOTNAVN"
+
+#: utils/gpilotd-client.c:53
+msgid "Specify a cradle to operate on (defaults to Cradle0)"
+msgstr "Angiv en krybbe at arbejde på (standard er krybbe0)"
+
+#: utils/gpilotd-client.c:53
+msgid "CRADLENAME"
+msgstr "KRYBBENAVN"
+
+#: utils/gpilotd-client.c:54
+msgid "List the specifed pilot's bases"
+msgstr "List den angivne pilots base"
+
+#: utils/gpilotd-client.c:360 utils/gpilotdcm-client.c:106
+msgid ""
+"\n"
+"BEWARE!!\n"
+"This is a tool for certain parts of the gnome-pilot package.\n"
+"Unless you know what you're doing, don't use this tool."
+msgstr ""
+"\n"
+"PAS PÅ!!\n"
+"Dette er et værktøj for visse dele af gnome-pilot pakken.\n"
+"Medmindre du véd hvad du gør, så lad være med at bruge dette værktøj."
+
+#: utils/gpilotdcm-client.c:26
+msgid "lists available conduits"
+msgstr "list tilgængelige conduiter"
+
+#: utils/gpilotdcm-client.c:27
+msgid "conduit to operate on"
+msgstr "Conduit at arbejde på"
+
+#: utils/gpilotdcm-client.c:28
+msgid "list all attributes"
+msgstr "list alle attributter"
+
+#: utils/gpilotdcm-client.c:29
+msgid "specify pilot to operate on"
+msgstr "Angiv en pilot at arbejde på"
+
+#: utils/gpilotdcm-client.c:29
+msgid "PILOTID"
+msgstr "PILOTID"
+
+#: utils/gpilotdcm-client.c:30
+msgid "list attributes"
+msgstr "list attributter"
+
+#: utils/gpilotdcm-client.c:31
+msgid "list available conduits and their state"
+msgstr "list tilgængelige conduiter og deres status"
+
+#: utils/gpilotdcm-client.c:32
+msgid "enable specified conduit"
+msgstr "slå angivne conduit til"
+
+#: utils/gpilotdcm-client.c:33
+msgid "disable specified conduit"
+msgstr "Slå valgte conduit fra"
+
+#: utils/gpilotdcm-client.c:34
+msgid "enable, and set firstsync to slow"
+msgstr "Slå til, og sæt firstsync til langsom"
+
+#: utils/gpilotdcm-client.c:35
+msgid "instantiate and destroy the conduit"
+msgstr "lav et eksemplar og ødelæg conduit"
+
+#~ msgid "Could not examine the port for"
+#~ msgstr "Kunne ikke undersøge porten for"
+
+#~ msgid "The port should point to a USB serial port"
+#~ msgstr "Porten bør pege til en USB seriel port"
+
+#~ msgid "The port should be a character special device but isn't for"
+#~ msgstr "Porten bør være en tegn-speciel-enhed men er det ikke for"
+
+#~ msgid "Sync Type"
+#~ msgstr "Synkr type"
+
+#~ msgid "Advanced"
+#~ msgstr "Avanceret"
+
+#, fuzzy
+#~ msgid ""
+#~ "Default conduit action for Synhronization. In most cases you dont want to "
+#~ "change this setting, but individual conduits instead."
+#~ msgstr ""
+#~ "Standard handling for synkronisering. I de fleste tilfælde behøver du "
+#~ "ikke at ændre denne indstilling, gør det for individuelle komponenter i "
+#~ "stedet."
+
+#~ msgid "Sync PCId"
+#~ msgstr "Sync PCid"
+
+#~ msgid "Copying to pilot..."
+#~ msgstr "Kopiérer til piloten..."
+
+#~ msgid "Copying from pilot..."
+#~ msgstr "Kopiérer fra piloten..."
+
+#~ msgid "Merging to pilot..."
+#~ msgstr "Fletter til pilot..."
+
+#~ msgid "Merging from pilot..."
+#~ msgstr "Fletter fra pilot..."
+
+#~ msgid "Using conduit settings for sync..."
+#~ msgstr "Bruger rørkanalens standardværdier for synkronisering..."
+
+#~ msgid "Restore..."
+#~ msgstr "Genopret..."
+
+#~ msgid "Last sync log..."
+#~ msgstr "Sidste synk-log..."
+
+#~ msgid "Conduit Settings..."
+#~ msgstr "Rørkanal indstillinger"
+
+#~ msgid "Pilot Link Settings..."
+#~ msgstr "Pilot-lænker opsætning..."
+
+#~ msgid "Properties..."
+#~ msgstr "Egenskaber..."
+
+#~ msgid "%P %%"
+#~ msgstr "%P %%"
+
+#~ msgid "Applet options"
+#~ msgstr "Applet indstillinger"
+
+#~ msgid "saving session"
+#~ msgstr "gemmer session"
+
+#~ msgid "Resume daemon"
+#~ msgstr "Fortsæt dæmon"
+
+#~ msgid "About..."
+#~ msgstr "Om..."
+
+#~ msgid "Can't create applet!\n"
+#~ msgstr "Kan ikke oprette applet!\n"
+
+#~ msgid "The gnome-pilot daemon is already running"
+#~ msgstr "GnomePilot dæmon kører allerede"
+
+#~ msgid "Gnome Pilot Conduits"
+#~ msgstr "Gnome pilot-rørkanal"
+
+#~ msgid "Handspring USB"
+#~ msgstr "Handspring USB"
+
+#~ msgid "\n"
+#~ msgstr "\n"
+
+#~ msgid ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ "/dev/ttyqe\n"
+#~ msgstr ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ "/dev/ttyqe\n"
+
+#~ msgid ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+#~ msgstr ""
+#~ "/dev/pilot\n"
+#~ "/dev/ttyS0\n"
+#~ "/dev/ttyS1\n"
+#~ "/dev/ttyS2\n"
+#~ "/dev/ttyS3\n"
+
+#~ msgid "Disabled\n"
+#~ msgstr "Slået fra\n"
+
+#: applet/gpilot-applet.desktop.in:3
+msgid "PilotSync"
+msgstr "PilotSynk"
+
+#: applet/gpilot-applet.desktop.in:5
+msgid "Synchroniser for PalmOS PDAs"
+msgstr "Synkronisering til PalmOS PDAs"

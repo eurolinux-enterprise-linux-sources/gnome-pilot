@@ -1,0 +1,27 @@
+<gconfschemafile>
+   <schemalist>
+
+      <schema>
+        <key>/schemas/apps/gpilot_applet/prefs/pop_ups</key>
+        <owner>gpilot-applet</owner>
+        <type>bool</type>
+        <default>true</default>
+        <locale name="C">
+          <short>Display notices in popup windows</short>
+          <long>Display notices in popup windows</long>
+        </locale>
+      </schema>
+
+      <schema>
+        <key>/schemas/apps/gpilot_applet/prefs/exec_when_clicked</key>
+        <owner>gpilot-applet</owner>
+        <type>string</type>
+        <default>gpilotd-control-applet</default>
+        <locale name="C">
+          <short>Command to execute when the applet is clicked</short>
+          <long>Command to execute when the applet is clicked</long>
+        </locale>
+      </schema>
+
+   </schemalist>
+</gconfschemafile>

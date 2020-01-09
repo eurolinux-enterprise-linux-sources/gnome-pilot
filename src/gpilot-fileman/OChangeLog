@@ -1,0 +1,57 @@
+PLEASE USE TOPLEVEL CHANGELOG 
+	eskil - March 22 2001
+
+1999-06-17    <jrb@redhat.com>
+
+	* Makefile.am (gpilot_fileman_SOURCES): typo in the Makefile.am.
+	Wonder how anyone ever got this to compile.
+
+Fri Jul 10 17:29:00 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+	* fileman.c: Make sure the chosen backup location really is a
+                     directory
+	
+Thu Jul 2 00:59:00 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+	* fileman.c: 
+	* pilotfunc.c: Make error reporting from parent to
+	               child work.  Not fully tested but it seems to work. 
+		       See TODO for know bug.
+	* multifile.c: Fixed problem with using .. entries and filename 
+		       creation.
+	
+Wed Jul 1 23:35:00 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+	* fileman.c: Fixed some problems with widget closing.  Made
+	       	     cancelling a backup work, sort of, sometimes the
+	       	     pilot still hangs.
+
+Wed Jul 1 19:30:00 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+	* multifile.c: Fixed signal emission problems, still not fully
+                       tested though.
+
+Wed Jul 1 19:14:00 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+	* pilotfunc.c: Updated backup function
+        * fileman.c: backup functionality works except on error w/ pilot
+		     Need to make g_error write to stderr with strlen first 
+		     for child.
+
+Wed Jul 1 00:07:00 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+	* pilotfunc.c:
+        * fileman.c: Started to add backup functionality
+	* fileman.c: Changed the name preferences to properties in the file 
+		     menu
+	* multifile.c: Added code to emit selected and unselected signals, 
+		       untested
+	
+Sun Jun 28 22:15:16 1998 EDT  Manish Vachharajani <mvachhar@vger.rutgers.edu>
+
+        * fileman.c: Added a few messages and made use of the new multifile 
+		     widget
+	* multifile.h:
+	* multifile.c:
+	* Makefile.am: Added the multifile widget
+	

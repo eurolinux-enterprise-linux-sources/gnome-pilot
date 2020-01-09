@@ -1,0 +1,314 @@
+AC_INIT(Makefile.am)
+
+dnl ******************************
+dnl Version
+dnl ******************************
+GNOME_PILOT_MAJOR=2
+GNOME_PILOT_REVISION=0
+GNOME_PILOT_PATCHLEVEL=17
+GNOME_PILOT_VERSION="$GNOME_PILOT_MAJOR.$GNOME_PILOT_REVISION.$GNOME_PILOT_PATCHLEVEL"
+VERSION="$GNOME_PILOT_MAJOR.$GNOME_PILOT_REVISION.$GNOME_PILOT_PATCHLEVEL"
+
+dnl ******************************
+dnl Library Versions
+dnl ******************************
+GPILOTD_CURRENT=4
+GPILOTD_REVISION=0
+GPILOTD_AGE=2
+
+AC_SUBST(GPILOTD_CURRENT)
+AC_SUBST(GPILOTD_REVISION)
+AC_SUBST(GPILOTD_AGE)
+
+GPILOTD_CONDUIT_CURRENT=2
+GPILOTD_CONDUIT_REVISION=4
+GPILOTD_CONDUIT_AGE=0
+
+AC_SUBST(GPILOTD_CONDUIT_CURRENT)
+AC_SUBST(GPILOTD_CONDUIT_REVISION)
+AC_SUBST(GPILOTD_CONDUIT_AGE)
+
+GPILOTD_CM_CURRENT=3
+GPILOTD_CM_REVISION=0
+GPILOTD_CM_AGE=1
+
+AC_SUBST(GPILOTD_CM_CURRENT)
+AC_SUBST(GPILOTD_CM_REVISION)
+AC_SUBST(GPILOTD_CM_AGE)
+
+dnl ******************************
+dnl Basic Checks
+dnl ******************************
+
+AM_CONFIG_HEADER(config.h)
+AM_INIT_AUTOMAKE(gnome-pilot, [$VERSION])
+AM_PROG_LIBTOOL
+AM_MAINTAINER_MODE
+
+IT_PROG_INTLTOOL([0.35.0])
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_YACC
+AC_STDC_HEADERS
+
+GNOME_COMPILE_WARNINGS
+CFLAGS="$CFLAGS $WARN_CFLAGS"
+
+dnl ******************************
+dnl Pilot Link Check
+dnl ******************************
+PILOT_LINK_CHECK(0.11.4)
+AC_SUBST(PILOT_LINK_MAJOR)
+AC_SUBST(PILOT_LINK_MINOR)
+AC_SUBST(PILOT_LINK_MICRO)
+AC_SUBST(PILOT_LINK_PATCH)
+AC_SUBST(PILOT_LINK_VERSION)
+
+if test $PILOT_LINK_MINOR -ge 12; then
+	AC_DEFINE(PILOT_LINK_0_12,,[Building against pilot-link 0.12.0 or greater])
+fi
+
+
+dnl ******************************
+dnl Various Device Support Checks
+dnl ******************************
+AC_ARG_ENABLE([usb],[  --enable-usb         Enable support for the Handspring USB cradle.],[
+	do_usb=$enableval
+],[
+	do_usb=yes
+])
+
+if test x"$do_usb" = xyes ; then
+	AC_DEFINE(WITH_USB_VISOR,, "With USB Visor Support")
+fi
+
+AC_DEFINE(WITH_IRDA,,"With IrDA Support")
+
+AC_ARG_ENABLE([network], [  --enable-network     Enable support for network synchronization],[
+	do_network=$enableval
+],[
+	do_network=yes
+])
+
+if test x"$do_network" = xyes ; then
+	AC_DEFINE(WITH_NETWORK,,"With Network Sync Support")
+fi
+
+dnl ******************************
+dnl Whether to use VFS
+dnl ******************************
+AC_ARG_WITH(vfs, [   --with-vfs              Enable GNOME vfs.], [do_vfs=$withval], [do_vfs=yes])
+if test x"$do_vfs" = xyes; then
+	GNOMEVFS_REQUIRED="gnome-vfs-2.0 >= 2.0.0"
+	AC_DEFINE(WITH_VFS,,"With GNOME VFS Support")
+fi
+
+dnl ******************************
+dnl Whether to use HAL/DBUS
+dnl ******************************
+dnl Default: use it if it is available
+DBUS_REQUIRED="dbus-glib-1 >= 0.31"
+HAL_REQUIRED="hal >= 0.5.4"
+PKG_CHECK_MODULES(HAL,
+[
+	$DBUS_REQUIRED
+	$HAL_REQUIRED
+],
+[
+	found_hal="yes"
+],
+[:])
+AC_ARG_WITH(hal, [   --with-hal              Enable HAL/DBUS support.],
+[
+if test x"$withval" = xyes; then
+	if test x"$found_hal" = xyes; then
+		AC_DEFINE(WITH_HAL,,"Using HAL/DBUS")
+		with_hal=yes
+	else
+		AC_MSG_ERROR([HAL/DBUS Library requirements ($DBUS_REQUIRED, $HAL_REQUIRED)
+not met; consider using --without-hal option, or adjusting the PKG_CONFIG_PATH
+environment variable if your libraries are in a nonstandard prefix so pkg-config
+can find them.])
+	fi
+fi
+],
+[
+dnl if --with-hal wasn't specified, carry on without HAL if it's not found.
+if test x"$found_hal" = xyes; then
+	AC_DEFINE(WITH_HAL,,"Using HAL/DBUS")
+	with_hal=yes
+else
+	AC_MSG_WARN([HAL/DBUS Library requirements ($DBUS_REQUIRED, $HAL_REQUIRED)
+not met; disabling HAL support.])
+fi
+]
+)
+dnl ******************************
+dnl Library Checks
+dnl ******************************
+LIBXML_REQUIRED="libxml-2.0"
+LIBGNOME_REQUIRED="libgnome-2.0 >= 2.0.0"
+LIBGNOMEUI_REQUIRED="libgnomeui-2.0 >= 2.0.0"
+LIBGLADE_REQUIRED="libglade-2.0 >= 2.0.0"
+ORBIT_REQUIRED="ORBit-2.0 >= 2.0.0"
+LIBBONOBO_REQUIRED="libbonobo-2.0 >= 2.0.0"
+BONOBO_ACTIVATION_REQUIRED="bonobo-activation-2.0 >= 1.0.3"
+LIBPANELAPPLET_REQUIRED="libpanelapplet-2.0 >= 2.0.6"
+GCONF_REQUIRED="gconf-2.0"
+
+PKG_CHECK_MODULES(GNOME_PILOT, 
+[
+	$LIBXML_REQUIRED
+	$LIBGNOME_REQUIRED
+	$LIBGNOMEUI_REQUIRED
+	$LIBGLADE_REQUIRED
+	$LIBBONOBO_REQUIRED
+	$ORBIT_REQUIRED
+	$BONOBO_ACTIVATION_REQUIRED
+	$GNOMEVFS_REQUIRED
+	$GCONF_REQUIRED
+])
+
+GNOME_PILOT_CFLAGS="$GNOME_PILOT_CFLAGS $PISOCK_CFLAGS $HAL_CFLAGS"
+GNOME_PILOT_LIBS="$GNOME_PILOT_LIBS $PISOCK_LIBS $HAL_LIBS"
+
+AC_SUBST(GNOME_PILOT_CFLAGS)
+AC_SUBST(GNOME_PILOT_LIBS)
+
+PKG_CHECK_MODULES(PILOT_APPLET,
+[
+	$LIBPANELAPPLET_REQUIRED
+])
+
+AC_SUBST(PILOT_APPLET_CFLAGS)
+AC_SUBST(PILOT_APPLET_LIBS)
+
+dnl ******************************
+dnl GOB2 Check
+dnl ******************************
+AC_PATH_PROG(GOB, gob2, no)
+if test "x$GOB" = "xno"; then
+	if test -f gpilotd/gnome-pilot-client.c; then
+		AC_MSG_WARN([GOB2 not found, check http://www.5z.com/jirka/gob.html and read the HACKING file])
+	else
+		AC_MSG_ERROR([GOB2 not found and the gob outputfiles are not present, check http://www.5z.com/jirka/gob.html and read the HACKING file])
+	fi
+else
+	GOB2_CHECK(2.0.3)
+fi
+
+dnl ***********
+dnl GConf stuff
+dnl ***********
+AC_PATH_PROG(GCONFTOOL, gconftool-2, no)
+AM_GCONF_SOURCE_2
+
+dnl ******************************
+dnl ORBit IDL Compiler
+dnl ******************************
+ORBIT_IDL="`$PKG_CONFIG --variable=orbit_idl ORBit-2.0`"
+AC_SUBST(ORBIT_IDL)
+
+dnl **************************************************
+dnl * Marshaller generation
+dnl **************************************************
+GLIB_GENMARSHAL="`$PKG_CONFIG --variable=glib_genmarshal glib-2.0`"
+AC_SUBST(GLIB_GENMARSHAL)
+
+dnl **************************************************
+dnl * Conduit files
+dnl **************************************************
+GP_CONDUIT_RULE=$srcdir/conduit.mk
+AC_SUBST_FILE(GP_CONDUIT_RULE)
+
+dnl **************************************************
+dnl * Conduit files
+dnl **************************************************
+GP_SERVER_RULE=$srcdir/server.mk
+AC_SUBST_FILE(GP_SERVER_RULE)
+
+dnl **************************************************
+dnl * internationalization support
+dnl **************************************************
+GETTEXT_PACKAGE=gnome-pilot
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", "Package name")
+AM_GLIB_GNU_GETTEXT
+
+
+AC_DEFINE_UNQUOTED(GNOME_ICONDIR, "${prefix}/share/pixmaps", "Icon directory")
+
+dnl Check for lib socket for solaris users.  Do you guys need -lnsl for pisock as well?  Been too long since I used solaris :)
+AC_CHECK_LIB(socket, sendmsg, [LIBS="-lsocket -lnsl"], [])
+
+dnl Set platform specific libs and defines here 
+dnl For defines, remember an addition to acconfig.h
+case "$host" in
+	*solaris*)
+	LIBS="$LIBS -lnsl"
+	;;
+	*linux*)
+	AC_DEFINE(USE_XOPEN_SOURCE,,"Use XOpen Source")
+	;;
+esac
+
+AC_CHECK_FUNCS(crypt)
+if test $ac_cv_func_crypt = no; then
+  # SCO-ODT-3.0 is reported to need this library for crypt.
+  AC_CHECK_LIB(ufc, crypt, LIBS="$LIBS -lufc",
+    [# NetBSD needs this library for crypt.
+    AC_CHECK_LIB(crypt, crypt,[ LIBS="$LIBS -lcrypt" ],[ AC_MSG_ERROR("Unable to find crypt")])])
+fi
+
+dnl Create files.
+AC_OUTPUT([
+Makefile 
+gnome-pilot.spec
+gpilotd/Makefile
+applet/Makefile
+conduits/Makefile
+conduits/backup/Makefile
+conduits/file/Makefile
+conduits/test/Makefile
+capplet/Makefile
+utils/Makefile
+idl/Makefile
+po/Makefile.in
+help/Makefile
+help/C/Makefile
+gnome-pilot-2.0.pc
+])
+
+echo ""
+echo "  Configuration :"
+echo ""
+
+if test x"$do_vfs" = xyes; then
+	echo "          gnome-vfs    : yes"
+else
+	echo "          gnome-vfs    : no"
+fi
+if test x"$do_network" = xyes; then
+	echo "          network sync : yes"
+else
+	echo "          network sync : no"
+fi
+if test x"$do_usb" = xyes; then
+	echo "          usb          : yes"
+else
+	echo "          usb          : no"
+fi
+if test x"$with_hal" = xyes; then
+	echo "          HAL/DBUS     : yes"
+else
+	echo "          HAL/DBUS     : no"
+fi
+if test x"$GOB" = xno; then
+	echo "          gob          : no"
+else
+	echo "          gob          : yes"
+fi
+	echo "          pilot-link   : $PILOT_LINK_VERSION"
+echo ""

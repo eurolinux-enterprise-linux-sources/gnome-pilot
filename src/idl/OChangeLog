@@ -1,0 +1,51 @@
+PLEASE USE TOPLEVEL CHANGELOG 
+	eskil - March 22 2001
+
+2000-03-17  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: added the idl defs for the two get_databases calls.
+
+2000-03-25  Vadim Strizhevsky  <vadim@optonline.net>
+
+	* gnome-pilot.idl: Remove the non-existing get_conduits call.
+	Add missing get_databases_from_cache call.
+
+2000-02-17  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: Made a revive call, that takes a pilot id +
+	dir and cradle to install it to.
+
+2000-01-29  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* changed the type of progress int to unsigned
+
+1999-12-22  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: Finished the api for
+	message/error/progress/begin/end conduit stuff.
+
+1999-12-14  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: Three new calls. Two to get name/id from
+	id/name, and one to get a basedir from a given pilot name.
+
+1999-11-13  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: Made another comment containing a call that is
+	supposed to let conduits inform users about errors.
+
+1999-11-02  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: Added a comment containing the calls that will
+	be used to implement conduit progress hell.
+
+1999-10-25  Eskil Heyn Olsen  <deity@eskil.dk>
+
+	* gnome-pilot.idl: Modyfied the ConduitOperations, to allow Merges 
+	and conduit default.
+
+1999-10-22  Eskil Olsen <deity@eskil.dk>
+
+	* gnome-pilot.idl: renames stringseq to StringSequence, added
+ 	LongSequence and a get_pilot_ids. Also renames get_pilots to
+ 	get_pilot_names.

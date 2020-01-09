@@ -1,0 +1,75 @@
+requires 1.99.0
+
+%h{
+#include <string.h>
+#include <config.h>
+#include <gtk/gtk.h>
+%}
+
+%{
+
+#include <gtk/gtk.h>
+
+static gboolean timeout (GPilotAppletProgress *obj);
+
+%}
+
+class GPilot:Applet:Progress from Gtk:Object {
+        public GtkProgress *progress;
+	argument POINTER (type GtkProgress*) progress (export) link;
+        public gboolean alive;
+	argument BOOLEAN (type gboolean) alive (export) link;
+
+        private guint timeout_handler;
+	
+
+	init (self) {
+		self->alive = FALSE;
+		self->progress = NULL;
+	}
+
+	public GtkObject*
+	new (void) {
+		return (GtkObject*)GET_NEW;
+	}
+
+	public void
+	start (self) {
+		g_assert (self->progress);
+		if (!self->alive) {			
+			gtk_progress_set_activity_mode (self->progress, TRUE);
+			self->alive = TRUE;
+			self->_priv->timeout_handler = gtk_timeout_add (10, (GtkFunction) timeout, self);
+		}
+	}
+
+	public void
+	stop (self) {
+		g_assert (self->progress);
+		if (self->alive) {
+			gtk_progress_set_activity_mode (self->progress, FALSE);
+			self->alive = FALSE;
+		}
+	}
+
+}
+
+%{
+
+static gboolean
+timeout (GPilotAppletProgress *obj) {
+	static int val = 0;
+	GtkProgress *progress = gpilot_applet_progress_get_progress (obj);
+	gtk_progress_set_value (progress, val);
+	val += 10;
+	if (val > 100) {
+		val = 0;
+	}
+/*
+	g_message ("applet progress timeout: val = %d, res = %s", 
+		   val, gpilot_applet_progress_get_alive (obj) ? "TRUE" : "FALSE");
+*/
+	return gpilot_applet_progress_get_alive (obj);
+}
+
+%}

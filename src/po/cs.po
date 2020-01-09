@@ -1,0 +1,1444 @@
+# Czech translation of gnome-pilot
+# Copyright (C) 2003, 2004, 2006 gnome-pilot'S COPYRIGHT HOLDER
+# Copyright (C) 2004, 2006 Miloslav Trmac <mitr@volny.cz>
+# This file is distributed under the same license as the gnome-pilot package.
+# Miloslav Trmac <mitr@volny.cz>, 2003, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-pilot VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-05-21 11:25+0200\n"
+"PO-Revision-Date: 2006-05-21 16:30+0200\n"
+"Last-Translator: Miloslav Trmac <mitr@volny.cz>\n"
+"Language-Team: Czech <cs@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../applet/GNOME_PilotApplet.server.in.in.h:1
+msgid "Utility"
+msgstr "Pomůcka"
+
+#: ../applet/pilot-applet.glade.h:1 ../capplet/gpilotd-capplet.glade.h:1
+msgid "*"
+msgstr "*"
+
+#: ../applet/pilot-applet.glade.h:2
+msgid "Choose Pilot"
+msgstr "Zvolte Pilota"
+
+#: ../applet/pilot-applet.glade.h:3
+msgid "Directory"
+msgstr "Adresář"
+
+#: ../applet/pilot-applet.glade.h:4
+msgid "Display notices"
+msgstr "Zobrazovat upozornění"
+
+#: ../applet/pilot-applet.glade.h:5
+msgid "Execute when clicked"
+msgstr "Spustit při kliknutí"
+
+#: ../applet/pilot-applet.glade.h:6
+msgid "GNOME PilotSync Properties"
+msgstr "Vlastnosti GNOME PilotSync"
+
+#: ../applet/pilot-applet.glade.h:7
+msgid "Pilot ID"
+msgstr "ID Pilota"
+
+#: ../applet/pilot-applet.glade.h:8
+msgid "Restore Pilot"
+msgstr "Obnovit Pilota"
+
+#: ../applet/pilot-applet.glade.h:9
+msgid "Sync cradle"
+msgstr "Synchronizovat kolébku"
+
+#: ../applet/pilot-applet.glade.h:10
+msgid "gnome-pilot progress"
+msgstr "průběh gnome-pilot"
+
+#: ../applet/pilot.c:136
+msgid "Synchronizing..."
+msgstr "Synchronizuji..."
+
+#: ../applet/pilot.c:164
+#, c-format
+msgid "%s Synchronizing"
+msgstr "Synchronizuji %s"
+
+#: ../applet/pilot.c:169
+msgid "Database %v of %u"
+msgstr "Databáze %v z %u"
+
+#: ../applet/pilot.c:188 ../applet/pilot.c:778 ../applet/pilot.c:931
+msgid "Ready to synchronize"
+msgstr "Připraven k synchronizaci"
+
+#: ../applet/pilot.c:208
+#, c-format
+msgid "Request %ld has been completed\n"
+msgstr "Požadavek %ld byl dokončen\n"
+
+#: ../applet/pilot.c:229
+#, c-format
+msgid "%s Synchronizing : %s"
+msgstr "Synchronizace %s : %s"
+
+#: ../applet/pilot.c:234
+#, c-format
+msgid "%s: Started\n"
+msgstr "%s: Spuštěno\n"
+
+#: ../applet/pilot.c:248
+#, c-format
+msgid "%s Finished : %s"
+msgstr "%s Dokončeno : %s"
+
+#: ../applet/pilot.c:253
+#, c-format
+msgid "%s: Ended\n"
+msgstr "%s Dokončeno\n"
+
+#: ../applet/pilot.c:278
+msgid "%v of %u records"
+msgstr "%v z %u záznamů"
+
+#: ../applet/pilot.c:354
+msgid ""
+"Pilot is currently synchronizing.\n"
+"Please wait for it to finish."
+msgstr ""
+"Pilot se právě synchronizuje.\n"
+"Počkejte prosím, až skončí."
+
+#: ../applet/pilot.c:357
+msgid "Not connected. Please restart daemon."
+msgstr "Nepřipojen. Spusťte prosím démona znovu."
+
+#: ../applet/pilot.c:359
+msgid ""
+"Not connected to gpilotd.\n"
+"Please restart daemon."
+msgstr ""
+"Nepřipojen k gpilotd.\n"
+"Spusťte prosím démona znovu."
+
+#: ../applet/pilot.c:375
+msgid "gnome-pilot applet"
+msgstr "aplet gnome-pilot"
+
+#: ../applet/pilot.c:377
+msgid "Copyright 2000-2006 Free Software Foundation, Inc."
+msgstr "Copyright 2000-2006 Free Software Foundation, Inc."
+
+#: ../applet/pilot.c:378
+msgid "A PalmOS PDA monitor.\n"
+msgstr "Sledování PDA PalmOS.\n"
+
+#: ../applet/pilot.c:470 ../applet/pilot.c:496
+#, c-format
+msgid "There was an error displaying help: %s"
+msgstr "Při zobrazování nápovědy došlo k chybě: %s"
+
+#: ../applet/pilot.c:534
+#, c-format
+msgid "cancelling %d"
+msgstr "přerušuji %d"
+
+#: ../applet/pilot.c:586
+#, c-format
+msgid "Restoring %s"
+msgstr "Obnovuji %s"
+
+#: ../applet/pilot.c:628
+msgid "No directory to restore from."
+msgstr "Neexistuje adresář pro obnovení"
+
+#: ../applet/pilot.c:636
+msgid ""
+"Press synchronize on the cradle to restore\n"
+" or cancel the operation."
+msgstr ""
+"Pro obnovení nebo přerušení operace\n"
+"stiskněte Synchronizovat na kolébce."
+
+#: ../applet/pilot.c:645
+msgid "Restore request failed"
+msgstr "Požadavek na obnovení selhal"
+
+#: ../applet/pilot.c:683
+msgid ""
+"Pilot sync is currently in progress.\n"
+"Are you sure you want to restart daemon?"
+msgstr ""
+"Právě probíhá synchronizace pilota.\n"
+"Jste si jisti, že chcete restartovat démona?"
+
+#: ../applet/pilot.c:693 ../applet/pilot.c:1263
+msgid "Trying to connect to the GnomePilot Daemon"
+msgstr "Pokouším se připojit k démonu GnomePilot"
+
+#: ../applet/pilot.c:709
+msgid "There's no last sync on record."
+msgstr "Poslední synchronizace není zaznamenána."
+
+#: ../applet/pilot.c:749
+msgid "Continue"
+msgstr "Pokračovat"
+
+#: ../applet/pilot.c:751
+msgid "Pause Daemon"
+msgstr "Pozastavit démona"
+
+#: ../applet/pilot.c:771
+msgid "Daemon paused..."
+msgstr "Démon pozastaven..."
+
+#: ../applet/pilot.c:912
+msgid "Not connected. Restart daemon to reconnect"
+msgstr "Nepřipojen. Pro znovupřipojení restartujte démona"
+
+#: ../applet/pilot.c:1096
+#, c-format
+msgid "Execution of %s failed"
+msgstr "Spuštění %s selhalo"
+
+#.
+#. if (strstr (file_type (ptr),"text")) {
+#. if (file_size (ptr)>properties.text_limit)
+#. g_message ("installing textfile as Doc (not implemented)");
+#. else
+#. g_message ("installing textfile as Memo (not implemented)");
+#. }
+#.
+#: ../applet/pilot.c:1222
+#, c-format
+msgid "installing \"%s\" to \"%s\""
+msgstr "instaluji \"%s\" do \"%s\""
+
+#: ../applet/pilot.c:1232
+msgid "unknown dnd type"
+msgstr "neznámý typ dnd"
+
+#: ../applet/pilot.c:1240
+msgid "destroy gpilot-applet"
+msgstr "zničení gpilot-applet"
+
+#: ../applet/pilot.c:1327
+msgid "Cannot find pilot-applet.glade"
+msgstr "Nemohu najít pilot-applet.glade"
+
+#: ../applet/pilot.schemas.in.h:1
+msgid "Command to execute when the applet is clicked"
+msgstr "Příkaz, který spustit po kliknutí na aplet"
+
+#: ../applet/pilot.schemas.in.h:2
+msgid "Display notices in popup windows"
+msgstr "Zobrazovat upozornění ve vyskakovacích oknech"
+
+#: ../capplet/gnome-pilot-capplet.c:211 ../capplet/gpilotd-capplet.glade.h:47
+msgid "Pilot Settings"
+msgstr "Nastavení Pilota"
+
+#: ../capplet/gnome-pilot-capplet.c:378 ../capplet/gnome-pilot-capplet.c:458
+#: ../capplet/gpilotd-capplet.glade.h:38
+msgid "Name"
+msgstr "Název"
+
+#: ../capplet/gnome-pilot-capplet.c:380 ../capplet/gpilotd-capplet.glade.h:34
+#: ../utils/gpilotd-client.c:44
+msgid "ID"
+msgstr "ID"
+
+#: ../capplet/gnome-pilot-capplet.c:382
+msgid "UserName"
+msgstr "JménoUživatele"
+
+#: ../capplet/gnome-pilot-capplet.c:460 ../capplet/gpilotd-capplet.glade.h:60
+msgid "Type"
+msgstr "Typ"
+
+#: ../capplet/gnome-pilot-capplet.c:566
+msgid "Conduit"
+msgstr "Modul"
+
+#: ../capplet/gnome-pilot-capplet.c:568
+msgid "Sync Action"
+msgstr "Akce synchronizace"
+
+#: ../capplet/gnome-pilot-capplet.c:769
+#, c-format
+msgid "Are you sure you want to delete %s pilot?"
+msgstr "Jste si jisti, že chcete odstranit pilota %s?"
+
+#: ../capplet/gnome-pilot-capplet.c:793
+msgid "_Edit this pilot..."
+msgstr "_Upravit tohoto pilota..."
+
+#: ../capplet/gnome-pilot-capplet.c:794
+msgid "Edit the currently selected pilot"
+msgstr "Upravit právě vybraného pilota"
+
+#: ../capplet/gnome-pilot-capplet.c:796
+msgid "_Delete this pilot"
+msgstr "_Odstranit tohoto pilota"
+
+#: ../capplet/gnome-pilot-capplet.c:797
+msgid "Delete the currently selected pilot"
+msgstr "Odstranit právě vybraného pilota"
+
+#: ../capplet/gnome-pilot-capplet.c:930
+#, c-format
+msgid "Are you sure you want to delete %s device?"
+msgstr "Jste si jisti, že chcete odstranit zařízení %s?"
+
+#: ../capplet/gnome-pilot-capplet.c:951
+msgid "_Edit this device..."
+msgstr "_Upravit toto zařízení.."
+
+#: ../capplet/gnome-pilot-capplet.c:952
+msgid "Edit the currently selected device"
+msgstr "Upravit vybrané zařízení"
+
+#: ../capplet/gnome-pilot-capplet.c:954
+msgid "_Delete this device"
+msgstr "_Odstranit toto zařízení"
+
+#: ../capplet/gnome-pilot-capplet.c:955
+msgid "Delete the currently selected device"
+msgstr "Odstranit vybrané zařízení"
+
+#: ../capplet/gnome-pilot-capplet.c:1117
+#, c-format
+msgid "Unable to instantiate %s conduit."
+msgstr "Nemohu instanciovat modul %s."
+
+#: ../capplet/gnome-pilot-capplet.c:1157
+msgid "_Enable this conduit"
+msgstr "_Povolit tento modul"
+
+#: ../capplet/gnome-pilot-capplet.c:1158
+msgid "Disable the currently selected conduit"
+msgstr "Zakázat vybraný modul"
+
+#: ../capplet/gnome-pilot-capplet.c:1160
+msgid "_Disable this conduit"
+msgstr "_Zakázat tento modul"
+
+#: ../capplet/gnome-pilot-capplet.c:1161
+msgid "Enable the currently selected conduit"
+msgstr "Povolit vybraný modul"
+
+#: ../capplet/gnome-pilot-capplet.c:1166
+msgid "_Settings..."
+msgstr "_Nastavení..."
+
+#: ../capplet/gnome-pilot-capplet.c:1167
+msgid "Modify the currently selected conduit's settings"
+msgstr "Změnit nastavení vybraného modulu"
+
+#. < 0) {
+#: ../capplet/gnome-pilot-cdialog.c:209
+msgid ""
+"Unable to create pilot settings window. Incorrect conduit configuration."
+msgstr "Nemohu vytvořit okno nastavení pilota. Nesprávné nastavení modulu."
+
+#: ../capplet/gnome-pilot-druid.c:425
+msgid ""
+"Setup did not complete and settings will not\n"
+"be saved. Are you sure you want to quit?"
+msgstr ""
+"Konfigurace nebyla dokončena a nastavení nebude\n"
+"uloženo. Jste si jisti, že chcete skončit?"
+
+#: ../capplet/gnome-pilot-druid.c:518
+#, c-format
+msgid ""
+"About to send the following data to the pilot.\n"
+"UserName: %s\n"
+"ID: %d\n"
+"Please put pilot in %s (%s) and press HotSync button."
+msgstr ""
+"Pošlu pilotovi následující data.\n"
+"JménoUživatele: %s\n"
+"ID: %d\n"
+"Vložte prosím pilota do %s (%s) a stiskněte tlačítko HotSync."
+
+#: ../capplet/gnome-pilot-druid.c:542
+#, c-format
+msgid ""
+"About to retrieve UserName and ID from the pilot.\n"
+"Please put pilot in %s (%s) and press HotSync button."
+msgstr ""
+"Získám JménoUživatele a ID z pilota.Pošlu pilotovi následující data.\n"
+"Vložte prosím pilota do %s (%s) a stiskněte tlačítko HotSync."
+
+#: ../capplet/gnome-pilot-druid.c:557
+msgid "Failed sending request to gpilotd"
+msgstr "Nemohu odeslat požadavek gpilotd"
+
+#: ../capplet/gnome-pilot-druid.c:688
+#, c-format
+msgid ""
+"Successfully retrieved UserName and ID from pilot.\n"
+"UserName: %s\n"
+"ID: %d"
+msgstr ""
+"Úspěšně jsem získal JménoUživatele a ID z pilota.\n"
+"JménoUživatele: %s\n"
+"ID: %d"
+
+#: ../capplet/gnome-pilot-pdialog.c:383
+#, c-format
+msgid ""
+"Please put pilot in %s (%s) and press HotSync button or cancel the operation."
+msgstr ""
+"Vložte prosím pilota do %s (%s) a stiskněte tlačítko HotSync nebo zrušte "
+"operaci."
+
+#: ../capplet/gnome-pilot-pdialog.c:420
+msgid "The request to get pilot id failed"
+msgstr "Požadavek získat ID pilota selhal"
+
+#: ../capplet/gnome-pilot-pdialog.c:460
+msgid "The request to set pilot id failed"
+msgstr "Požadavek nastavit ID pilota selhal"
+
+#: ../capplet/gpilotd-capplet.glade.h:2
+msgid "/dev/pilot"
+msgstr "/dev/pilot"
+
+#: ../capplet/gpilotd-capplet.glade.h:3
+msgid "/dev/ttyS0"
+msgstr "/dev/ttyS0"
+
+#: ../capplet/gpilotd-capplet.glade.h:4
+msgid "/dev/ttyS1"
+msgstr "/dev/ttyS1"
+
+#: ../capplet/gpilotd-capplet.glade.h:5
+msgid "/dev/ttyS2"
+msgstr "/dev/ttyS2"
+
+#: ../capplet/gpilotd-capplet.glade.h:6
+msgid "/dev/ttyS3"
+msgstr "/dev/ttyS3"
+
+#: ../capplet/gpilotd-capplet.glade.h:7
+msgid "/dev/ttyqe"
+msgstr "/dev/ttyqe"
+
+#: ../capplet/gpilotd-capplet.glade.h:8
+msgid "Action:"
+msgstr "Akce::"
+
+#: ../capplet/gpilotd-capplet.glade.h:9
+msgid "Add..."
+msgstr "Přidat..."
+
+#: ../capplet/gpilotd-capplet.glade.h:10
+msgid "Choose Device"
+msgstr "Zvolte zařízení"
+
+#: ../capplet/gpilotd-capplet.glade.h:11
+msgid "Conduit Actions"
+msgstr "Akce modulu"
+
+#: ../capplet/gpilotd-capplet.glade.h:12
+msgid "Conduit Description"
+msgstr "Popis modulu"
+
+#: ../capplet/gpilotd-capplet.glade.h:13
+msgid "Conduit Settings"
+msgstr "Nastavení modulu"
+
+#: ../capplet/gpilotd-capplet.glade.h:14
+msgid "Conduits"
+msgstr "Moduly"
+
+#: ../capplet/gpilotd-capplet.glade.h:15
+msgid ""
+"Congratulations, gnome-pilot is configured!\n"
+"\n"
+"You can change gnome-pilot settings at any time from \n"
+"PilotLink and Conduits tabs in control center.\n"
+"\n"
+"You can monitor syncing of gnome-pilot by adding \n"
+"PilotLink applet to your panel."
+msgstr ""
+"Gratulujeme, gnome-pilot je nastaven!\n"
+"\n"
+"Nastavení gnome-pilot můžete kdykoli změnit v záložkách\n"
+"PilotLink a Moduly v ovládacím centru.\n"
+"\n"
+"Synchronizaci gnome-pilot můžete sledovat přidáním\n"
+"apletu PilotLink na svůj panel."
+
+#: ../capplet/gpilotd-capplet.glade.h:22
+msgid "Cradle Settings"
+msgstr "Nastavení kolébky"
+
+#: ../capplet/gpilotd-capplet.glade.h:23
+msgid "Delete"
+msgstr "Odstranit"
+
+#: ../capplet/gpilotd-capplet.glade.h:24
+msgid "Device Settings"
+msgstr "Nastavení zařízení"
+
+#: ../capplet/gpilotd-capplet.glade.h:25
+msgid "Devices"
+msgstr "Zařízení"
+
+#: ../capplet/gpilotd-capplet.glade.h:26
+msgid "Disable"
+msgstr "Zakázat"
+
+#: ../capplet/gpilotd-capplet.glade.h:27 ../capplet/util.c:73
+#: ../capplet/util.c:413
+msgid "Disabled"
+msgstr "Zakázáno"
+
+#: ../capplet/gpilotd-capplet.glade.h:28
+msgid "Edit..."
+msgstr "Upravit..."
+
+#: ../capplet/gpilotd-capplet.glade.h:29
+msgid "Enable"
+msgstr "Povolit"
+
+#: ../capplet/gpilotd-capplet.glade.h:30
+msgid "Enter user name you want stored on your pilot"
+msgstr "Zadejte jméno uživatele, které chcete uložit na svém pilotu"
+
+#: ../capplet/gpilotd-capplet.glade.h:31
+msgid "Get User Name and ID from existing pilot that was used before."
+msgstr ""
+"Získat jméno uživatele a ID z existujícího pilota, který již byl použit."
+
+#: ../capplet/gpilotd-capplet.glade.h:32
+msgid "Get from pilot"
+msgstr "Získat z pilota"
+
+#: ../capplet/gpilotd-capplet.glade.h:33
+msgid "Gnome Pilot Settings"
+msgstr "Nastavení Gnome Pilot"
+
+#: ../capplet/gpilotd-capplet.glade.h:35
+msgid "Initial Sync"
+msgstr "Počáteční synchronizace"
+
+#: ../capplet/gpilotd-capplet.glade.h:36 ../capplet/util.c:403
+msgid "IrDA"
+msgstr "IrDA"
+
+#: ../capplet/gpilotd-capplet.glade.h:37
+msgid "Local basedir"
+msgstr "Místní základní adresář"
+
+#: ../capplet/gpilotd-capplet.glade.h:39 ../capplet/util.c:404
+msgid "Network"
+msgstr "Síť"
+
+#: ../capplet/gpilotd-capplet.glade.h:40
+msgid "No, I've never used sync software with this pilot before."
+msgstr "Ne, ještě jsem s tímto pilotem nikdy nepoužil synchronizační software."
+
+#: ../capplet/gpilotd-capplet.glade.h:41 ../capplet/util.c:114
+msgid "None"
+msgstr "Žádná"
+
+#: ../capplet/gpilotd-capplet.glade.h:42
+msgid "One Time Action:"
+msgstr "Jednou provedená akce:"
+
+#: ../capplet/gpilotd-capplet.glade.h:43
+msgid "Pilot Attributes"
+msgstr "Atributy pilota"
+
+#: ../capplet/gpilotd-capplet.glade.h:44
+msgid "Pilot Identification"
+msgstr "Identifikace pilota"
+
+#: ../capplet/gpilotd-capplet.glade.h:45
+msgid "Pilot Name"
+msgstr "Název pilota"
+
+#: ../capplet/gpilotd-capplet.glade.h:46
+msgid "Pilot Name:"
+msgstr "Název pilota:"
+
+#: ../capplet/gpilotd-capplet.glade.h:48
+msgid "Pilots"
+msgstr "Piloti"
+
+#: ../capplet/gpilotd-capplet.glade.h:49
+msgid "Port"
+msgstr "Port"
+
+#: ../capplet/gpilotd-capplet.glade.h:50
+msgid "Send to pilot"
+msgstr "Odeslat pilotovi"
+
+#: ../capplet/gpilotd-capplet.glade.h:51 ../capplet/util.c:405
+msgid "Serial"
+msgstr "Sériové"
+
+#: ../capplet/gpilotd-capplet.glade.h:52
+msgid "Set User Name and ID to a new pilot."
+msgstr "Nastavit jméno uživatele a ID v novém pilotu."
+
+#: ../capplet/gpilotd-capplet.glade.h:53
+msgid "Set the root directory for all pilot files to be stored."
+msgstr "Nastavte kořenový adresář, kde budou uloženy všechny soubory pilota."
+
+#: ../capplet/gpilotd-capplet.glade.h:54
+msgid "Settings..."
+msgstr "Nastavení..."
+
+#: ../capplet/gpilotd-capplet.glade.h:55
+msgid "Speed"
+msgstr "Rychlost"
+
+#: ../capplet/gpilotd-capplet.glade.h:56
+msgid "Success"
+msgstr "Úspěch"
+
+#: ../capplet/gpilotd-capplet.glade.h:57
+msgid "The name for your pilot. It is only used for identification."
+msgstr "Název vašeho pilota. Používá se jen pro identifikaci."
+
+#: ../capplet/gpilotd-capplet.glade.h:58
+msgid ""
+"This integer ID identifies your pilot and must be unique between different "
+"pilots that you use."
+msgstr ""
+"Toto celočíselné ID identifikuje vašeho pilota a musí být mezi různými "
+"piloty, které používáte, jedinečné."
+
+#: ../capplet/gpilotd-capplet.glade.h:59
+msgid "Timeout"
+msgstr "Timeout"
+
+#: ../capplet/gpilotd-capplet.glade.h:61 ../capplet/util.c:402
+msgid "USB"
+msgstr "USB"
+
+#: ../capplet/gpilotd-capplet.glade.h:62
+msgid "User Name"
+msgstr "Jméno uživatele"
+
+#: ../capplet/gpilotd-capplet.glade.h:63
+msgid "User Name and ID to set on the Pilot"
+msgstr "Jméno uživatele a ID, které na Pilotu nastavit"
+
+#: ../capplet/gpilotd-capplet.glade.h:64
+msgid "User Name:"
+msgstr "Jméno uživatele:"
+
+#: ../capplet/gpilotd-capplet.glade.h:65
+msgid "Welcome to gnome-pilot!"
+msgstr "Vítejte v gnome-pilot!"
+
+#: ../capplet/gpilotd-capplet.glade.h:66
+msgid "Yes, I've used sync software with this pilot before."
+msgstr "Ano, s tímto pilotem jsem již použil synchronizační software."
+
+#: ../capplet/gpilotd-capplet.glade.h:67
+msgid ""
+"You seem to be running gnome-pilot for the first time.\n"
+"The following steps will setup gnome-pilot for syncing. \n"
+"You can always change any options later from\n"
+"PilotLink panel in Gnome Control Center.\n"
+"\n"
+"Press 'Forward' to continue.\n"
+"Press 'Cancel' to exit."
+msgstr ""
+"Zřejmě jste spustili gnome-pilot poprvé.\n"
+"Následující kroky nastaví gnome-pilot pro synchronizaci.\n"
+"Všechna nastavení budete moci později změnit z panelu\n"
+"PilotLink v Ovládacím centru Gnome.\n"
+"\n"
+"Pokračujte stisknutím 'Vpřed'.\n"
+"Skončete stisknutím 'Zrušit'."
+
+#: ../capplet/gpilotd-control-applet.c:81
+msgid "Start druid only"
+msgstr "Spustit jen druida"
+
+#: ../capplet/gpilotd-control-applet.c:103
+msgid "Error initializing gpilotd capplet"
+msgstr "Chyba při inicializaci capletu gpilotd"
+
+#: ../capplet/gpilotd-control-applet.c:114
+#: ../capplet/gpilotd-control-applet.c:115
+msgid "Error loading pilot state, aborting"
+msgstr "Chyba při načítání stavu pilota, končím"
+
+#: ../capplet/gpilotd-control-applet.c:122
+#: ../capplet/gpilotd-control-applet.c:123
+msgid "Cannot connect to the GnomePilot Daemon"
+msgstr "Nemohu se připojit k démonu GnomePilot"
+
+#: ../capplet/gpilotd-control-applet.c:132
+msgid "Cannot run druid if pilots or cradles already configured"
+msgstr "Nemohu spustit druida, jsou-li piloti nebo kolébky již nastaveny"
+
+#: ../capplet/gpilotd-control-applet.desktop.in.h:1
+msgid "Configure PalmOS devices"
+msgstr "Nastavit zařízení PalmOS"
+
+#: ../capplet/gpilotd-control-applet.desktop.in.h:2
+msgid "PalmOS Devices"
+msgstr "Zařízení PalmOS"
+
+#: ../capplet/util.c:80 ../capplet/util.c:415
+msgid "Enabled"
+msgstr "Povoleno"
+
+#: ../capplet/util.c:223
+msgid "You must have at least one device setup"
+msgstr "Musíte mít nastaveno alespoň jedno zařízení"
+
+#: ../capplet/util.c:387
+msgid "Synchronize"
+msgstr "Synchronizovat"
+
+#: ../capplet/util.c:388
+msgid "Copy from pilot"
+msgstr "Kopírovat z pilota"
+
+#: ../capplet/util.c:389
+msgid "Copy to pilot"
+msgstr "Kopírovat do pilota"
+
+#: ../capplet/util.c:390
+msgid "Merge from pilot"
+msgstr "Sloučit z pilota"
+
+#: ../capplet/util.c:391
+msgid "Merge to pilot"
+msgstr "Sloučit do pilota"
+
+#: ../capplet/util.c:394
+msgid "Use conduit settings"
+msgstr "Použít nastavení modulu"
+
+#: ../capplet/util.c:453
+msgid ""
+"The specified base directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+"Zadaný základní adresář existuje, ale má nesprávná oprávnění.\n"
+"Opravte to prosím, nebo zvolte jiný adresář"
+
+#: ../capplet/util.c:458
+msgid ""
+"The specified base directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+"Zadaný základní adresář existuje, ale není to adresář.\n"
+"Opravte to prosím, nebo zvolte jiný adresář"
+
+#: ../capplet/util.c:465
+msgid ""
+"It wasn't possible to create the specified base directory.\n"
+"Please verify the permitions on the specified path or choose another "
+"directory"
+msgstr ""
+"Nebylo možné vytvořit zadaný základní adresář.\n"
+"Zkontrolujte prosím oprávnění na zadané cestě nebo zvolte jiný adresář"
+
+#: ../capplet/util.c:470
+msgid ""
+"The path specified for the base directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+"Cesta zadaná pro základní adresář není platná.\n"
+"Zvolte prosím jiný adresář."
+
+#: ../capplet/util.c:578
+msgid "Read/Write permissions failed on"
+msgstr "Oprávnění ke čtení a zápisu selhalo na"
+
+#: ../capplet/util.c:580
+msgid "Check the permissions on the device and retry"
+msgstr "Zkontrolujte oprávnění zařízení a zkuste to znovu"
+
+#: ../capplet/util.c:594 ../gpilotd/gpilotd.c:1177
+#, c-format
+msgid ""
+"Failed to find directory %s or read file %s.  Check that usbfs or sysfs is "
+"mounted."
+msgstr ""
+"Nemohu najít adresář %s nebo číst soubor %s. Zkontrolujte, že je připojen "
+"usbfs nebo sysfs."
+
+#: ../conduits/backup/backup_conduit.c:243
+msgid "Checking for removed databases"
+msgstr "Hledám odstraněné databáze"
+
+#. I18N note: this is printed when renaming a file %s
+#: ../conduits/backup/backup_conduit.c:250
+#, c-format
+msgid "Renaming %s"
+msgstr "Přejmenovávám %s"
+
+#. I18N note: this message follow a "Renaming %s". The
+#. %s is a file name
+#: ../conduits/backup/backup_conduit.c:257
+#, c-format
+msgid "to %s"
+msgstr "na %s"
+
+#: ../conduits/backup/backup_conduit.c:435
+#: ../conduits/backup/backup_conduit.c:439
+#, c-format
+msgid "%s not modified since last sync"
+msgstr "%s nebylo změněno od poslední synchronizace"
+
+#: ../conduits/backup/backup_conduit.c:451
+#: ../conduits/backup/backup_conduit.c:453
+#, c-format
+msgid "Making backup of %s"
+msgstr "Vytvářím zálohu %s"
+
+#: ../conduits/backup/backup_conduit.c:460
+#: ../conduits/backup/backup_conduit.c:462
+#, c-format
+msgid "Could not create backup file %s"
+msgstr "Nemohu vytvořit záložní soubor %s"
+
+#: ../conduits/backup/backup_conduit.c:733
+msgid "Collecting restore information..."
+msgstr "Sbírám informace pro obnovení..."
+
+#: ../conduits/backup/backup_conduit.c:856
+msgid "Backup directory"
+msgstr "Adresář záloh"
+
+#: ../conduits/backup/backup_conduit.c:866
+msgid "Only backup changed bases"
+msgstr "Zálohovat jen změněné databáze"
+
+#: ../conduits/backup/backup_conduit.c:873
+msgid "Remove local base if deleted on pilot"
+msgstr "Odstranit místní databáze, je-li odstraněna v pilotu"
+
+#: ../conduits/backup/backup_conduit.c:880
+msgid "# of old backups to keep"
+msgstr "Počet udržovaných starých záloh"
+
+#: ../conduits/backup/backup_conduit.c:924
+msgid ""
+"The specified backup directory exists but has the wrong permissions.\n"
+"Please fix or choose another directory"
+msgstr ""
+"Zadaný záložní adresář existuje, ale má nesprávná oprávnění.\n"
+"Opravte to prosím, nebo zvolte jiný adresář"
+
+#: ../conduits/backup/backup_conduit.c:929
+msgid ""
+"The specified backup directory exists but is not a directory.\n"
+"Please make it a directory or choose another directory"
+msgstr ""
+"Zadaný záložní adresář existuje, ale není to adresář.\n"
+"Udělejte z něj prosím adresář nebo zvolte jiný adresář"
+
+#: ../conduits/backup/backup_conduit.c:936
+msgid ""
+"It wasn't possible to create the specified backup directory.\n"
+"Please verify the permissions on the specified path or choose another "
+"directory"
+msgstr ""
+"Nebylo možné vytvořit zadaný záložní adresář.\n"
+"Zkontrolujte prosím oprávnění na zadané cestě nebo zvolte jiný adresář"
+
+#: ../conduits/backup/backup_conduit.c:941
+msgid ""
+"The path specified for the backup directory is invalid.\n"
+"Please choose another directory"
+msgstr ""
+"Cesta zadaná pro záložní adresář není platná.\n"
+"Zvolte prosím jiný adresář"
+
+#: ../conduits/file/file_conduit.c:243 ../conduits/file/file_conduit.c:253
+#, c-format
+msgid "Install of %s failed"
+msgstr "Instalace %s selhala"
+
+#: ../conduits/file/file_conduit.c:290
+#, c-format
+msgid "Installing %s from %s..."
+msgstr "Instaluji %s z %s..."
+
+#: ../conduits/file/file_conduit.c:292
+#, c-format
+msgid "Installing %s..."
+msgstr "Instaluji %s..."
+
+#: ../conduits/file/gpilot_install_file.c:44
+msgid "Install immediately"
+msgstr "Instalovat okamžitě"
+
+#: ../conduits/file/gpilot_install_file.c:45
+msgid "Install delayed"
+msgstr "Instalovat se zpožděním"
+
+#: ../conduits/file/gpilot_install_file.c:46
+msgid "Pilot to install to"
+msgstr "Pilot, na který instalovat"
+
+#: ../conduits/file/gpilot_install_file.c:46
+msgid "PILOT"
+msgstr "PILOT"
+
+#: ../conduits/file/gpilot_install_file.c:118
+#: ../conduits/file/gpilot_install_file.c:119
+msgid "Unable to get pilot names"
+msgstr "Nemohu získat názvy pilotů"
+
+#: ../conduits/file/gpilot_install_file.c:158
+msgid "Following files failed :\n"
+msgstr "Následující soubory selhaly :\n"
+
+#: ../conduits/file/gpilot_install_file.c:170
+#, c-format
+msgid "Installing to %s:\n"
+msgstr "Instaluji do %s:\n"
+
+#: ../conduits/file/gpilot_install_file.c:191
+msgid "No files to install"
+msgstr "Žádné soubory k instalaci"
+
+#: ../conduits/file/gpilot_install_file.c:194
+msgid ""
+"Press synchronize on the cradle to install\n"
+" or cancel the operation."
+msgstr "Pro instalaci stiskněte Synchronizovat na kolébce nebo zrušte operaci."
+
+#: ../gpilotd/GNOME_Pilot_Daemon.server.in.in.h:1
+msgid "Gnome-Pilot daemon"
+msgstr "Démon Gnome-Pilot"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:136
+msgid "deleted pilot record modified locally, not deleting\n"
+msgstr "odstraněný záznam pilota lokálně změněn, neodstraňuji\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:137
+msgid "deleted local record modified on pilot, not deleting\n"
+msgstr "odstraněný místní záznam změněn na pilotu, neodstraňuji\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:138
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:142
+msgid "merge conflict, pilot and local record swapped\n"
+msgstr "konflikt slučování, záznam pilota a místní záznam prohozeny\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:139
+msgid "archive and change conflict, pilot and local record swapped\n"
+msgstr "konflikt archivu a změny, záznam pilota a místní záznam prohozeny\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:140
+msgid "archive and change conflict, local record sent to pilot\n"
+msgstr "konflikt archivu a změny, místní záznam odeslán na pilota\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:141
+msgid "archive and change conflict, pilot record saved locally\n"
+msgstr "konflikt archivu a změny, záznam pilota uložen lokálně\n"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:423
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:498
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:563
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:592
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:621
+msgid "Conduits initialization failed, aborting operation"
+msgstr "Inicializace modulu selhala, přerušuji operaci"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:436
+msgid "Unable to delete all records in pilot database, aborting operation."
+msgstr "Nemohu odstranit všechny záznamy databáze pilota, přerušuji operaci."
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:447
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:1025
+msgid "Conduit did not return a record"
+msgstr "Modul nevrátil záznam"
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:504
+msgid "Unable to delete all records in local database, aborting operation."
+msgstr "Nemohu odstranit všechny záznamy místní databáze, přerušuji operaci."
+
+#: ../gpilotd/gnome-pilot-conduit-standard-abs.c:1430
+msgid "Error in conduit, newly added record could not be found"
+msgstr "Chyba v modulu, nově přidaný záznam nebyl nalezen"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:487
+msgid "Copy to pilot failed!"
+msgstr "Kopírování do pilota selhalo!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:511
+msgid "Copy from pilot failed!"
+msgstr "Kopírování z pilota selhalo!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:535
+msgid "Merge to pilot failed!"
+msgstr "Slučování do pilota selhalo!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:559
+msgid "Merge from pilot failed!"
+msgstr "Slučování z pilota selhalo!"
+
+#: ../gpilotd/gnome-pilot-conduit-sync-abs.c:614
+msgid "Synchronization failed!"
+msgstr "Synchronizace selhala!"
+
+#: ../gpilotd/gnome-pilot-structures.c:286
+#, c-format
+msgid "Could not open device %s (%s): reason: \"%s\"."
+msgstr "Nemohu otevřít zařízení %s (%s): důvod: \"%s\"."
+
+#: ../gpilotd/gnome-pilot-structures.c:290
+#, c-format
+msgid ""
+"GnomePilot could not open device %s (%s).\n"
+"Reason: \"%s\"."
+msgstr ""
+"GnomePilot nemohl otevřít zařízení %s (%s).\n"
+"Důvod: \"%s\"."
+
+#: ../gpilotd/gnome-pilot-structures.c:517
+#: ../gpilotd/gnome-pilot-structures.c:566
+#: ../gpilotd/gnome-pilot-structures.c:594
+#: ../gpilotd/gnome-pilot-structures.c:620
+msgid "Unknown device type"
+msgstr "Neznámý typ zařízení"
+
+#: ../gpilotd/gnome-pilot-structures.c:635
+msgid "Number of devices is configured to 0"
+msgstr "Počet zařízení je nastaven na 0"
+
+#: ../gpilotd/gnome-pilot-structures.c:637
+msgid ""
+"No cradles configure.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Nenastavena žádná kolébka.\n"
+"Nastavte prosím gnome-pilot spuštěním\n"
+"gpilotd-control-applet (použijte gnomecc)."
+
+#: ../gpilotd/gnome-pilot-structures.c:658
+msgid "No accessible devices available"
+msgstr "Není k dispozici žádné přístupné zařízení"
+
+#: ../gpilotd/gnome-pilot-structures.c:673
+msgid "Number of pilots is configured to 0"
+msgstr "Počet pilotů je nastaven na 0"
+
+#: ../gpilotd/gnome-pilot-structures.c:675
+msgid ""
+"No pilots configured.\n"
+"Please run gpilotd-control-applet (use gnomecc)\n"
+"to configure gnome-pilot."
+msgstr ""
+"Nenastaven žádný pilot.\n"
+"Nastavte prosím gnome-pilot spuštěním\n"
+"gpilotd-control-applet (použijte gnomecc)."
+
+#: ../gpilotd/gpilotd.c:206
+msgid "Unable to bind to pilot"
+msgstr "Nemohu se připojit k pilotu"
+
+#: ../gpilotd/gpilotd.c:377
+#, c-format
+msgid "Unknown pilot, no userID/username match %ld"
+msgstr "Neznámý pilot, neodpovídá userID/jméno uživatele %ld"
+
+#: ../gpilotd/gpilotd.c:384
+msgid "Use gnomecc to configure pilot"
+msgstr "Nastavte pilota pomocí gnomecc"
+
+#. FIXME: here we should offer to create a profile for the pilot,
+#. bug # 8218
+#: ../gpilotd/gpilotd.c:389 ../gpilotd/gpilotd.c:595
+#, c-format
+msgid ""
+"Unknown pilot - no pilots matches ID %ld\n"
+"Use gnomecc to set pilot's ID"
+msgstr ""
+"Neznámý pilot - žádný pilot neodpovídá ID %ld\n"
+"Nastavte ID pilota pomocí gnomecc"
+
+#: ../gpilotd/gpilotd.c:413
+#, c-format
+msgid "Cradle %s has %d events"
+msgstr "Kolébka %s má %d událostí"
+
+#: ../gpilotd/gpilotd.c:426
+msgid "Setting userinfo..."
+msgstr "Nastavuji userinfo..."
+
+#: ../gpilotd/gpilotd.c:431
+msgid "Sync continues"
+msgstr "Synchronizace pokračuje"
+
+#: ../gpilotd/gpilotd.c:450
+msgid "Getting userinfo..."
+msgstr "Získávám userinfo..."
+
+#: ../gpilotd/gpilotd.c:512
+msgid "NetSync request detected, synchronizing pilot"
+msgstr "Detekován požadavek NetSync, synchronizuji pilota"
+
+#: ../gpilotd/gpilotd.c:514
+msgid "HotSync button pressed, synchronizing pilot"
+msgstr "Stisknuto tlačítko HotSync, synchronizuji pilota"
+
+#: ../gpilotd/gpilotd.c:516
+#, c-format
+msgid "Pilot ID is %ld, name is %s, owner is %s"
+msgstr "ID pilota je %ld, název je %s, vlastník je %s"
+
+#: ../gpilotd/gpilotd.c:526
+#, c-format
+msgid "On host %s\n"
+msgstr "Na počítači %s\n"
+
+#: ../gpilotd/gpilotd.c:528
+#, c-format
+msgid "On host %d\n"
+msgstr "Na počítači %d\n"
+
+#: ../gpilotd/gpilotd.c:547
+msgid "Synchronization ended"
+msgstr "Synchronizace skončila"
+
+#: ../gpilotd/gpilotd.c:550
+msgid "Synchronization ended early"
+msgstr "Synchronizace skončila brzy"
+
+#: ../gpilotd/gpilotd.c:582
+#, c-format
+msgid ""
+"The base directory %s is invalid.\n"
+"Please fix it or use gnomecc to choose another directory."
+msgstr ""
+"Základní adresář %s není platný.\n"
+"Opravte jej prosím nebo zvolte jiný adresář pomocí gnomecc."
+
+#. no ? drop connection then
+#: ../gpilotd/gpilotd.c:646
+msgid "An error occurred while getting the pilot's system data"
+msgstr "Při získávání systémových dat pilota došlo k chybě"
+
+#. no ? drop connection then
+#: ../gpilotd/gpilotd.c:651
+msgid "An error occurred while getting the pilot's user data"
+msgstr "Při získávání dat o uživateli pilota došlo k chybě"
+
+#: ../gpilotd/gpilotd.c:656
+#, c-format
+msgid "Completed events for cradle %s (%s)"
+msgstr "Dokončeny události pro kolébku %s (%s)"
+
+#: ../gpilotd/gpilotd.c:715
+#, c-format
+msgid "Woke on %s"
+msgstr "Probuzen na %s"
+
+#: ../gpilotd/gpilotd.c:796
+#, c-format
+msgid "Woke on network: %s"
+msgstr "Probuzen na síti: %s"
+
+#: ../gpilotd/gpilotd.c:1337 ../gpilotd/gpilotd.c:1339
+#, c-format
+msgid "Watching %s (%s)"
+msgstr "Sleduji %s (%s)"
+
+#: ../gpilotd/gpilotd.c:1353
+msgid "Exiting (caught SIGTERM)..."
+msgstr "Končím (zachycen SIGTERM)..."
+
+#: ../gpilotd/gpilotd.c:1362
+msgid "Exiting (caught SIGINT)..."
+msgstr "Končím (zachycen SIGINT)..."
+
+#: ../gpilotd/gpilotd.c:1394
+msgid "Unable to create file installation queue directory"
+msgstr "Nemohu vytvořit adresář fronty instalace souborů"
+
+#: ../gpilotd/gpilotd.c:1444
+msgid "Shutting down devices"
+msgstr "Ukončuji zařízení"
+
+#: ../gpilotd/gpilotd.c:1446
+msgid "Rereading configuration..."
+msgstr "Znovu načítám nastavení..."
+
+#: ../gpilotd/manager.c:269
+msgid "non-backup conduit in backup conduit list"
+msgstr "nezálohovací modul v seznamu zálohovacích modulů"
+
+#: ../gpilotd/manager.c:277
+#, c-format
+msgid "%s backed up\n"
+msgstr "%s zazálohováno\n"
+
+#: ../gpilotd/manager.c:279
+#, c-format
+msgid "%s backup failed\n"
+msgstr "záloha %s selhala\n"
+
+#: ../gpilotd/manager.c:305
+msgid "Collecting synchronization info..."
+msgstr "Sbírám informace o synchronizaci..."
+
+#: ../gpilotd/manager.c:427
+#, c-format
+msgid "Synchronizing %s\n"
+msgstr "Synchronizuji %s\n"
+
+#: ../gpilotd/manager.c:446
+#, c-format
+msgid "Copy to pilot %s\n"
+msgstr "Kopírovat do pilota %s\n"
+
+#: ../gpilotd/manager.c:464
+#, c-format
+msgid "Copy from pilot %s\n"
+msgstr "Kopírovat z pilota %s\n"
+
+#: ../gpilotd/manager.c:482
+#, c-format
+msgid "Merge to pilot %s\n"
+msgstr "Sloučit do pilota %s\n"
+
+#: ../gpilotd/manager.c:500
+#, c-format
+msgid "Merge from pilot %s\n"
+msgstr "Sloučit z pilota %s\n"
+
+#: ../gpilotd/manager.c:528
+#, c-format
+msgid "Conduit %s's first synchronization..."
+msgstr "První synchronizace modulu %s..."
+
+#: ../gpilotd/manager.c:552
+#, c-format
+msgid "unknown syncing action (%d = %s).\n"
+msgstr "neznámá akce synchronizace (%d = %s).\n"
+
+#: ../gpilotd/manager.c:678
+#, c-format
+msgid "Instantiating %d conduits..."
+msgstr "Instanciuji %d modulů..."
+
+#: ../gpilotd/manager.c:683 ../gpilotd/manager.c:684
+#, c-format
+msgid "Unknown conduit \"%s\" in configure!"
+msgstr "Neznámý modul \"%s\" v konfiguraci!"
+
+#: ../gpilotd/manager.c:693
+#, c-format
+msgid "Loading conduit \"%s\" failed!"
+msgstr "Načítání modulu \"%s\" selhalo!"
+
+#: ../gpilotd/manager.c:694
+#, c-format
+msgid "Loading conduit \"%s\" failed!\n"
+msgstr "Načítání modulu \"%s\" selhalo!\n"
+
+#: ../gpilotd/manager.c:783
+#, c-format
+msgid "Setting user/id to %d/%s..."
+msgstr "Nastavuji uživatele/id na %d/%s..."
+
+#. FIXME: remove the bloody request, or the user will get this
+#. message every time
+#: ../gpilotd/manager.c:815
+#, c-format
+msgid "Conduit %s requested, but not found"
+msgstr "Modul %s požadován, ale nenalezen"
+
+#: ../gpilotd/manager.c:825
+#, c-format
+msgid "Conduit %s cannot be requested"
+msgstr "Nelze požadovat modul %s"
+
+#: ../gpilotd/orbit_daemon_glue.c:1747
+msgid "(unknown DB)"
+msgstr "(neznámá DB)"
+
+#: ../gpilotd/queue_io.c:96
+msgid "Error in queue, non-existing entry"
+msgstr "Chyba ve frontě, neexistující položka"
+
+#: ../gpilotd/queue_io.c:436
+#, c-format
+msgid "fault: no request found for pilot %d, request %d"
+msgstr "selhání: nenalezen požadavek pro pilota %d, požadavek %d"
+
+#: ../libgpilotdCM/gnome-pilot-conduit-management.gob:686
+msgid "module loading not supported, fatal!"
+msgstr "načítání modulů nepodporováno, fatální!"
+
+#: ../utils/gpilotd-client.c:39
+msgid "Get System Info"
+msgstr "Získat informace o systému"
+
+#: ../utils/gpilotd-client.c:40
+msgid "Pause daemon"
+msgstr "Pozastavit démona"
+
+#: ../utils/gpilotd-client.c:41
+msgid "Unpause daemon"
+msgstr "Zrušit pozastavení démona"
+
+#: ../utils/gpilotd-client.c:42
+msgid "Restart daemon"
+msgstr "Restartovat démona"
+
+#: ../utils/gpilotd-client.c:43
+msgid "Set user id and name"
+msgstr "Nastavit ID a jméno uživatele"
+
+#: ../utils/gpilotd-client.c:44
+msgid "ID for the pilot"
+msgstr "ID pilota"
+
+#: ../utils/gpilotd-client.c:45
+msgid "Install file"
+msgstr "Nainstalovat soubor"
+
+#: ../utils/gpilotd-client.c:45
+msgid "FILE"
+msgstr "SOUBOR"
+
+#: ../utils/gpilotd-client.c:46
+msgid "Restore directory"
+msgstr "Obnovit adresář"
+
+#: ../utils/gpilotd-client.c:46
+msgid "DIRECTORY"
+msgstr "ADRESÁŘ"
+
+#: ../utils/gpilotd-client.c:47
+msgid "Run conduit"
+msgstr "Spustit modul"
+
+#: ../utils/gpilotd-client.c:47 ../utils/gpilotdcm-client.c:27
+msgid "CONDUIT"
+msgstr "MODUL"
+
+#: ../utils/gpilotd-client.c:48
+msgid "Username to set"
+msgstr "Jméno uživatele, které nastavit"
+
+#: ../utils/gpilotd-client.c:48
+msgid "USERNAME"
+msgstr "JMÉNOUŽIVATELE"
+
+#: ../utils/gpilotd-client.c:49
+msgid "Monitor the specified pilots actions"
+msgstr "Sledovat akce zadaných pilotů"
+
+#: ../utils/gpilotd-client.c:50
+msgid "Monitor all pilots"
+msgstr "Sledovat všechny piloty"
+
+#: ../utils/gpilotd-client.c:51
+msgid "list pilots by login (all for all pilots)"
+msgstr "vypsat piloty podle přihlášení (all pro všechny piloty)"
+
+#: ../utils/gpilotd-client.c:51
+msgid "LOGIN"
+msgstr "PŘIHLÁŠENÍ"
+
+#: ../utils/gpilotd-client.c:52
+msgid "Specify pilot to operate on (defaults to MyPilot)"
+msgstr "Zadat pilota, se kterým pracovat (implicitně MyPilot)"
+
+#: ../utils/gpilotd-client.c:52
+msgid "PILOTNAME"
+msgstr "JMÉNOPILOTA"
+
+#: ../utils/gpilotd-client.c:53
+msgid "Specify a cradle to operate on (defaults to Cradle0)"
+msgstr "Zadat kolébku, se kterou pracovat (implicitně Cradle0)"
+
+#: ../utils/gpilotd-client.c:53
+msgid "CRADLENAME"
+msgstr "JMÉNOKOLÉBKY"
+
+#: ../utils/gpilotd-client.c:54
+msgid "List the specifed pilot's bases"
+msgstr "Vypsat báze zadaného pilota"
+
+#: ../utils/gpilotd-client.c:359 ../utils/gpilotdcm-client.c:106
+msgid ""
+"\n"
+"BEWARE!!\n"
+"This is a tool for certain parts of the gnome-pilot package.\n"
+"Unless you know what you're doing, don't use this tool."
+msgstr ""
+"\n"
+"POZOR!!\n"
+"Noto je nástroj pro jisté části balíčku gnome-pilot.\n"
+"Nepoužívejte tento nástroj, pokud nevíte, co děláte."
+
+#: ../utils/gpilotdcm-client.c:26
+msgid "lists available conduits"
+msgstr "vypíše dostupné moduly"
+
+#: ../utils/gpilotdcm-client.c:27
+msgid "conduit to operate on"
+msgstr "modul, se kterým pracovat"
+
+#: ../utils/gpilotdcm-client.c:28
+msgid "list all attributes"
+msgstr "vypsat všechny atributy"
+
+#: ../utils/gpilotdcm-client.c:29
+msgid "specify pilot to operate on"
+msgstr "zadat pilota, na kterém pracovat"
+
+#: ../utils/gpilotdcm-client.c:29
+msgid "PILOTID"
+msgstr "IDPILOTA"
+
+#: ../utils/gpilotdcm-client.c:30
+msgid "list attributes"
+msgstr "vypsat atributy"
+
+#: ../utils/gpilotdcm-client.c:31
+msgid "list available conduits and their state"
+msgstr "vypsat dostupné moduly a jejich stav"
+
+#: ../utils/gpilotdcm-client.c:32
+msgid "enable specified conduit"
+msgstr "povolit určený modul"
+
+#: ../utils/gpilotdcm-client.c:33
+msgid "disable specified conduit"
+msgstr "zakázat určený modul"
+
+#: ../utils/gpilotdcm-client.c:34
+msgid "enable, and set firstsync to slow"
+msgstr "povolit a nastavit firstsync na slow"
+
+#: ../utils/gpilotdcm-client.c:35
+msgid "instantiate and destroy the conduit"
+msgstr "instanciovat a zničit modul"
+
+#~ msgid "A dnd and gui monitor for gpilotd.\n"
+#~ msgstr "DnD a GUI monitor pro gpilotd.\n"
+
+#~ msgid "Watching %s (%s, %s)"
+#~ msgstr "Sleduji %s (%s, %s)"
+
+#~ msgid "Unable to open or create file %s with read/write privs"
+#~ msgstr ""
+#~ "Nemohu otevřít nebo vytvořit soubor %s s oprávněním ke čtení a zápisu"

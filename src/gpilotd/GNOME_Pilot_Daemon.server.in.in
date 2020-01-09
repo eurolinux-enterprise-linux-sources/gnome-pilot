@@ -1,0 +1,16 @@
+<oaf_info>
+
+<oaf_server iid="OAFIID:GNOME_Pilot_Daemon"
+            type="exe"
+            location="@LIBEXECDIR@/gpilotd">
+
+	<oaf_attribute name="repo_ids" type="stringv">
+		<item value="IDL:GNOME/Pilot/Daemon:2.0"/>
+	</oaf_attribute>
+
+	<oaf_attribute name="description" type="string"
+	               _value="Gnome-Pilot daemon"/>
+
+</oaf_server>
+
+</oaf_info>
